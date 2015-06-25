@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.project.tdsl/src-gen" editDirectory="/org.xtext.project.tdsl.edit/src"
+    editorDirectory="/org.xtext.project.tdsl.editor/src" modelPluginID="org.xtext.project.tdsl"
+    forceOverwrite="true" modelName="TransfoDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="org.xtext.project.tdsl.edit"
+    editorPluginID="org.xtext.project.tdsl.editor" runtimeVersion="2.10">
+  <genPackages prefix="TransfoDsl" basePackage="org.xtext.project.tdsl" disposableProviderFactory="true"
+      fileExtensions="tdsl" ecorePackage="TransfoDsl.ecore#/">
+    <genClasses ecoreClass="TransfoDsl.ecore#//Transformation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Transformation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Transformation/importURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Transformation/fileName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransfoDsl.ecore#//Transformation/layer"/>
+    </genClasses>
+    <genClasses ecoreClass="TransfoDsl.ecore#//Layer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Layer/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
