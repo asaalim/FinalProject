@@ -18,8 +18,10 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.project.tdsl.services.TransfoDslGrammarAccess;
 import org.xtext.project.tdsl.transfoDsl.Layer;
+import org.xtext.project.tdsl.transfoDsl.SrcModel;
 import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
 import org.xtext.project.tdsl.transfoDsl.Transformation;
+import org.xtext.project.tdsl.transfoDsl.TrgModel;
 
 @SuppressWarnings("all")
 public class TransfoDslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -33,8 +35,14 @@ public class TransfoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case TransfoDslPackage.LAYER:
 				sequence_Layer(context, (Layer) semanticObject); 
 				return; 
+			case TransfoDslPackage.SRC_MODEL:
+				sequence_SrcModel(context, (SrcModel) semanticObject); 
+				return; 
 			case TransfoDslPackage.TRANSFORMATION:
 				sequence_Transformation(context, (Transformation) semanticObject); 
+				return; 
+			case TransfoDslPackage.TRG_MODEL:
+				sequence_TrgModel(context, (TrgModel) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -42,25 +50,56 @@ public class TransfoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (name=ID type+=Type)
 	 */
 	protected void sequence_Layer(EObject context, Layer semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID importURI=STRING)
+	 */
+	protected void sequence_SrcModel(EObject context, SrcModel semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.LAYER__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.LAYER__NAME));
+			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.SRC_MODEL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.SRC_MODEL__NAME));
+			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.SRC_MODEL__IMPORT_URI) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.SRC_MODEL__IMPORT_URI));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getLayerAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getSrcModelAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getSrcModelAccess().getImportURISTRINGTerminalRuleCall_2_0(), semanticObject.getImportURI());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID importURI=STRING fileName=STRING layer+=Layer)
+	 *     (name=ID srcModel+=SrcModel layer+=Layer+ targetModel+=TrgModel)
 	 */
 	protected void sequence_Transformation(EObject context, Transformation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID filepath=STRING)
+	 */
+	protected void sequence_TrgModel(EObject context, TrgModel semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.TRG_MODEL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.TRG_MODEL__NAME));
+			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.TRG_MODEL__FILEPATH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.TRG_MODEL__FILEPATH));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getTrgModelAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getTrgModelAccess().getFilepathSTRINGTerminalRuleCall_2_0(), semanticObject.getFilepath());
+		feeder.finish();
 	}
 }

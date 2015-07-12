@@ -32,6 +32,24 @@ public interface TransfoDslFactory extends EFactory
   Transformation createTransformation();
 
   /**
+   * Returns a new object of class '<em>Trg Model</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Trg Model</em>'.
+   * @generated
+   */
+  TrgModel createTrgModel();
+
+  /**
+   * Returns a new object of class '<em>Src Model</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Src Model</em>'.
+   * @generated
+   */
+  SrcModel createSrcModel();
+
+  /**
    * Returns a new object of class '<em>Layer</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -80,6 +80,16 @@ public class TransfoDslAdapterFactory extends AdapterFactoryImpl
         return createTransformationAdapter();
       }
       @Override
+      public Adapter caseTrgModel(TrgModel object)
+      {
+        return createTrgModelAdapter();
+      }
+      @Override
+      public Adapter caseSrcModel(SrcModel object)
+      {
+        return createSrcModelAdapter();
+      }
+      @Override
       public Adapter caseLayer(Layer object)
       {
         return createLayerAdapter();
@@ -117,6 +127,36 @@ public class TransfoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTransformationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.project.tdsl.transfoDsl.TrgModel <em>Trg Model</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.project.tdsl.transfoDsl.TrgModel
+   * @generated
+   */
+  public Adapter createTrgModelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.project.tdsl.transfoDsl.SrcModel <em>Src Model</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.project.tdsl.transfoDsl.SrcModel
+   * @generated
+   */
+  public Adapter createSrcModelAdapter()
   {
     return null;
   }

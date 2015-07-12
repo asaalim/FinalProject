@@ -2,6 +2,8 @@
  */
 package org.xtext.project.tdsl.transfoDsl;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.Layer#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.Layer#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,5 +50,21 @@ public interface Layer extends EObject
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Type</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Type</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Type</em>' attribute list.
+   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getLayer_Type()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getType();
 
 } // Layer

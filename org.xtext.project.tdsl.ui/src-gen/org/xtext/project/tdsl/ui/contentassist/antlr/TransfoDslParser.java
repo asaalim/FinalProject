@@ -37,13 +37,21 @@ public class TransfoDslParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getTypeAccess().getAlternatives(), "rule__Type__Alternatives");
 					put(grammarAccess.getTransformationAccess().getGroup(), "rule__Transformation__Group__0");
+					put(grammarAccess.getTrgModelAccess().getGroup(), "rule__TrgModel__Group__0");
+					put(grammarAccess.getSrcModelAccess().getGroup(), "rule__SrcModel__Group__0");
 					put(grammarAccess.getLayerAccess().getGroup(), "rule__Layer__Group__0");
 					put(grammarAccess.getTransformationAccess().getNameAssignment_1(), "rule__Transformation__NameAssignment_1");
-					put(grammarAccess.getTransformationAccess().getImportURIAssignment_5(), "rule__Transformation__ImportURIAssignment_5");
-					put(grammarAccess.getTransformationAccess().getFileNameAssignment_9(), "rule__Transformation__FileNameAssignment_9");
-					put(grammarAccess.getTransformationAccess().getLayerAssignment_11(), "rule__Transformation__LayerAssignment_11");
+					put(grammarAccess.getTransformationAccess().getSrcModelAssignment_3(), "rule__Transformation__SrcModelAssignment_3");
+					put(grammarAccess.getTransformationAccess().getLayerAssignment_4(), "rule__Transformation__LayerAssignment_4");
+					put(grammarAccess.getTransformationAccess().getTargetModelAssignment_5(), "rule__Transformation__TargetModelAssignment_5");
+					put(grammarAccess.getTrgModelAccess().getNameAssignment_1(), "rule__TrgModel__NameAssignment_1");
+					put(grammarAccess.getTrgModelAccess().getFilepathAssignment_2(), "rule__TrgModel__FilepathAssignment_2");
+					put(grammarAccess.getSrcModelAccess().getNameAssignment_1(), "rule__SrcModel__NameAssignment_1");
+					put(grammarAccess.getSrcModelAccess().getImportURIAssignment_2(), "rule__SrcModel__ImportURIAssignment_2");
 					put(grammarAccess.getLayerAccess().getNameAssignment_1(), "rule__Layer__NameAssignment_1");
+					put(grammarAccess.getLayerAccess().getTypeAssignment_2(), "rule__Layer__TypeAssignment_2");
 				}
 			};
 		}

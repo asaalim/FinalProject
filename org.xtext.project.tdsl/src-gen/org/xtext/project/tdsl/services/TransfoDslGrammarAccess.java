@@ -25,28 +25,19 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cSourceModelKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cImportURIAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cImportURISTRINGTerminalRuleCall_5_0 = (RuleCall)cImportURIAssignment_5.eContents().get(0);
-		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cTargetModelKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Keyword cEqualsSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cFileNameAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cFileNameSTRINGTerminalRuleCall_9_0 = (RuleCall)cFileNameAssignment_9.eContents().get(0);
-		private final Keyword cSemicolonKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Assignment cLayerAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cLayerLayerParserRuleCall_11_0 = (RuleCall)cLayerAssignment_11.eContents().get(0);
-		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Assignment cSrcModelAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSrcModelSrcModelParserRuleCall_3_0 = (RuleCall)cSrcModelAssignment_3.eContents().get(0);
+		private final Assignment cLayerAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cLayerLayerParserRuleCall_4_0 = (RuleCall)cLayerAssignment_4.eContents().get(0);
+		private final Assignment cTargetModelAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTargetModelTrgModelParserRuleCall_5_0 = (RuleCall)cTargetModelAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Transformation:
-		//	"transformation" name=ID "{" "sourceModel" "=" importURI=STRING ";" "targetModel" "=" fileName=STRING ";" layer+=Layer
-		//	";" "}";
+		//	"transformation" name=ID "{" srcModel+=SrcModel layer+=Layer+ targetModel+=TrgModel "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"transformation" name=ID "{" "sourceModel" "=" importURI=STRING ";" "targetModel" "=" fileName=STRING ";" layer+=Layer
-		//";" "}"
+		//"transformation" name=ID "{" srcModel+=SrcModel layer+=Layer+ targetModel+=TrgModel "}"
 		public Group getGroup() { return cGroup; }
 
 		//"transformation"
@@ -61,47 +52,90 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//"sourceModel"
-		public Keyword getSourceModelKeyword_3() { return cSourceModelKeyword_3; }
+		//srcModel+=SrcModel
+		public Assignment getSrcModelAssignment_3() { return cSrcModelAssignment_3; }
 
-		//"="
-		public Keyword getEqualsSignKeyword_4() { return cEqualsSignKeyword_4; }
+		//SrcModel
+		public RuleCall getSrcModelSrcModelParserRuleCall_3_0() { return cSrcModelSrcModelParserRuleCall_3_0; }
 
-		//importURI=STRING
-		public Assignment getImportURIAssignment_5() { return cImportURIAssignment_5; }
-
-		//STRING
-		public RuleCall getImportURISTRINGTerminalRuleCall_5_0() { return cImportURISTRINGTerminalRuleCall_5_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
-
-		//"targetModel"
-		public Keyword getTargetModelKeyword_7() { return cTargetModelKeyword_7; }
-
-		//"="
-		public Keyword getEqualsSignKeyword_8() { return cEqualsSignKeyword_8; }
-
-		//fileName=STRING
-		public Assignment getFileNameAssignment_9() { return cFileNameAssignment_9; }
-
-		//STRING
-		public RuleCall getFileNameSTRINGTerminalRuleCall_9_0() { return cFileNameSTRINGTerminalRuleCall_9_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_10() { return cSemicolonKeyword_10; }
-
-		//layer+=Layer
-		public Assignment getLayerAssignment_11() { return cLayerAssignment_11; }
+		//layer+=Layer+
+		public Assignment getLayerAssignment_4() { return cLayerAssignment_4; }
 
 		//Layer
-		public RuleCall getLayerLayerParserRuleCall_11_0() { return cLayerLayerParserRuleCall_11_0; }
+		public RuleCall getLayerLayerParserRuleCall_4_0() { return cLayerLayerParserRuleCall_4_0; }
 
-		//";"
-		public Keyword getSemicolonKeyword_12() { return cSemicolonKeyword_12; }
+		//targetModel+=TrgModel
+		public Assignment getTargetModelAssignment_5() { return cTargetModelAssignment_5; }
+
+		//TrgModel
+		public RuleCall getTargetModelTrgModelParserRuleCall_5_0() { return cTargetModelTrgModelParserRuleCall_5_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+	}
+
+	public class TrgModelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TrgModel");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cGenerateKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cFilepathAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFilepathSTRINGTerminalRuleCall_2_0 = (RuleCall)cFilepathAssignment_2.eContents().get(0);
+		
+		//TrgModel:
+		//	"Generate" name=ID filepath=STRING;
+		@Override public ParserRule getRule() { return rule; }
+
+		//"Generate" name=ID filepath=STRING
+		public Group getGroup() { return cGroup; }
+
+		//"Generate"
+		public Keyword getGenerateKeyword_0() { return cGenerateKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//filepath=STRING
+		public Assignment getFilepathAssignment_2() { return cFilepathAssignment_2; }
+
+		//STRING
+		public RuleCall getFilepathSTRINGTerminalRuleCall_2_0() { return cFilepathSTRINGTerminalRuleCall_2_0; }
+	}
+
+	public class SrcModelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SrcModel");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cImportKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cImportURIAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cImportURISTRINGTerminalRuleCall_2_0 = (RuleCall)cImportURIAssignment_2.eContents().get(0);
+		
+		//SrcModel:
+		//	"Import" name=ID importURI=STRING;
+		@Override public ParserRule getRule() { return rule; }
+
+		//"Import" name=ID importURI=STRING
+		public Group getGroup() { return cGroup; }
+
+		//"Import"
+		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//importURI=STRING
+		public Assignment getImportURIAssignment_2() { return cImportURIAssignment_2; }
+
+		//STRING
+		public RuleCall getImportURISTRINGTerminalRuleCall_2_0() { return cImportURISTRINGTerminalRuleCall_2_0; }
 	}
 
 	public class LayerElements extends AbstractParserRuleElementFinder {
@@ -110,22 +144,14 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cApplyKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
 		
-		/// *Type:
-		//  DataType | Entity;
-		//DataType:
-		//  "datatype" name=ID;
-		//  
-		//  Transformation:
-		//  "transformation" name=ID "{"
-		//    (layers+=Layer);  
-		//    //source = sourcemodelref;
-		//       
-		//  "}";* / Layer:
-		//	"apply" name=ID;
+		//Layer:
+		//	"apply" name=ID type+=Type;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"apply" name=ID
+		//"apply" name=ID type+=Type
 		public Group getGroup() { return cGroup; }
 
 		//"apply"
@@ -136,11 +162,67 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//type+=Type
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+
+		//Type
+		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+	}
+
+	public class TypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Type");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cRenameClassKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cDeleteClassKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		
+		/// *Operation:
+		//	'Rename' | 'Remove' | 'Add'
+		//	
+		//;
+		//Rename:
+		//	 (entity=[Import]'.')
+		//	;
+		//Remove:
+		//	(entity=[Import])
+		//;
+		//Add:
+		//	(entity=[Import])
+		//;
+		//
+		//entity:
+		//	'class' | 'Association' | 'Attribute'
+		//;
+		// * / / *Type:
+		//  DataType | Entity;
+		//DataType:
+		//  "datatype" name=ID;
+		//  
+		//  Transformation:
+		//  "transformation" name=ID "{"
+		//    (layers+=Layer);  
+		//    //source = sourcemodelref;
+		//       
+		//  "}";* / Type:
+		//	"Rename class" | "Delete class";
+		@Override public ParserRule getRule() { return rule; }
+
+		//"Rename class" | "Delete class"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"Rename class"
+		public Keyword getRenameClassKeyword_0() { return cRenameClassKeyword_0; }
+
+		//"Delete class"
+		public Keyword getDeleteClassKeyword_1() { return cDeleteClassKeyword_1; }
 	}
 	
 	
 	private final TransformationElements pTransformation;
+	private final TrgModelElements pTrgModel;
+	private final SrcModelElements pSrcModel;
 	private final LayerElements pLayer;
+	private final TypeElements pType;
 	
 	private final Grammar grammar;
 
@@ -152,7 +234,10 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pTransformation = new TransformationElements();
+		this.pTrgModel = new TrgModelElements();
+		this.pSrcModel = new SrcModelElements();
 		this.pLayer = new LayerElements();
+		this.pType = new TypeElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -183,8 +268,7 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Transformation:
-	//	"transformation" name=ID "{" "sourceModel" "=" importURI=STRING ";" "targetModel" "=" fileName=STRING ";" layer+=Layer
-	//	";" "}";
+	//	"transformation" name=ID "{" srcModel+=SrcModel layer+=Layer+ targetModel+=TrgModel "}";
 	public TransformationElements getTransformationAccess() {
 		return pTransformation;
 	}
@@ -193,7 +277,54 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getTransformationAccess().getRule();
 	}
 
-	/// *Type:
+	//TrgModel:
+	//	"Generate" name=ID filepath=STRING;
+	public TrgModelElements getTrgModelAccess() {
+		return pTrgModel;
+	}
+	
+	public ParserRule getTrgModelRule() {
+		return getTrgModelAccess().getRule();
+	}
+
+	//SrcModel:
+	//	"Import" name=ID importURI=STRING;
+	public SrcModelElements getSrcModelAccess() {
+		return pSrcModel;
+	}
+	
+	public ParserRule getSrcModelRule() {
+		return getSrcModelAccess().getRule();
+	}
+
+	//Layer:
+	//	"apply" name=ID type+=Type;
+	public LayerElements getLayerAccess() {
+		return pLayer;
+	}
+	
+	public ParserRule getLayerRule() {
+		return getLayerAccess().getRule();
+	}
+
+	/// *Operation:
+	//	'Rename' | 'Remove' | 'Add'
+	//	
+	//;
+	//Rename:
+	//	 (entity=[Import]'.')
+	//	;
+	//Remove:
+	//	(entity=[Import])
+	//;
+	//Add:
+	//	(entity=[Import])
+	//;
+	//
+	//entity:
+	//	'class' | 'Association' | 'Attribute'
+	//;
+	// * / / *Type:
 	//  DataType | Entity;
 	//DataType:
 	//  "datatype" name=ID;
@@ -203,14 +334,14 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//    (layers+=Layer);  
 	//    //source = sourcemodelref;
 	//       
-	//  "}";* / Layer:
-	//	"apply" name=ID;
-	public LayerElements getLayerAccess() {
-		return pLayer;
+	//  "}";* / Type:
+	//	"Rename class" | "Delete class";
+	public TypeElements getTypeAccess() {
+		return pType;
 	}
 	
-	public ParserRule getLayerRule() {
-		return getLayerAccess().getRule();
+	public ParserRule getTypeRule() {
+		return getTypeAccess().getRule();
 	}
 
 	//terminal ID:

@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getImportURI <em>Import URI</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getFileName <em>File Name</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getSrcModel <em>Src Model</em>}</li>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getLayer <em>Layer</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getTargetModel <em>Target Model</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,56 +54,20 @@ public interface Transformation extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Import URI</b></em>' attribute.
+   * Returns the value of the '<em><b>Src Model</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.project.tdsl.transfoDsl.SrcModel}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Import URI</em>' attribute isn't clear,
+   * If the meaning of the '<em>Src Model</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Import URI</em>' attribute.
-   * @see #setImportURI(String)
-   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getTransformation_ImportURI()
-   * @model
+   * @return the value of the '<em>Src Model</em>' containment reference list.
+   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getTransformation_SrcModel()
+   * @model containment="true"
    * @generated
    */
-  String getImportURI();
-
-  /**
-   * Sets the value of the '{@link org.xtext.project.tdsl.transfoDsl.Transformation#getImportURI <em>Import URI</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Import URI</em>' attribute.
-   * @see #getImportURI()
-   * @generated
-   */
-  void setImportURI(String value);
-
-  /**
-   * Returns the value of the '<em><b>File Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>File Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>File Name</em>' attribute.
-   * @see #setFileName(String)
-   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getTransformation_FileName()
-   * @model
-   * @generated
-   */
-  String getFileName();
-
-  /**
-   * Sets the value of the '{@link org.xtext.project.tdsl.transfoDsl.Transformation#getFileName <em>File Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>File Name</em>' attribute.
-   * @see #getFileName()
-   * @generated
-   */
-  void setFileName(String value);
+  EList<SrcModel> getSrcModel();
 
   /**
    * Returns the value of the '<em><b>Layer</b></em>' containment reference list.
@@ -120,5 +84,21 @@ public interface Transformation extends EObject
    * @generated
    */
   EList<Layer> getLayer();
+
+  /**
+   * Returns the value of the '<em><b>Target Model</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.project.tdsl.transfoDsl.TrgModel}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Target Model</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Target Model</em>' containment reference list.
+   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getTransformation_TargetModel()
+   * @model containment="true"
+   * @generated
+   */
+  EList<TrgModel> getTargetModel();
 
 } // Transformation

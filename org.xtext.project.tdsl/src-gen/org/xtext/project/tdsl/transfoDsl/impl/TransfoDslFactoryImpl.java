@@ -65,6 +65,8 @@ public class TransfoDslFactoryImpl extends EFactoryImpl implements TransfoDslFac
     switch (eClass.getClassifierID())
     {
       case TransfoDslPackage.TRANSFORMATION: return createTransformation();
+      case TransfoDslPackage.TRG_MODEL: return createTrgModel();
+      case TransfoDslPackage.SRC_MODEL: return createSrcModel();
       case TransfoDslPackage.LAYER: return createLayer();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -80,6 +82,28 @@ public class TransfoDslFactoryImpl extends EFactoryImpl implements TransfoDslFac
   {
     TransformationImpl transformation = new TransformationImpl();
     return transformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TrgModel createTrgModel()
+  {
+    TrgModelImpl trgModel = new TrgModelImpl();
+    return trgModel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SrcModel createSrcModel()
+  {
+    SrcModelImpl srcModel = new SrcModelImpl();
+    return srcModel;
   }
 
   /**

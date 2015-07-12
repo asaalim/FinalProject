@@ -19,8 +19,10 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.project.tdsl.transfoDsl.Layer;
+import org.xtext.project.tdsl.transfoDsl.SrcModel;
 import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
 import org.xtext.project.tdsl.transfoDsl.Transformation;
+import org.xtext.project.tdsl.transfoDsl.TrgModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,9 +32,9 @@ import org.xtext.project.tdsl.transfoDsl.Transformation;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getImportURI <em>Import URI</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getFileName <em>File Name</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getSrcModel <em>Src Model</em>}</li>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getLayer <em>Layer</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getTargetModel <em>Target Model</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,44 +63,14 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
+   * The cached value of the '{@link #getSrcModel() <em>Src Model</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImportURI()
+   * @see #getSrcModel()
    * @generated
    * @ordered
    */
-  protected static final String IMPORT_URI_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getImportURI()
-   * @generated
-   * @ordered
-   */
-  protected String importURI = IMPORT_URI_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getFileName() <em>File Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFileName()
-   * @generated
-   * @ordered
-   */
-  protected static final String FILE_NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getFileName() <em>File Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFileName()
-   * @generated
-   * @ordered
-   */
-  protected String fileName = FILE_NAME_EDEFAULT;
+  protected EList<SrcModel> srcModel;
 
   /**
    * The cached value of the '{@link #getLayer() <em>Layer</em>}' containment reference list.
@@ -109,6 +81,16 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * @ordered
    */
   protected EList<Layer> layer;
+
+  /**
+   * The cached value of the '{@link #getTargetModel() <em>Target Model</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTargetModel()
+   * @generated
+   * @ordered
+   */
+  protected EList<TrgModel> targetModel;
 
   /**
    * <!-- begin-user-doc -->
@@ -159,45 +141,13 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getImportURI()
+  public EList<SrcModel> getSrcModel()
   {
-    return importURI;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setImportURI(String newImportURI)
-  {
-    String oldImportURI = importURI;
-    importURI = newImportURI;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRANSFORMATION__IMPORT_URI, oldImportURI, importURI));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getFileName()
-  {
-    return fileName;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setFileName(String newFileName)
-  {
-    String oldFileName = fileName;
-    fileName = newFileName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRANSFORMATION__FILE_NAME, oldFileName, fileName));
+    if (srcModel == null)
+    {
+      srcModel = new EObjectContainmentEList<SrcModel>(SrcModel.class, this, TransfoDslPackage.TRANSFORMATION__SRC_MODEL);
+    }
+    return srcModel;
   }
 
   /**
@@ -219,13 +169,31 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<TrgModel> getTargetModel()
+  {
+    if (targetModel == null)
+    {
+      targetModel = new EObjectContainmentEList<TrgModel>(TrgModel.class, this, TransfoDslPackage.TRANSFORMATION__TARGET_MODEL);
+    }
+    return targetModel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
+      case TransfoDslPackage.TRANSFORMATION__SRC_MODEL:
+        return ((InternalEList<?>)getSrcModel()).basicRemove(otherEnd, msgs);
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         return ((InternalEList<?>)getLayer()).basicRemove(otherEnd, msgs);
+      case TransfoDslPackage.TRANSFORMATION__TARGET_MODEL:
+        return ((InternalEList<?>)getTargetModel()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -242,12 +210,12 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
     {
       case TransfoDslPackage.TRANSFORMATION__NAME:
         return getName();
-      case TransfoDslPackage.TRANSFORMATION__IMPORT_URI:
-        return getImportURI();
-      case TransfoDslPackage.TRANSFORMATION__FILE_NAME:
-        return getFileName();
+      case TransfoDslPackage.TRANSFORMATION__SRC_MODEL:
+        return getSrcModel();
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         return getLayer();
+      case TransfoDslPackage.TRANSFORMATION__TARGET_MODEL:
+        return getTargetModel();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -266,15 +234,17 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
       case TransfoDslPackage.TRANSFORMATION__NAME:
         setName((String)newValue);
         return;
-      case TransfoDslPackage.TRANSFORMATION__IMPORT_URI:
-        setImportURI((String)newValue);
-        return;
-      case TransfoDslPackage.TRANSFORMATION__FILE_NAME:
-        setFileName((String)newValue);
+      case TransfoDslPackage.TRANSFORMATION__SRC_MODEL:
+        getSrcModel().clear();
+        getSrcModel().addAll((Collection<? extends SrcModel>)newValue);
         return;
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         getLayer().clear();
         getLayer().addAll((Collection<? extends Layer>)newValue);
+        return;
+      case TransfoDslPackage.TRANSFORMATION__TARGET_MODEL:
+        getTargetModel().clear();
+        getTargetModel().addAll((Collection<? extends TrgModel>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -293,14 +263,14 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
       case TransfoDslPackage.TRANSFORMATION__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TransfoDslPackage.TRANSFORMATION__IMPORT_URI:
-        setImportURI(IMPORT_URI_EDEFAULT);
-        return;
-      case TransfoDslPackage.TRANSFORMATION__FILE_NAME:
-        setFileName(FILE_NAME_EDEFAULT);
+      case TransfoDslPackage.TRANSFORMATION__SRC_MODEL:
+        getSrcModel().clear();
         return;
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         getLayer().clear();
+        return;
+      case TransfoDslPackage.TRANSFORMATION__TARGET_MODEL:
+        getTargetModel().clear();
         return;
     }
     super.eUnset(featureID);
@@ -318,12 +288,12 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
     {
       case TransfoDslPackage.TRANSFORMATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TransfoDslPackage.TRANSFORMATION__IMPORT_URI:
-        return IMPORT_URI_EDEFAULT == null ? importURI != null : !IMPORT_URI_EDEFAULT.equals(importURI);
-      case TransfoDslPackage.TRANSFORMATION__FILE_NAME:
-        return FILE_NAME_EDEFAULT == null ? fileName != null : !FILE_NAME_EDEFAULT.equals(fileName);
+      case TransfoDslPackage.TRANSFORMATION__SRC_MODEL:
+        return srcModel != null && !srcModel.isEmpty();
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         return layer != null && !layer.isEmpty();
+      case TransfoDslPackage.TRANSFORMATION__TARGET_MODEL:
+        return targetModel != null && !targetModel.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -341,10 +311,6 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", importURI: ");
-    result.append(importURI);
-    result.append(", fileName: ");
-    result.append(fileName);
     result.append(')');
     return result.toString();
   }

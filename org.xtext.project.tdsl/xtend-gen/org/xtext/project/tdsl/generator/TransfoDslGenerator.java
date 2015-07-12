@@ -3,9 +3,17 @@
  */
 package org.xtext.project.tdsl.generator;
 
+import com.google.common.collect.Iterators;
+import java.util.Iterator;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
+import org.xtext.project.tdsl.generator.TransformationRunner;
+import org.xtext.project.tdsl.transfoDsl.Transformation;
 
 /**
  * Generates code from your model files on save.
@@ -16,5 +24,12 @@ import org.eclipse.xtext.generator.IGenerator;
 public class TransfoDslGenerator implements IGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
+    TreeIterator<EObject> _allContents = resource.getAllContents();
+    Iterator<Transformation> _filter = Iterators.<Transformation>filter(_allContents, Transformation.class);
+    final Procedure1<Transformation> _function = (Transformation t) -> {
+      TransformationRunner _transformationRunner = new TransformationRunner();
+      _transformationRunner.run(t);
+    };
+    IteratorExtensions.<Transformation>forEach(_filter, _function);
   }
 }

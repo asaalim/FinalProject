@@ -1,11 +1,11 @@
-';'=15
-'='=14
+'Delete class'=12
+'Generate'=16
+'Import'=17
+'Rename class'=11
 'apply'=18
-'sourceModel'=13
-'targetModel'=16
-'transformation'=11
-'{'=12
-'}'=17
+'transformation'=13
+'{'=14
+'}'=15
 RULE_ANY_OTHER=10
 RULE_ID=4
 RULE_INT=6

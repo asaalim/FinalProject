@@ -9,12 +9,21 @@
       fileExtensions="tdsl" ecorePackage="TransfoDsl.ecore#/">
     <genClasses ecoreClass="TransfoDsl.ecore#//Transformation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Transformation/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Transformation/importURI"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Transformation/fileName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransfoDsl.ecore#//Transformation/srcModel"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransfoDsl.ecore#//Transformation/layer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransfoDsl.ecore#//Transformation/targetModel"/>
+    </genClasses>
+    <genClasses ecoreClass="TransfoDsl.ecore#//TrgModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//TrgModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//TrgModel/filepath"/>
+    </genClasses>
+    <genClasses ecoreClass="TransfoDsl.ecore#//SrcModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//SrcModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//SrcModel/importURI"/>
     </genClasses>
     <genClasses ecoreClass="TransfoDsl.ecore#//Layer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Layer/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Layer/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
