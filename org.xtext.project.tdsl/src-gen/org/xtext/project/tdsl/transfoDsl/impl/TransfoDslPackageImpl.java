@@ -250,16 +250,6 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getLayer_Type()
-  {
-    return (EAttribute)layerEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public TransfoDslFactory getTransfoDslFactory()
   {
     return (TransfoDslFactory)getEFactoryInstance();
@@ -301,7 +291,6 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
 
     layerEClass = createEClass(LAYER);
     createEAttribute(layerEClass, LAYER__NAME);
-    createEAttribute(layerEClass, LAYER__TYPE);
   }
 
   /**
@@ -351,7 +340,6 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
 
     initEClass(layerEClass, Layer.class, "Layer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLayer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Layer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLayer_Type(), ecorePackage.getEString(), "type", null, 0, -1, Layer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

@@ -37,7 +37,6 @@ public class TransfoDslParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getTypeAccess().getAlternatives(), "rule__Type__Alternatives");
 					put(grammarAccess.getTransformationAccess().getGroup(), "rule__Transformation__Group__0");
 					put(grammarAccess.getTrgModelAccess().getGroup(), "rule__TrgModel__Group__0");
 					put(grammarAccess.getSrcModelAccess().getGroup(), "rule__SrcModel__Group__0");
@@ -51,7 +50,6 @@ public class TransfoDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSrcModelAccess().getNameAssignment_1(), "rule__SrcModel__NameAssignment_1");
 					put(grammarAccess.getSrcModelAccess().getImportURIAssignment_2(), "rule__SrcModel__ImportURIAssignment_2");
 					put(grammarAccess.getLayerAccess().getNameAssignment_1(), "rule__Layer__NameAssignment_1");
-					put(grammarAccess.getLayerAccess().getTypeAssignment_2(), "rule__Layer__TypeAssignment_2");
 				}
 			};
 		}

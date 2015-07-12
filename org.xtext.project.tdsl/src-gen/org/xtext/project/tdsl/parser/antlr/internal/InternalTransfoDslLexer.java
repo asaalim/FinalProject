@@ -19,9 +19,7 @@ public class InternalTransfoDslLexer extends Lexer {
     public static final int RULE_SL_COMMENT=8;
     public static final int T__15=15;
     public static final int T__16=16;
-    public static final int T__17=17;
     public static final int RULE_INT=6;
-    public static final int T__18=18;
     public static final int T__11=11;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__12=12;
@@ -166,57 +164,15 @@ public class InternalTransfoDslLexer extends Lexer {
     }
     // $ANTLR end "T__16"
 
-    // $ANTLR start "T__17"
-    public final void mT__17() throws RecognitionException {
-        try {
-            int _type = T__17;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:17:7: ( 'Rename class' )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:17:9: 'Rename class'
-            {
-            match("Rename class"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__17"
-
-    // $ANTLR start "T__18"
-    public final void mT__18() throws RecognitionException {
-        try {
-            int _type = T__18;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:18:7: ( 'Delete class' )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:18:9: 'Delete class'
-            {
-            match("Delete class"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__18"
-
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:388:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:388:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:336:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:336:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:388:11: ( '^' )?
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:336:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -225,7 +181,7 @@ public class InternalTransfoDslLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:388:11: '^'
+                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:336:11: '^'
                     {
                     match('^'); 
 
@@ -243,7 +199,7 @@ public class InternalTransfoDslLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:388:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:336:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -292,10 +248,10 @@ public class InternalTransfoDslLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:390:10: ( ( '0' .. '9' )+ )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:390:12: ( '0' .. '9' )+
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:338:10: ( ( '0' .. '9' )+ )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:338:12: ( '0' .. '9' )+
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:390:12: ( '0' .. '9' )+
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:338:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -309,7 +265,7 @@ public class InternalTransfoDslLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:390:13: '0' .. '9'
+            	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:338:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -341,10 +297,10 @@ public class InternalTransfoDslLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:392:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:392:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:340:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:340:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:392:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:340:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -362,10 +318,10 @@ public class InternalTransfoDslLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:392:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:340:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:392:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:340:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -381,7 +337,7 @@ public class InternalTransfoDslLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:392:21: '\\\\' .
+                    	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:340:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -389,7 +345,7 @@ public class InternalTransfoDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:392:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:340:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -414,10 +370,10 @@ public class InternalTransfoDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:392:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:340:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:392:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:340:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -433,7 +389,7 @@ public class InternalTransfoDslLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:392:54: '\\\\' .
+                    	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:340:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -441,7 +397,7 @@ public class InternalTransfoDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:392:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:340:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -484,12 +440,12 @@ public class InternalTransfoDslLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:394:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:394:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:342:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:342:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:394:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:342:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -514,7 +470,7 @@ public class InternalTransfoDslLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:394:52: .
+            	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:342:52: .
             	    {
             	    matchAny(); 
 
@@ -544,12 +500,12 @@ public class InternalTransfoDslLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:396:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:396:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:344:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:344:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:396:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:344:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -562,7 +518,7 @@ public class InternalTransfoDslLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:396:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:344:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -582,7 +538,7 @@ public class InternalTransfoDslLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:396:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:344:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -591,9 +547,9 @@ public class InternalTransfoDslLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:396:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:344:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:396:41: ( '\\r' )?
+                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:344:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -602,7 +558,7 @@ public class InternalTransfoDslLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:396:41: '\\r'
+                            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:344:41: '\\r'
                             {
                             match('\r'); 
 
@@ -634,10 +590,10 @@ public class InternalTransfoDslLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:398:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:398:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:346:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:346:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:398:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:346:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -691,8 +647,8 @@ public class InternalTransfoDslLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:400:16: ( . )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:400:18: .
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:348:16: ( . )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:348:18: .
             {
             matchAny(); 
 
@@ -707,8 +663,8 @@ public class InternalTransfoDslLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=15;
+        // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=13;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -754,63 +710,49 @@ public class InternalTransfoDslLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:46: T__17
-                {
-                mT__17(); 
-
-                }
-                break;
-            case 8 :
-                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:52: T__18
-                {
-                mT__18(); 
-
-                }
-                break;
-            case 9 :
-                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:58: RULE_ID
+                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:46: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 10 :
-                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:66: RULE_INT
+            case 8 :
+                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:54: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 11 :
-                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:75: RULE_STRING
+            case 9 :
+                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:63: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 12 :
-                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:87: RULE_ML_COMMENT
+            case 10 :
+                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:75: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 13 :
-                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:103: RULE_SL_COMMENT
+            case 11 :
+                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:91: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 14 :
-                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:119: RULE_WS
+            case 12 :
+                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:107: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 15 :
-                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:127: RULE_ANY_OTHER
+            case 13 :
+                // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:1:115: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -824,87 +766,73 @@ public class InternalTransfoDslLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\22\2\uffff\5\22\1\20\2\uffff\3\20\2\uffff\1\22\3\uffff\5\22\5\uffff\17\22\1\64\4\22\1\71\1\uffff\4\22\3\uffff\1\22\1\77\1\22\1\uffff\4\22\1\105\1\uffff";
+        "\1\uffff\1\20\2\uffff\3\20\1\16\2\uffff\3\16\2\uffff\1\20\3\uffff\3\20\5\uffff\13\20\1\52\2\20\1\55\1\uffff\2\20\1\uffff\1\20\1\61\1\20\1\uffff\4\20\1\67\1\uffff";
     static final String DFA12_eofS =
-        "\106\uffff";
+        "\70\uffff";
     static final String DFA12_minS =
-        "\1\0\1\162\2\uffff\1\145\1\155\1\160\2\145\1\101\2\uffff\2\0\1\52\2\uffff\1\141\3\uffff\1\156\2\160\1\156\1\154\5\uffff\1\156\1\145\1\157\1\154\1\141\1\145\1\163\2\162\1\171\1\155\1\164\1\146\1\141\1\164\1\60\2\145\1\157\1\164\1\60\1\uffff\2\40\1\162\1\145\3\uffff\1\155\1\60\1\141\1\uffff\1\164\1\151\1\157\1\156\1\60\1\uffff";
+        "\1\0\1\162\2\uffff\1\145\1\155\1\160\1\101\2\uffff\2\0\1\52\2\uffff\1\141\3\uffff\1\156\2\160\5\uffff\1\156\1\145\1\157\1\154\1\163\2\162\1\171\1\146\1\141\1\164\1\60\1\157\1\164\1\60\1\uffff\1\162\1\145\1\uffff\1\155\1\60\1\141\1\uffff\1\164\1\151\1\157\1\156\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\162\2\uffff\1\145\1\155\1\160\2\145\1\172\2\uffff\2\uffff\1\57\2\uffff\1\141\3\uffff\1\156\2\160\1\156\1\154\5\uffff\1\156\1\145\1\157\1\154\1\141\1\145\1\163\2\162\1\171\1\155\1\164\1\146\1\141\1\164\1\172\2\145\1\157\1\164\1\172\1\uffff\2\40\1\162\1\145\3\uffff\1\155\1\172\1\141\1\uffff\1\164\1\151\1\157\1\156\1\172\1\uffff";
+        "\1\uffff\1\162\2\uffff\1\145\1\155\1\160\1\172\2\uffff\2\uffff\1\57\2\uffff\1\141\3\uffff\1\156\2\160\5\uffff\1\156\1\145\1\157\1\154\1\163\2\162\1\171\1\146\1\141\1\164\1\172\1\157\1\164\1\172\1\uffff\1\162\1\145\1\uffff\1\155\1\172\1\141\1\uffff\1\164\1\151\1\157\1\156\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\3\6\uffff\1\11\1\12\3\uffff\1\16\1\17\1\uffff\1\11\1\2\1\3\5\uffff\1\12\1\13\1\14\1\15\1\16\25\uffff\1\6\4\uffff\1\5\1\7\1\10\3\uffff\1\4\5\uffff\1\1";
+        "\2\uffff\1\2\1\3\4\uffff\1\7\1\10\3\uffff\1\14\1\15\1\uffff\1\7\1\2\1\3\3\uffff\1\10\1\11\1\12\1\13\1\14\17\uffff\1\6\2\uffff\1\5\3\uffff\1\4\5\uffff\1\1";
     static final String DFA12_specialS =
-        "\1\1\13\uffff\1\2\1\0\70\uffff}>";
+        "\1\1\11\uffff\1\2\1\0\54\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\20\2\17\2\20\1\17\22\20\1\17\1\20\1\14\4\20\1\15\7\20\1\16\12\13\7\20\3\12\1\10\2\12\1\4\1\12\1\5\10\12\1\7\10\12\3\20\1\11\1\12\1\20\1\6\22\12\1\1\6\12\1\2\1\20\1\3\uff82\20",
-            "\1\21",
+            "\11\16\2\15\2\16\1\15\22\16\1\15\1\16\1\12\4\16\1\13\7\16\1\14\12\11\7\16\6\10\1\4\1\10\1\5\21\10\3\16\1\7\1\10\1\16\1\6\22\10\1\1\6\10\1\2\1\16\1\3\uff82\16",
+            "\1\17",
             "",
             "",
+            "\1\23",
+            "\1\24",
             "\1\25",
-            "\1\26",
-            "\1\27",
-            "\1\30",
-            "\1\31",
-            "\32\22\4\uffff\1\22\1\uffff\32\22",
+            "\32\20\4\uffff\1\20\1\uffff\32\20",
             "",
             "",
-            "\0\33",
-            "\0\33",
-            "\1\34\4\uffff\1\35",
+            "\0\27",
+            "\0\27",
+            "\1\30\4\uffff\1\31",
+            "",
+            "",
+            "\1\33",
+            "",
+            "",
+            "",
+            "\1\34",
+            "\1\35",
+            "\1\36",
+            "",
+            "",
+            "",
             "",
             "",
             "\1\37",
-            "",
-            "",
-            "",
             "\1\40",
             "\1\41",
             "\1\42",
             "\1\43",
             "\1\44",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\45",
             "\1\46",
             "\1\47",
             "\1\50",
             "\1\51",
-            "\1\52",
+            "\12\20\7\uffff\32\20\4\uffff\1\20\1\uffff\32\20",
             "\1\53",
             "\1\54",
-            "\1\55",
+            "\12\20\7\uffff\32\20\4\uffff\1\20\1\uffff\32\20",
+            "",
             "\1\56",
             "\1\57",
+            "",
             "\1\60",
-            "\1\61",
+            "\12\20\7\uffff\32\20\4\uffff\1\20\1\uffff\32\20",
             "\1\62",
+            "",
             "\1\63",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
+            "\1\64",
             "\1\65",
             "\1\66",
-            "\1\67",
-            "\1\70",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
-            "",
-            "\1\72",
-            "\1\73",
-            "\1\74",
-            "\1\75",
-            "",
-            "",
-            "",
-            "\1\76",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
-            "\1\100",
-            "",
-            "\1\101",
-            "\1\102",
-            "\1\103",
-            "\1\104",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
+            "\12\20\7\uffff\32\20\4\uffff\1\20\1\uffff\32\20",
             ""
     };
 
@@ -938,19 +866,19 @@ public class InternalTransfoDslLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_13 = input.LA(1);
+                        int LA12_11 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_13>='\u0000' && LA12_13<='\uFFFF')) ) {s = 27;}
+                        if ( ((LA12_11>='\u0000' && LA12_11<='\uFFFF')) ) {s = 23;}
 
-                        else s = 16;
+                        else s = 14;
 
                         if ( s>=0 ) return s;
                         break;
@@ -970,35 +898,31 @@ public class InternalTransfoDslLexer extends Lexer {
 
                         else if ( (LA12_0=='a') ) {s = 6;}
 
-                        else if ( (LA12_0=='R') ) {s = 7;}
+                        else if ( (LA12_0=='^') ) {s = 7;}
 
-                        else if ( (LA12_0=='D') ) {s = 8;}
+                        else if ( ((LA12_0>='A' && LA12_0<='F')||LA12_0=='H'||(LA12_0>='J' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='b' && LA12_0<='s')||(LA12_0>='u' && LA12_0<='z')) ) {s = 8;}
 
-                        else if ( (LA12_0=='^') ) {s = 9;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 9;}
 
-                        else if ( ((LA12_0>='A' && LA12_0<='C')||(LA12_0>='E' && LA12_0<='F')||LA12_0=='H'||(LA12_0>='J' && LA12_0<='Q')||(LA12_0>='S' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='b' && LA12_0<='s')||(LA12_0>='u' && LA12_0<='z')) ) {s = 10;}
+                        else if ( (LA12_0=='\"') ) {s = 10;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 11;}
+                        else if ( (LA12_0=='\'') ) {s = 11;}
 
-                        else if ( (LA12_0=='\"') ) {s = 12;}
+                        else if ( (LA12_0=='/') ) {s = 12;}
 
-                        else if ( (LA12_0=='\'') ) {s = 13;}
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 13;}
 
-                        else if ( (LA12_0=='/') ) {s = 14;}
-
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 15;}
-
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 16;}
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 14;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA12_12 = input.LA(1);
+                        int LA12_10 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_12>='\u0000' && LA12_12<='\uFFFF')) ) {s = 27;}
+                        if ( ((LA12_10>='\u0000' && LA12_10<='\uFFFF')) ) {s = 23;}
 
-                        else s = 16;
+                        else s = 14;
 
                         if ( s>=0 ) return s;
                         break;

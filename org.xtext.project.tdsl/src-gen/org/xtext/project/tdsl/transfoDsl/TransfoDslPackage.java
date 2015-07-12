@@ -205,22 +205,13 @@ public interface TransfoDslPackage extends EPackage
   int LAYER__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LAYER__TYPE = 1;
-
-  /**
    * The number of structural features of the '<em>Layer</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LAYER_FEATURE_COUNT = 2;
+  int LAYER_FEATURE_COUNT = 1;
 
 
   /**
@@ -363,17 +354,6 @@ public interface TransfoDslPackage extends EPackage
   EAttribute getLayer_Name();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.xtext.project.tdsl.transfoDsl.Layer#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Type</em>'.
-   * @see org.xtext.project.tdsl.transfoDsl.Layer#getType()
-   * @see #getLayer()
-   * @generated
-   */
-  EAttribute getLayer_Type();
-
-  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -507,14 +487,6 @@ public interface TransfoDslPackage extends EPackage
      * @generated
      */
     EAttribute LAYER__NAME = eINSTANCE.getLayer_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LAYER__TYPE = eINSTANCE.getLayer_Type();
 
   }
 

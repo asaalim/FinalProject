@@ -168,60 +168,6 @@ finally {
 
 
 
-// Entry rule entryRuleType
-entryRuleType 
-:
-{ before(grammarAccess.getTypeRule()); }
-	 ruleType
-{ after(grammarAccess.getTypeRule()); } 
-	 EOF 
-;
-
-// Rule Type
-ruleType
-    @init {
-		int stackSize = keepStackSize();
-    }
-	:
-(
-{ before(grammarAccess.getTypeAccess().getAlternatives()); }
-(rule__Type__Alternatives)
-{ after(grammarAccess.getTypeAccess().getAlternatives()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-rule__Type__Alternatives
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getTypeAccess().getRenameClassKeyword_0()); }
-
-	'Rename class' 
-
-{ after(grammarAccess.getTypeAccess().getRenameClassKeyword_0()); }
-)
-
-    |(
-{ before(grammarAccess.getTypeAccess().getDeleteClassKeyword_1()); }
-
-	'Delete class' 
-
-{ after(grammarAccess.getTypeAccess().getDeleteClassKeyword_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
 
 
 
@@ -679,7 +625,6 @@ rule__Layer__Group__1
     }
 :
 	rule__Layer__Group__1__Impl
-	rule__Layer__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -700,36 +645,6 @@ rule__Layer__Group__1__Impl
 finally {
 	restoreStackSize(stackSize);
 }
-
-
-rule__Layer__Group__2
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Layer__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Layer__Group__2__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getLayerAccess().getTypeAssignment_2()); }
-(rule__Layer__TypeAssignment_2)
-{ after(grammarAccess.getLayerAccess().getTypeAssignment_2()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
 
 
 
@@ -865,21 +780,6 @@ rule__Layer__NameAssignment_1
 (
 { before(grammarAccess.getLayerAccess().getNameIDTerminalRuleCall_1_0()); }
 	RULE_ID{ after(grammarAccess.getLayerAccess().getNameIDTerminalRuleCall_1_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Layer__TypeAssignment_2
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getLayerAccess().getTypeTypeParserRuleCall_2_0()); }
-	ruleType{ after(grammarAccess.getLayerAccess().getTypeTypeParserRuleCall_2_0()); }
 )
 
 ;

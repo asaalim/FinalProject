@@ -23,7 +23,6 @@
     </genClasses>
     <genClasses ecoreClass="TransfoDsl.ecore#//Layer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Layer/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Layer/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

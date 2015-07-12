@@ -326,60 +326,8 @@ ruleLayer returns [EObject current=null]
 	    }
 
 )
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLayerAccess().getTypeTypeParserRuleCall_2_0()); 
-	    }
-		lv_type_2_0=ruleType		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLayerRule());
-	        }
-       		add(
-       			$current, 
-       			"type",
-        		lv_type_2_0, 
-        		"Type");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
 ))
 ;
-
-
-
-
-
-// Entry rule entryRuleType
-entryRuleType returns [String current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getTypeRule()); } 
-	 iv_ruleType=ruleType 
-	 { $current=$iv_ruleType.current.getText(); }  
-	 EOF 
-;
-
-// Rule Type
-ruleType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-	kw='Rename class' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTypeAccess().getRenameClassKeyword_0()); 
-    }
-
-    |
-	kw='Delete class' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getTypeAccess().getDeleteClassKeyword_1()); 
-    }
-)
-    ;
 
 
 

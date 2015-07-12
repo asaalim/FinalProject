@@ -144,37 +144,6 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cApplyKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		
-		//Layer:
-		//	"apply" name=ID type+=Type;
-		@Override public ParserRule getRule() { return rule; }
-
-		//"apply" name=ID type+=Type
-		public Group getGroup() { return cGroup; }
-
-		//"apply"
-		public Keyword getApplyKeyword_0() { return cApplyKeyword_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//type+=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
-
-		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
-	}
-
-	public class TypeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Type");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cRenameClassKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
-		private final Keyword cDeleteClassKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
 		
 		/// *Operation:
 		//	'Rename' | 'Remove' | 'Add'
@@ -203,18 +172,21 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//    (layers+=Layer);  
 		//    //source = sourcemodelref;
 		//       
-		//  "}";* / Type:
-		//	"Rename class" | "Delete class";
+		//  "}";* / Layer:
+		//	"apply" name=ID;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Rename class" | "Delete class"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//"apply" name=ID
+		public Group getGroup() { return cGroup; }
 
-		//"Rename class"
-		public Keyword getRenameClassKeyword_0() { return cRenameClassKeyword_0; }
+		//"apply"
+		public Keyword getApplyKeyword_0() { return cApplyKeyword_0; }
 
-		//"Delete class"
-		public Keyword getDeleteClassKeyword_1() { return cDeleteClassKeyword_1; }
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 	}
 	
 	
@@ -222,7 +194,6 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final TrgModelElements pTrgModel;
 	private final SrcModelElements pSrcModel;
 	private final LayerElements pLayer;
-	private final TypeElements pType;
 	
 	private final Grammar grammar;
 
@@ -237,7 +208,6 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pTrgModel = new TrgModelElements();
 		this.pSrcModel = new SrcModelElements();
 		this.pLayer = new LayerElements();
-		this.pType = new TypeElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -297,16 +267,6 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSrcModelAccess().getRule();
 	}
 
-	//Layer:
-	//	"apply" name=ID type+=Type;
-	public LayerElements getLayerAccess() {
-		return pLayer;
-	}
-	
-	public ParserRule getLayerRule() {
-		return getLayerAccess().getRule();
-	}
-
 	/// *Operation:
 	//	'Rename' | 'Remove' | 'Add'
 	//	
@@ -334,14 +294,14 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//    (layers+=Layer);  
 	//    //source = sourcemodelref;
 	//       
-	//  "}";* / Type:
-	//	"Rename class" | "Delete class";
-	public TypeElements getTypeAccess() {
-		return pType;
+	//  "}";* / Layer:
+	//	"apply" name=ID;
+	public LayerElements getLayerAccess() {
+		return pLayer;
 	}
 	
-	public ParserRule getTypeRule() {
-		return getTypeAccess().getRule();
+	public ParserRule getLayerRule() {
+		return getLayerAccess().getRule();
 	}
 
 	//terminal ID:

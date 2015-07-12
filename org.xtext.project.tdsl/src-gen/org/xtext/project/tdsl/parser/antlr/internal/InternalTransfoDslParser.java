@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'transformation'", "'{'", "'}'", "'Generate'", "'Import'", "'apply'", "'Rename class'", "'Delete class'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'transformation'", "'{'", "'}'", "'Generate'", "'Import'", "'apply'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
@@ -30,9 +30,7 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
     public static final int RULE_SL_COMMENT=8;
     public static final int T__15=15;
     public static final int T__16=16;
-    public static final int T__17=17;
     public static final int RULE_INT=6;
-    public static final int T__18=18;
     public static final int T__11=11;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__12=12;
@@ -610,23 +608,21 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLayer"
-    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:303:1: ruleLayer returns [EObject current=null] : (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleType ) ) ) ;
+    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:303:1: ruleLayer returns [EObject current=null] : (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleLayer() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
-        AntlrDatatypeRuleToken lv_type_2_0 = null;
-
 
          enterRule(); 
             
         try {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:306:28: ( (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleType ) ) ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:307:1: (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleType ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:306:28: ( (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:307:1: (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:307:1: (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleType ) ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:307:3: otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleType ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:307:1: (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:307:3: otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,16,FOLLOW_16_in_ruleLayer569); 
 
@@ -658,37 +654,6 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:329:2: ( (lv_type_2_0= ruleType ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:330:1: (lv_type_2_0= ruleType )
-            {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:330:1: (lv_type_2_0= ruleType )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:331:3: lv_type_2_0= ruleType
-            {
-             
-            	        newCompositeNode(grammarAccess.getLayerAccess().getTypeTypeParserRuleCall_2_0()); 
-            	    
-            pushFollow(FOLLOW_ruleType_in_ruleLayer612);
-            lv_type_2_0=ruleType();
-
-            state._fsp--;
-
-
-            	        if (current==null) {
-            	            current = createModelElementForParent(grammarAccess.getLayerRule());
-            	        }
-                   		add(
-                   			current, 
-                   			"type",
-                    		lv_type_2_0, 
-                    		"Type");
-            	        afterParserOrEnumRuleCall();
-            	    
-
-            }
-
-
-            }
-
 
             }
 
@@ -707,114 +672,6 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
         return current;
     }
     // $ANTLR end "ruleLayer"
-
-
-    // $ANTLR start "entryRuleType"
-    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:355:1: entryRuleType returns [String current=null] : iv_ruleType= ruleType EOF ;
-    public final String entryRuleType() throws RecognitionException {
-        String current = null;
-
-        AntlrDatatypeRuleToken iv_ruleType = null;
-
-
-        try {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:356:2: (iv_ruleType= ruleType EOF )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:357:2: iv_ruleType= ruleType EOF
-            {
-             newCompositeNode(grammarAccess.getTypeRule()); 
-            pushFollow(FOLLOW_ruleType_in_entryRuleType649);
-            iv_ruleType=ruleType();
-
-            state._fsp--;
-
-             current =iv_ruleType.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleType660); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleType"
-
-
-    // $ANTLR start "ruleType"
-    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:364:1: ruleType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'Rename class' | kw= 'Delete class' ) ;
-    public final AntlrDatatypeRuleToken ruleType() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
-
-        Token kw=null;
-
-         enterRule(); 
-            
-        try {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:367:28: ( (kw= 'Rename class' | kw= 'Delete class' ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:368:1: (kw= 'Rename class' | kw= 'Delete class' )
-            {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:368:1: (kw= 'Rename class' | kw= 'Delete class' )
-            int alt2=2;
-            int LA2_0 = input.LA(1);
-
-            if ( (LA2_0==17) ) {
-                alt2=1;
-            }
-            else if ( (LA2_0==18) ) {
-                alt2=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
-
-                throw nvae;
-            }
-            switch (alt2) {
-                case 1 :
-                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:369:2: kw= 'Rename class'
-                    {
-                    kw=(Token)match(input,17,FOLLOW_17_in_ruleType698); 
-
-                            current.merge(kw);
-                            newLeafNode(kw, grammarAccess.getTypeAccess().getRenameClassKeyword_0()); 
-                        
-
-                    }
-                    break;
-                case 2 :
-                    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:376:2: kw= 'Delete class'
-                    {
-                    kw=(Token)match(input,18,FOLLOW_18_in_ruleType717); 
-
-                            current.merge(kw);
-                            newLeafNode(kw, grammarAccess.getTypeAccess().getDeleteClassKeyword_1()); 
-                        
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleType"
 
     // Delegated rules
 
@@ -843,11 +700,6 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleLayer_in_entryRuleLayer522 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLayer532 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_16_in_ruleLayer569 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLayer586 = new BitSet(new long[]{0x0000000000060000L});
-    public static final BitSet FOLLOW_ruleType_in_ruleLayer612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_entryRuleType649 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleType660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleType698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleType717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLayer586 = new BitSet(new long[]{0x0000000000000002L});
 
 }
