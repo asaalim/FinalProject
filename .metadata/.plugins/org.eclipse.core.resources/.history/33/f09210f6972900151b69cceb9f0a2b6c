@@ -9,6 +9,6 @@ class TransformationRunner {
 		//3// Derive Layer
 		//4// Execute Layer
 		println("My simple run function.")
-		println(t.class.package.class.typeName)
+		println(t.class.package.toString)
 	}
 }

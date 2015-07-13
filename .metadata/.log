@@ -593,3 +593,8 @@ org.osgi.service.prefs.BackingStoreException: Exception loading preferences from
 	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
 	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 2 2 2015-07-12 01:04:17.334
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2015-07-12 01:04:17.334
+!MESSAGE The project description file (.project) for 'Metamodels' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
