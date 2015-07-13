@@ -10,7 +10,13 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.xtext.project.tdsl.transfoDsl.*;
+import org.xtext.project.tdsl.transfoDsl.Layer;
+import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
+import org.xtext.project.tdsl.transfoDsl.SrcModel;
+import org.xtext.project.tdsl.transfoDsl.TransfoDslFactory;
+import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
+import org.xtext.project.tdsl.transfoDsl.Transformation;
+import org.xtext.project.tdsl.transfoDsl.TrgModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,6 +73,8 @@ public class TransfoDslFactoryImpl extends EFactoryImpl implements TransfoDslFac
       case TransfoDslPackage.TRANSFORMATION: return createTransformation();
       case TransfoDslPackage.TRG_MODEL: return createTrgModel();
       case TransfoDslPackage.SRC_MODEL: return createSrcModel();
+      case TransfoDslPackage.SRC_METAMODEL: return createSrcMetamodel();
+      case TransfoDslPackage.PACKAGE: return createPackage();
       case TransfoDslPackage.LAYER: return createLayer();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -104,6 +112,28 @@ public class TransfoDslFactoryImpl extends EFactoryImpl implements TransfoDslFac
   {
     SrcModelImpl srcModel = new SrcModelImpl();
     return srcModel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SrcMetamodel createSrcMetamodel()
+  {
+    SrcMetamodelImpl srcMetamodel = new SrcMetamodelImpl();
+    return srcMetamodel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.xtext.project.tdsl.transfoDsl.Package createPackage()
+  {
+    PackageImpl package_ = new PackageImpl();
+    return package_;
   }
 
   /**

@@ -9,7 +9,12 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.xtext.project.tdsl.transfoDsl.*;
+import org.xtext.project.tdsl.transfoDsl.Layer;
+import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
+import org.xtext.project.tdsl.transfoDsl.SrcModel;
+import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
+import org.xtext.project.tdsl.transfoDsl.Transformation;
+import org.xtext.project.tdsl.transfoDsl.TrgModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,6 +95,16 @@ public class TransfoDslAdapterFactory extends AdapterFactoryImpl
         return createSrcModelAdapter();
       }
       @Override
+      public Adapter caseSrcMetamodel(SrcMetamodel object)
+      {
+        return createSrcMetamodelAdapter();
+      }
+      @Override
+      public Adapter casePackage(org.xtext.project.tdsl.transfoDsl.Package object)
+      {
+        return createPackageAdapter();
+      }
+      @Override
       public Adapter caseLayer(Layer object)
       {
         return createLayerAdapter();
@@ -157,6 +172,36 @@ public class TransfoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSrcModelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.project.tdsl.transfoDsl.SrcMetamodel <em>Src Metamodel</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.project.tdsl.transfoDsl.SrcMetamodel
+   * @generated
+   */
+  public Adapter createSrcMetamodelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.project.tdsl.transfoDsl.Package <em>Package</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.project.tdsl.transfoDsl.Package
+   * @generated
+   */
+  public Adapter createPackageAdapter()
   {
     return null;
   }

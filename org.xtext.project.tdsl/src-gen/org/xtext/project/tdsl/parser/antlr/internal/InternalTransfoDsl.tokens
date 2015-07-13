@@ -1,6 +1,7 @@
-'Generate'=14
-'Import'=15
-'apply'=16
+'IN'=15
+'OUT'=14
+'apply'=17
+'import'=16
 'transformation'=11
 '{'=12
 '}'=13
@@ -17,3 +18,4 @@ T__13=13
 T__14=14
 T__15=15
 T__16=16
+T__17=17

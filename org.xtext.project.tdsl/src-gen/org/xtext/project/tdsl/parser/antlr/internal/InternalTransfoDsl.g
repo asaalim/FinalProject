@@ -182,9 +182,9 @@ ruleTrgModel returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='Generate' 
+(	otherlv_0='OUT' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getTrgModelAccess().getGenerateKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getTrgModelAccess().getOUTKeyword_0());
     }
 (
 (
@@ -243,9 +243,9 @@ ruleSrcModel returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='Import' 
+(	otherlv_0='IN' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getSrcModelAccess().getImportKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getSrcModelAccess().getINKeyword_0());
     }
 (
 (
@@ -283,8 +283,29 @@ ruleSrcModel returns [EObject current=null]
 	    }
 
 )
-))
+)(	otherlv_3='import' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getSrcModelAccess().getImportKeyword_3_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSrcModelRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getSrcModelAccess().getSorcemetamodelSrcMetamodelCrossReference_3_1_0()); 
+	}
+
+)
+)))
 ;
+
+
+
+
 
 
 

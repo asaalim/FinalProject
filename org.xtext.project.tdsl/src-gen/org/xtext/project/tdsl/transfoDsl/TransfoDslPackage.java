@@ -177,13 +177,87 @@ public interface TransfoDslPackage extends EPackage
   int SRC_MODEL__IMPORT_URI = 1;
 
   /**
+   * The feature id for the '<em><b>Sorcemetamodel</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SRC_MODEL__SORCEMETAMODEL = 2;
+
+  /**
    * The number of structural features of the '<em>Src Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SRC_MODEL_FEATURE_COUNT = 2;
+  int SRC_MODEL_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.project.tdsl.transfoDsl.impl.SrcMetamodelImpl <em>Src Metamodel</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.project.tdsl.transfoDsl.impl.SrcMetamodelImpl
+   * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getSrcMetamodel()
+   * @generated
+   */
+  int SRC_METAMODEL = 3;
+
+  /**
+   * The feature id for the '<em><b>Package</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SRC_METAMODEL__PACKAGE = 0;
+
+  /**
+   * The number of structural features of the '<em>Src Metamodel</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SRC_METAMODEL_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.project.tdsl.transfoDsl.impl.PackageImpl <em>Package</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.project.tdsl.transfoDsl.impl.PackageImpl
+   * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getPackage()
+   * @generated
+   */
+  int PACKAGE = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PACKAGE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Import URI</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PACKAGE__IMPORT_URI = 1;
+
+  /**
+   * The number of structural features of the '<em>Package</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PACKAGE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.project.tdsl.transfoDsl.impl.LayerImpl <em>Layer</em>}' class.
@@ -193,7 +267,7 @@ public interface TransfoDslPackage extends EPackage
    * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getLayer()
    * @generated
    */
-  int LAYER = 3;
+  int LAYER = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -333,6 +407,70 @@ public interface TransfoDslPackage extends EPackage
   EAttribute getSrcModel_ImportURI();
 
   /**
+   * Returns the meta object for the reference '{@link org.xtext.project.tdsl.transfoDsl.SrcModel#getSorcemetamodel <em>Sorcemetamodel</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Sorcemetamodel</em>'.
+   * @see org.xtext.project.tdsl.transfoDsl.SrcModel#getSorcemetamodel()
+   * @see #getSrcModel()
+   * @generated
+   */
+  EReference getSrcModel_Sorcemetamodel();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.project.tdsl.transfoDsl.SrcMetamodel <em>Src Metamodel</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Src Metamodel</em>'.
+   * @see org.xtext.project.tdsl.transfoDsl.SrcMetamodel
+   * @generated
+   */
+  EClass getSrcMetamodel();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.project.tdsl.transfoDsl.SrcMetamodel#getPackage <em>Package</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Package</em>'.
+   * @see org.xtext.project.tdsl.transfoDsl.SrcMetamodel#getPackage()
+   * @see #getSrcMetamodel()
+   * @generated
+   */
+  EReference getSrcMetamodel_Package();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.project.tdsl.transfoDsl.Package <em>Package</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Package</em>'.
+   * @see org.xtext.project.tdsl.transfoDsl.Package
+   * @generated
+   */
+  EClass getPackage();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.project.tdsl.transfoDsl.Package#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.project.tdsl.transfoDsl.Package#getName()
+   * @see #getPackage()
+   * @generated
+   */
+  EAttribute getPackage_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.project.tdsl.transfoDsl.Package#getImportURI <em>Import URI</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Import URI</em>'.
+   * @see org.xtext.project.tdsl.transfoDsl.Package#getImportURI()
+   * @see #getPackage()
+   * @generated
+   */
+  EAttribute getPackage_ImportURI();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.project.tdsl.transfoDsl.Layer <em>Layer</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -469,6 +607,58 @@ public interface TransfoDslPackage extends EPackage
      * @generated
      */
     EAttribute SRC_MODEL__IMPORT_URI = eINSTANCE.getSrcModel_ImportURI();
+
+    /**
+     * The meta object literal for the '<em><b>Sorcemetamodel</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SRC_MODEL__SORCEMETAMODEL = eINSTANCE.getSrcModel_Sorcemetamodel();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.project.tdsl.transfoDsl.impl.SrcMetamodelImpl <em>Src Metamodel</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.project.tdsl.transfoDsl.impl.SrcMetamodelImpl
+     * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getSrcMetamodel()
+     * @generated
+     */
+    EClass SRC_METAMODEL = eINSTANCE.getSrcMetamodel();
+
+    /**
+     * The meta object literal for the '<em><b>Package</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SRC_METAMODEL__PACKAGE = eINSTANCE.getSrcMetamodel_Package();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.project.tdsl.transfoDsl.impl.PackageImpl <em>Package</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.project.tdsl.transfoDsl.impl.PackageImpl
+     * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getPackage()
+     * @generated
+     */
+    EClass PACKAGE = eINSTANCE.getPackage();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PACKAGE__NAME = eINSTANCE.getPackage_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Import URI</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PACKAGE__IMPORT_URI = eINSTANCE.getPackage_ImportURI();
 
     /**
      * The meta object literal for the '{@link org.xtext.project.tdsl.transfoDsl.impl.LayerImpl <em>Layer</em>}' class.

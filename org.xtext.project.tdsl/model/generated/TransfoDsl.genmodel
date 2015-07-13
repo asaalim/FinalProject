@@ -20,6 +20,14 @@
     <genClasses ecoreClass="TransfoDsl.ecore#//SrcModel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//SrcModel/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//SrcModel/importURI"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TransfoDsl.ecore#//SrcModel/sorcemetamodel"/>
+    </genClasses>
+    <genClasses ecoreClass="TransfoDsl.ecore#//SrcMetamodel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TransfoDsl.ecore#//SrcMetamodel/package"/>
+    </genClasses>
+    <genClasses ecoreClass="TransfoDsl.ecore#//Package">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Package/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Package/importURI"/>
     </genClasses>
     <genClasses ecoreClass="TransfoDsl.ecore#//Layer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Layer/name"/>

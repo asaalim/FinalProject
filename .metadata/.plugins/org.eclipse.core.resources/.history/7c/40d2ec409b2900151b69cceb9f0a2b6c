@@ -1,0 +1,64 @@
+grammar org.xtext.project.tdsl.TransfoDsl with org.eclipse.xtext.common.Terminals
+
+generate transfoDsl "http://www.xtext.org/project/tdsl/TransfoDsl"
+
+Transformation:
+	'transformation' name=ID '{'
+	(srcModel+=SrcModel)
+	(layer+=Layer)+
+	(targetModel+=TrgModel)
+	
+'}'
+;
+
+TrgModel:
+	'OUT' name=ID filepath=STRING
+;
+SrcModel:
+	'Import' name=ID importURI=STRING ('IN' sorcemetamodel=[SrcMetamodel])
+;
+SrcMetamodel:
+	'is a' package=[Package]
+;
+Package:
+	name=ID importURI=STRING
+;
+Layer:
+	'apply' name=ID 
+;
+
+
+/*Operation:
+	'Rename' | 'Remove' | 'Add'
+	
+;
+Rename:
+	 (entity=[Import]'.')
+	;
+Remove:
+	(entity=[Import])
+;
+Add:
+	(entity=[Import])
+;
+
+entity:
+	'class' | 'Association' | 'Attribute'
+;
+*/
+
+
+
+
+/*Type:
+  DataType | Entity;
+DataType:
+  "datatype" name=ID;
+  
+  Transformation:
+  "transformation" name=ID "{"
+    (layers+=Layer);  
+    //source = sourcemodelref;
+       
+  "}";*/
+

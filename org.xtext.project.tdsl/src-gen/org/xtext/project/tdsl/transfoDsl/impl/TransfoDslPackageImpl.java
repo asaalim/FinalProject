@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.project.tdsl.transfoDsl.Layer;
+import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
 import org.xtext.project.tdsl.transfoDsl.SrcModel;
 import org.xtext.project.tdsl.transfoDsl.TransfoDslFactory;
 import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
@@ -44,6 +45,20 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
    * @generated
    */
   private EClass srcModelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass srcMetamodelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass packageEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -230,6 +245,66 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getSrcModel_Sorcemetamodel()
+  {
+    return (EReference)srcModelEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSrcMetamodel()
+  {
+    return srcMetamodelEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSrcMetamodel_Package()
+  {
+    return (EReference)srcMetamodelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPackage()
+  {
+    return packageEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPackage_Name()
+  {
+    return (EAttribute)packageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPackage_ImportURI()
+  {
+    return (EAttribute)packageEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLayer()
   {
     return layerEClass;
@@ -288,6 +363,14 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
     srcModelEClass = createEClass(SRC_MODEL);
     createEAttribute(srcModelEClass, SRC_MODEL__NAME);
     createEAttribute(srcModelEClass, SRC_MODEL__IMPORT_URI);
+    createEReference(srcModelEClass, SRC_MODEL__SORCEMETAMODEL);
+
+    srcMetamodelEClass = createEClass(SRC_METAMODEL);
+    createEReference(srcMetamodelEClass, SRC_METAMODEL__PACKAGE);
+
+    packageEClass = createEClass(PACKAGE);
+    createEAttribute(packageEClass, PACKAGE__NAME);
+    createEAttribute(packageEClass, PACKAGE__IMPORT_URI);
 
     layerEClass = createEClass(LAYER);
     createEAttribute(layerEClass, LAYER__NAME);
@@ -337,6 +420,14 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
     initEClass(srcModelEClass, SrcModel.class, "SrcModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSrcModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, SrcModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSrcModel_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, SrcModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSrcModel_Sorcemetamodel(), this.getSrcMetamodel(), null, "sorcemetamodel", null, 0, 1, SrcModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(srcMetamodelEClass, SrcMetamodel.class, "SrcMetamodel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSrcMetamodel_Package(), this.getPackage(), null, "package", null, 0, 1, SrcMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(packageEClass, org.xtext.project.tdsl.transfoDsl.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPackage_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.xtext.project.tdsl.transfoDsl.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPackage_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, org.xtext.project.tdsl.transfoDsl.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(layerEClass, Layer.class, "Layer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLayer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Layer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

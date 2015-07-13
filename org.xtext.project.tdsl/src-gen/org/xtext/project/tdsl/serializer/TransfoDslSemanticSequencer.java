@@ -18,6 +18,7 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.project.tdsl.services.TransfoDslGrammarAccess;
 import org.xtext.project.tdsl.transfoDsl.Layer;
+import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
 import org.xtext.project.tdsl.transfoDsl.SrcModel;
 import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
 import org.xtext.project.tdsl.transfoDsl.Transformation;
@@ -34,6 +35,12 @@ public class TransfoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 		if(semanticObject.eClass().getEPackage() == TransfoDslPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case TransfoDslPackage.LAYER:
 				sequence_Layer(context, (Layer) semanticObject); 
+				return; 
+			case TransfoDslPackage.PACKAGE:
+				sequence_Package(context, (org.xtext.project.tdsl.transfoDsl.Package) semanticObject); 
+				return; 
+			case TransfoDslPackage.SRC_METAMODEL:
+				sequence_SrcMetamodel(context, (SrcMetamodel) semanticObject); 
 				return; 
 			case TransfoDslPackage.SRC_MODEL:
 				sequence_SrcModel(context, (SrcModel) semanticObject); 
@@ -68,17 +75,55 @@ public class TransfoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 * Constraint:
 	 *     (name=ID importURI=STRING)
 	 */
+	protected void sequence_Package(EObject context, org.xtext.project.tdsl.transfoDsl.Package semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.PACKAGE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.PACKAGE__NAME));
+			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.PACKAGE__IMPORT_URI) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.PACKAGE__IMPORT_URI));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getPackageAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getPackageAccess().getImportURISTRINGTerminalRuleCall_1_0(), semanticObject.getImportURI());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     package=[Package|ID]
+	 */
+	protected void sequence_SrcMetamodel(EObject context, SrcMetamodel semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.SRC_METAMODEL__PACKAGE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.SRC_METAMODEL__PACKAGE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getSrcMetamodelAccess().getPackagePackageIDTerminalRuleCall_1_0_1(), semanticObject.getPackage());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID importURI=STRING sorcemetamodel=[SrcMetamodel|ID])
+	 */
 	protected void sequence_SrcModel(EObject context, SrcModel semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.SRC_MODEL__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.SRC_MODEL__NAME));
 			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.SRC_MODEL__IMPORT_URI) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.SRC_MODEL__IMPORT_URI));
+			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.SRC_MODEL__SORCEMETAMODEL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.SRC_MODEL__SORCEMETAMODEL));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getSrcModelAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getSrcModelAccess().getImportURISTRINGTerminalRuleCall_2_0(), semanticObject.getImportURI());
+		feeder.accept(grammarAccess.getSrcModelAccess().getSorcemetamodelSrcMetamodelIDTerminalRuleCall_3_1_0_1(), semanticObject.getSorcemetamodel());
 		feeder.finish();
 	}
 	

@@ -7,7 +7,12 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.xtext.project.tdsl.transfoDsl.*;
+import org.xtext.project.tdsl.transfoDsl.Layer;
+import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
+import org.xtext.project.tdsl.transfoDsl.SrcModel;
+import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
+import org.xtext.project.tdsl.transfoDsl.Transformation;
+import org.xtext.project.tdsl.transfoDsl.TrgModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,6 +98,20 @@ public class TransfoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case TransfoDslPackage.SRC_METAMODEL:
+      {
+        SrcMetamodel srcMetamodel = (SrcMetamodel)theEObject;
+        T result = caseSrcMetamodel(srcMetamodel);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TransfoDslPackage.PACKAGE:
+      {
+        org.xtext.project.tdsl.transfoDsl.Package package_ = (org.xtext.project.tdsl.transfoDsl.Package)theEObject;
+        T result = casePackage(package_);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case TransfoDslPackage.LAYER:
       {
         Layer layer = (Layer)theEObject;
@@ -148,6 +167,38 @@ public class TransfoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSrcModel(SrcModel object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Src Metamodel</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Src Metamodel</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSrcMetamodel(SrcMetamodel object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Package</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Package</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePackage(org.xtext.project.tdsl.transfoDsl.Package object)
   {
     return null;
   }

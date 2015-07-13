@@ -77,21 +77,21 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 	public class TrgModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TrgModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGenerateKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cOUTKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cFilepathAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cFilepathSTRINGTerminalRuleCall_2_0 = (RuleCall)cFilepathAssignment_2.eContents().get(0);
 		
 		//TrgModel:
-		//	"Generate" name=ID filepath=STRING;
+		//	"OUT" name=ID filepath=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Generate" name=ID filepath=STRING
+		//"OUT" name=ID filepath=STRING
 		public Group getGroup() { return cGroup; }
 
-		//"Generate"
-		public Keyword getGenerateKeyword_0() { return cGenerateKeyword_0; }
+		//"OUT"
+		public Keyword getOUTKeyword_0() { return cOUTKeyword_0; }
 
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -109,21 +109,26 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 	public class SrcModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SrcModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cImportKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cINKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cImportURIAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cImportURISTRINGTerminalRuleCall_2_0 = (RuleCall)cImportURIAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cImportKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cSorcemetamodelAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cSorcemetamodelSrcMetamodelCrossReference_3_1_0 = (CrossReference)cSorcemetamodelAssignment_3_1.eContents().get(0);
+		private final RuleCall cSorcemetamodelSrcMetamodelIDTerminalRuleCall_3_1_0_1 = (RuleCall)cSorcemetamodelSrcMetamodelCrossReference_3_1_0.eContents().get(1);
 		
 		//SrcModel:
-		//	"Import" name=ID importURI=STRING;
+		//	"IN" name=ID importURI=STRING ("import" sorcemetamodel=[SrcMetamodel]);
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Import" name=ID importURI=STRING
+		//"IN" name=ID importURI=STRING ("import" sorcemetamodel=[SrcMetamodel])
 		public Group getGroup() { return cGroup; }
 
-		//"Import"
-		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
+		//"IN"
+		public Keyword getINKeyword_0() { return cINKeyword_0; }
 
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -136,6 +141,77 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getImportURISTRINGTerminalRuleCall_2_0() { return cImportURISTRINGTerminalRuleCall_2_0; }
+
+		//"import" sorcemetamodel=[SrcMetamodel]
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"import"
+		public Keyword getImportKeyword_3_0() { return cImportKeyword_3_0; }
+
+		//sorcemetamodel=[SrcMetamodel]
+		public Assignment getSorcemetamodelAssignment_3_1() { return cSorcemetamodelAssignment_3_1; }
+
+		//[SrcMetamodel]
+		public CrossReference getSorcemetamodelSrcMetamodelCrossReference_3_1_0() { return cSorcemetamodelSrcMetamodelCrossReference_3_1_0; }
+
+		//ID
+		public RuleCall getSorcemetamodelSrcMetamodelIDTerminalRuleCall_3_1_0_1() { return cSorcemetamodelSrcMetamodelIDTerminalRuleCall_3_1_0_1; }
+	}
+
+	public class SrcMetamodelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SrcMetamodel");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cIsAKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cPackageAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cPackagePackageCrossReference_1_0 = (CrossReference)cPackageAssignment_1.eContents().get(0);
+		private final RuleCall cPackagePackageIDTerminalRuleCall_1_0_1 = (RuleCall)cPackagePackageCrossReference_1_0.eContents().get(1);
+		
+		//SrcMetamodel:
+		//	"is a" package=[Package];
+		@Override public ParserRule getRule() { return rule; }
+
+		//"is a" package=[Package]
+		public Group getGroup() { return cGroup; }
+
+		//"is a"
+		public Keyword getIsAKeyword_0() { return cIsAKeyword_0; }
+
+		//package=[Package]
+		public Assignment getPackageAssignment_1() { return cPackageAssignment_1; }
+
+		//[Package]
+		public CrossReference getPackagePackageCrossReference_1_0() { return cPackagePackageCrossReference_1_0; }
+
+		//ID
+		public RuleCall getPackagePackageIDTerminalRuleCall_1_0_1() { return cPackagePackageIDTerminalRuleCall_1_0_1; }
+	}
+
+	public class PackageElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Package");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cImportURIAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cImportURISTRINGTerminalRuleCall_1_0 = (RuleCall)cImportURIAssignment_1.eContents().get(0);
+		
+		//Package:
+		//	name=ID importURI=STRING;
+		@Override public ParserRule getRule() { return rule; }
+
+		//name=ID importURI=STRING
+		public Group getGroup() { return cGroup; }
+
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
+		//importURI=STRING
+		public Assignment getImportURIAssignment_1() { return cImportURIAssignment_1; }
+
+		//STRING
+		public RuleCall getImportURISTRINGTerminalRuleCall_1_0() { return cImportURISTRINGTerminalRuleCall_1_0; }
 	}
 
 	public class LayerElements extends AbstractParserRuleElementFinder {
@@ -193,6 +269,8 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final TransformationElements pTransformation;
 	private final TrgModelElements pTrgModel;
 	private final SrcModelElements pSrcModel;
+	private final SrcMetamodelElements pSrcMetamodel;
+	private final PackageElements pPackage;
 	private final LayerElements pLayer;
 	
 	private final Grammar grammar;
@@ -207,6 +285,8 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pTransformation = new TransformationElements();
 		this.pTrgModel = new TrgModelElements();
 		this.pSrcModel = new SrcModelElements();
+		this.pSrcMetamodel = new SrcMetamodelElements();
+		this.pPackage = new PackageElements();
 		this.pLayer = new LayerElements();
 	}
 	
@@ -248,7 +328,7 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TrgModel:
-	//	"Generate" name=ID filepath=STRING;
+	//	"OUT" name=ID filepath=STRING;
 	public TrgModelElements getTrgModelAccess() {
 		return pTrgModel;
 	}
@@ -258,13 +338,33 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SrcModel:
-	//	"Import" name=ID importURI=STRING;
+	//	"IN" name=ID importURI=STRING ("import" sorcemetamodel=[SrcMetamodel]);
 	public SrcModelElements getSrcModelAccess() {
 		return pSrcModel;
 	}
 	
 	public ParserRule getSrcModelRule() {
 		return getSrcModelAccess().getRule();
+	}
+
+	//SrcMetamodel:
+	//	"is a" package=[Package];
+	public SrcMetamodelElements getSrcMetamodelAccess() {
+		return pSrcMetamodel;
+	}
+	
+	public ParserRule getSrcMetamodelRule() {
+		return getSrcMetamodelAccess().getRule();
+	}
+
+	//Package:
+	//	name=ID importURI=STRING;
+	public PackageElements getPackageAccess() {
+		return pPackage;
+	}
+	
+	public ParserRule getPackageRule() {
+		return getPackageAccess().getRule();
 	}
 
 	/// *Operation:

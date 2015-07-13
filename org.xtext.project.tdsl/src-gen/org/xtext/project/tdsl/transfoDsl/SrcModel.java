@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.SrcModel#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.SrcModel#getImportURI <em>Import URI</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.SrcModel#getSorcemetamodel <em>Sorcemetamodel</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,5 +75,31 @@ public interface SrcModel extends EObject
    * @generated
    */
   void setImportURI(String value);
+
+  /**
+   * Returns the value of the '<em><b>Sorcemetamodel</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Sorcemetamodel</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Sorcemetamodel</em>' reference.
+   * @see #setSorcemetamodel(SrcMetamodel)
+   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getSrcModel_Sorcemetamodel()
+   * @model
+   * @generated
+   */
+  SrcMetamodel getSorcemetamodel();
+
+  /**
+   * Sets the value of the '{@link org.xtext.project.tdsl.transfoDsl.SrcModel#getSorcemetamodel <em>Sorcemetamodel</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Sorcemetamodel</em>' reference.
+   * @see #getSorcemetamodel()
+   * @generated
+   */
+  void setSorcemetamodel(SrcMetamodel value);
 
 } // SrcModel
