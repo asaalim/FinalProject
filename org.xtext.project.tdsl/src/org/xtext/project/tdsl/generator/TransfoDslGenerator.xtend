@@ -22,5 +22,6 @@ class TransfoDslGenerator implements IGenerator {
 //				.map[name]
 //				.join(', '))
 	resource.allContents.filter(typeof(Transformation)).forEach[t |new TransformationRunner().run(t)]
+	resource.allContents.filter(typeof(Transformation)).forEach[new TransformationRunner()]
 	}
 }

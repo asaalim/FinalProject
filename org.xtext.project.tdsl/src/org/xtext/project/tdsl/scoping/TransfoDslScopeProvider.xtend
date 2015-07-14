@@ -3,6 +3,8 @@
  */
 package org.xtext.project.tdsl.scoping
 
+
+
 /**
  * This class contains custom scoping description.
  * 

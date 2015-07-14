@@ -1,0 +1,24 @@
+package org.xtext.project.tdsl.generator
+
+import org.xtext.project.tdsl.transfoDsl.Transformation
+
+class TransformationRunner {
+	
+	val IN_METAMODEL = "./metamodels/Composed.ecore";
+	val IN_METAMODEL_NAME = "Composed";
+	val IN_MODEL = "./models/composed.xmi";
+	
+	val inputMetamodelNsURI;
+	val outputMetamodelNsURI;
+	
+	
+	def run(Transformation t){
+		//1// Load Model
+		//2// Run Model
+		//3// Derive Layer
+		//4// Execute Layer
+		println("My simple run function.")
+		println(t.class.package.class.typeName)
+		Metamodel inMetamodel = EmftvmFactory.eINSTANCE.createMetamodel();
+	}
+}

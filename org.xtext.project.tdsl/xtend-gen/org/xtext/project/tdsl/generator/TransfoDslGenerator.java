@@ -31,5 +31,11 @@ public class TransfoDslGenerator implements IGenerator {
       _transformationRunner.run(t);
     };
     IteratorExtensions.<Transformation>forEach(_filter, _function);
+    TreeIterator<EObject> _allContents_1 = resource.getAllContents();
+    Iterator<Transformation> _filter_1 = Iterators.<Transformation>filter(_allContents_1, Transformation.class);
+    final Procedure1<Transformation> _function_1 = (Transformation it) -> {
+      new TransformationRunner();
+    };
+    IteratorExtensions.<Transformation>forEach(_filter_1, _function_1);
   }
 }

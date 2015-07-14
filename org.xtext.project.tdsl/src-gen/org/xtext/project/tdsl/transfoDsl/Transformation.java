@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getSrcModel <em>Src Model</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getSrcmodel <em>Srcmodel</em>}</li>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getLayer <em>Layer</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getTargetModel <em>Target Model</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getTargetmodel <em>Targetmodel</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,20 +54,20 @@ public interface Transformation extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Src Model</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Srcmodel</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.project.tdsl.transfoDsl.SrcModel}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Src Model</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Srcmodel</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Src Model</em>' containment reference list.
-   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getTransformation_SrcModel()
+   * @return the value of the '<em>Srcmodel</em>' containment reference list.
+   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getTransformation_Srcmodel()
    * @model containment="true"
    * @generated
    */
-  EList<SrcModel> getSrcModel();
+  EList<SrcModel> getSrcmodel();
 
   /**
    * Returns the value of the '<em><b>Layer</b></em>' containment reference list.
@@ -86,19 +86,19 @@ public interface Transformation extends EObject
   EList<Layer> getLayer();
 
   /**
-   * Returns the value of the '<em><b>Target Model</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Targetmodel</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.project.tdsl.transfoDsl.TrgModel}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Target Model</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Targetmodel</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Target Model</em>' containment reference list.
-   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getTransformation_TargetModel()
+   * @return the value of the '<em>Targetmodel</em>' containment reference list.
+   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getTransformation_Targetmodel()
    * @model containment="true"
    * @generated
    */
-  EList<TrgModel> getTargetModel();
+  EList<TrgModel> getTargetmodel();
 
 } // Transformation

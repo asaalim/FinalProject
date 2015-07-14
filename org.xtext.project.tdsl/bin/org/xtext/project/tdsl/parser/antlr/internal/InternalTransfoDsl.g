@@ -106,16 +106,16 @@ ruleTransformation returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTransformationAccess().getSrcModelSrcModelParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getTransformationAccess().getSrcmodelSrcModelParserRuleCall_3_0()); 
 	    }
-		lv_srcModel_3_0=ruleSrcModel		{
+		lv_srcmodel_3_0=ruleSrcModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTransformationRule());
 	        }
        		add(
        			$current, 
-       			"srcModel",
-        		lv_srcModel_3_0, 
+       			"srcmodel",
+        		lv_srcmodel_3_0, 
         		"SrcModel");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -142,16 +142,16 @@ ruleTransformation returns [EObject current=null]
 )+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTransformationAccess().getTargetModelTrgModelParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getTransformationAccess().getTargetmodelTrgModelParserRuleCall_5_0()); 
 	    }
-		lv_targetModel_5_0=ruleTrgModel		{
+		lv_targetmodel_5_0=ruleTrgModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTransformationRule());
 	        }
        		add(
        			$current, 
-       			"targetModel",
-        		lv_targetModel_5_0, 
+       			"targetmodel",
+        		lv_targetmodel_5_0, 
         		"TrgModel");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -283,9 +283,9 @@ ruleSrcModel returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_3='import' 
+)(	otherlv_3='conforms' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getSrcModelAccess().getImportKeyword_3_0());
+    	newLeafNode(otherlv_3, grammarAccess.getSrcModelAccess().getConformsKeyword_3_0());
     }
 (
 (
@@ -296,14 +296,12 @@ ruleSrcModel returns [EObject current=null]
         }
 	otherlv_4=RULE_ID
 	{
-		newLeafNode(otherlv_4, grammarAccess.getSrcModelAccess().getSorcemetamodelSrcMetamodelCrossReference_3_1_0()); 
+		newLeafNode(otherlv_4, grammarAccess.getSrcModelAccess().getSrcmetamodelEPackageCrossReference_3_1_0()); 
 	}
 
 )
 )))
 ;
-
-
 
 
 

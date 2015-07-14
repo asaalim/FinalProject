@@ -142,8 +142,6 @@ finally {
 
 
 
-
-
 // Entry rule entryRuleLayer
 entryRuleLayer 
 :
@@ -284,9 +282,9 @@ rule__Transformation__Group__3__Impl
     }
 :
 (
-{ before(grammarAccess.getTransformationAccess().getSrcModelAssignment_3()); }
-(rule__Transformation__SrcModelAssignment_3)
-{ after(grammarAccess.getTransformationAccess().getSrcModelAssignment_3()); }
+{ before(grammarAccess.getTransformationAccess().getSrcmodelAssignment_3()); }
+(rule__Transformation__SrcmodelAssignment_3)
+{ after(grammarAccess.getTransformationAccess().getSrcmodelAssignment_3()); }
 )
 
 ;
@@ -349,9 +347,9 @@ rule__Transformation__Group__5__Impl
     }
 :
 (
-{ before(grammarAccess.getTransformationAccess().getTargetModelAssignment_5()); }
-(rule__Transformation__TargetModelAssignment_5)
-{ after(grammarAccess.getTransformationAccess().getTargetModelAssignment_5()); }
+{ before(grammarAccess.getTransformationAccess().getTargetmodelAssignment_5()); }
+(rule__Transformation__TargetmodelAssignment_5)
+{ after(grammarAccess.getTransformationAccess().getTargetmodelAssignment_5()); }
 )
 
 ;
@@ -641,11 +639,11 @@ rule__SrcModel__Group_3__0__Impl
     }
 :
 (
-{ before(grammarAccess.getSrcModelAccess().getImportKeyword_3_0()); }
+{ before(grammarAccess.getSrcModelAccess().getConformsKeyword_3_0()); }
 
-	'import' 
+	'conforms' 
 
-{ after(grammarAccess.getSrcModelAccess().getImportKeyword_3_0()); }
+{ after(grammarAccess.getSrcModelAccess().getConformsKeyword_3_0()); }
 )
 
 ;
@@ -671,9 +669,9 @@ rule__SrcModel__Group_3__1__Impl
     }
 :
 (
-{ before(grammarAccess.getSrcModelAccess().getSorcemetamodelAssignment_3_1()); }
-(rule__SrcModel__SorcemetamodelAssignment_3_1)
-{ after(grammarAccess.getSrcModelAccess().getSorcemetamodelAssignment_3_1()); }
+{ before(grammarAccess.getSrcModelAccess().getSrcmetamodelAssignment_3_1()); }
+(rule__SrcModel__SrcmetamodelAssignment_3_1)
+{ after(grammarAccess.getSrcModelAccess().getSrcmetamodelAssignment_3_1()); }
 )
 
 ;
@@ -767,14 +765,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Transformation__SrcModelAssignment_3
+rule__Transformation__SrcmodelAssignment_3
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getTransformationAccess().getSrcModelSrcModelParserRuleCall_3_0()); }
-	ruleSrcModel{ after(grammarAccess.getTransformationAccess().getSrcModelSrcModelParserRuleCall_3_0()); }
+{ before(grammarAccess.getTransformationAccess().getSrcmodelSrcModelParserRuleCall_3_0()); }
+	ruleSrcModel{ after(grammarAccess.getTransformationAccess().getSrcmodelSrcModelParserRuleCall_3_0()); }
 )
 
 ;
@@ -797,14 +795,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Transformation__TargetModelAssignment_5
+rule__Transformation__TargetmodelAssignment_5
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getTransformationAccess().getTargetModelTrgModelParserRuleCall_5_0()); }
-	ruleTrgModel{ after(grammarAccess.getTransformationAccess().getTargetModelTrgModelParserRuleCall_5_0()); }
+{ before(grammarAccess.getTransformationAccess().getTargetmodelTrgModelParserRuleCall_5_0()); }
+	ruleTrgModel{ after(grammarAccess.getTransformationAccess().getTargetmodelTrgModelParserRuleCall_5_0()); }
 )
 
 ;
@@ -872,27 +870,24 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__SrcModel__SorcemetamodelAssignment_3_1
+rule__SrcModel__SrcmetamodelAssignment_3_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getSrcModelAccess().getSorcemetamodelSrcMetamodelCrossReference_3_1_0()); }
+{ before(grammarAccess.getSrcModelAccess().getSrcmetamodelEPackageCrossReference_3_1_0()); }
 (
-{ before(grammarAccess.getSrcModelAccess().getSorcemetamodelSrcMetamodelIDTerminalRuleCall_3_1_0_1()); }
-	RULE_ID{ after(grammarAccess.getSrcModelAccess().getSorcemetamodelSrcMetamodelIDTerminalRuleCall_3_1_0_1()); }
+{ before(grammarAccess.getSrcModelAccess().getSrcmetamodelEPackageIDTerminalRuleCall_3_1_0_1()); }
+	RULE_ID{ after(grammarAccess.getSrcModelAccess().getSrcmetamodelEPackageIDTerminalRuleCall_3_1_0_1()); }
 )
-{ after(grammarAccess.getSrcModelAccess().getSorcemetamodelSrcMetamodelCrossReference_3_1_0()); }
+{ after(grammarAccess.getSrcModelAccess().getSrcmetamodelEPackageCrossReference_3_1_0()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
-
-
-
 
 rule__Layer__NameAssignment_1
     @init {

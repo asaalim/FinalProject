@@ -50,24 +50,6 @@ public interface TransfoDslFactory extends EFactory
   SrcModel createSrcModel();
 
   /**
-   * Returns a new object of class '<em>Src Metamodel</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Src Metamodel</em>'.
-   * @generated
-   */
-  SrcMetamodel createSrcMetamodel();
-
-  /**
-   * Returns a new object of class '<em>Package</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Package</em>'.
-   * @generated
-   */
-  Package createPackage();
-
-  /**
    * Returns a new object of class '<em>Layer</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

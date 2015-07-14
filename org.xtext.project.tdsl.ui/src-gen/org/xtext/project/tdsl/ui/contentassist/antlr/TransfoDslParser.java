@@ -41,21 +41,18 @@ public class TransfoDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTrgModelAccess().getGroup(), "rule__TrgModel__Group__0");
 					put(grammarAccess.getSrcModelAccess().getGroup(), "rule__SrcModel__Group__0");
 					put(grammarAccess.getSrcModelAccess().getGroup_3(), "rule__SrcModel__Group_3__0");
-					put(grammarAccess.getSrcMetamodelAccess().getGroup(), "rule__SrcMetamodel__Group__0");
-					put(grammarAccess.getPackageAccess().getGroup(), "rule__Package__Group__0");
+					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
+					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getLayerAccess().getGroup(), "rule__Layer__Group__0");
 					put(grammarAccess.getTransformationAccess().getNameAssignment_1(), "rule__Transformation__NameAssignment_1");
-					put(grammarAccess.getTransformationAccess().getSrcModelAssignment_3(), "rule__Transformation__SrcModelAssignment_3");
+					put(grammarAccess.getTransformationAccess().getSrcmodelAssignment_3(), "rule__Transformation__SrcmodelAssignment_3");
 					put(grammarAccess.getTransformationAccess().getLayerAssignment_4(), "rule__Transformation__LayerAssignment_4");
-					put(grammarAccess.getTransformationAccess().getTargetModelAssignment_5(), "rule__Transformation__TargetModelAssignment_5");
+					put(grammarAccess.getTransformationAccess().getTargetmodelAssignment_5(), "rule__Transformation__TargetmodelAssignment_5");
 					put(grammarAccess.getTrgModelAccess().getNameAssignment_1(), "rule__TrgModel__NameAssignment_1");
 					put(grammarAccess.getTrgModelAccess().getFilepathAssignment_2(), "rule__TrgModel__FilepathAssignment_2");
 					put(grammarAccess.getSrcModelAccess().getNameAssignment_1(), "rule__SrcModel__NameAssignment_1");
 					put(grammarAccess.getSrcModelAccess().getImportURIAssignment_2(), "rule__SrcModel__ImportURIAssignment_2");
-					put(grammarAccess.getSrcModelAccess().getSorcemetamodelAssignment_3_1(), "rule__SrcModel__SorcemetamodelAssignment_3_1");
-					put(grammarAccess.getSrcMetamodelAccess().getPackageAssignment_1(), "rule__SrcMetamodel__PackageAssignment_1");
-					put(grammarAccess.getPackageAccess().getNameAssignment_0(), "rule__Package__NameAssignment_0");
-					put(grammarAccess.getPackageAccess().getImportURIAssignment_1(), "rule__Package__ImportURIAssignment_1");
+					put(grammarAccess.getSrcModelAccess().getSrcmetamodelAssignment_3_1(), "rule__SrcModel__SrcmetamodelAssignment_3_1");
 					put(grammarAccess.getLayerAccess().getNameAssignment_1(), "rule__Layer__NameAssignment_1");
 				}
 			};

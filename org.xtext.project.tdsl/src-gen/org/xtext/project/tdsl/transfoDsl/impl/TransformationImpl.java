@@ -32,9 +32,9 @@ import org.xtext.project.tdsl.transfoDsl.TrgModel;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getSrcModel <em>Src Model</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getSrcmodel <em>Srcmodel</em>}</li>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getLayer <em>Layer</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getTargetModel <em>Target Model</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getTargetmodel <em>Targetmodel</em>}</li>
  * </ul>
  * </p>
  *
@@ -63,14 +63,14 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSrcModel() <em>Src Model</em>}' containment reference list.
+   * The cached value of the '{@link #getSrcmodel() <em>Srcmodel</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSrcModel()
+   * @see #getSrcmodel()
    * @generated
    * @ordered
    */
-  protected EList<SrcModel> srcModel;
+  protected EList<SrcModel> srcmodel;
 
   /**
    * The cached value of the '{@link #getLayer() <em>Layer</em>}' containment reference list.
@@ -83,14 +83,14 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
   protected EList<Layer> layer;
 
   /**
-   * The cached value of the '{@link #getTargetModel() <em>Target Model</em>}' containment reference list.
+   * The cached value of the '{@link #getTargetmodel() <em>Targetmodel</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTargetModel()
+   * @see #getTargetmodel()
    * @generated
    * @ordered
    */
-  protected EList<TrgModel> targetModel;
+  protected EList<TrgModel> targetmodel;
 
   /**
    * <!-- begin-user-doc -->
@@ -141,13 +141,13 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SrcModel> getSrcModel()
+  public EList<SrcModel> getSrcmodel()
   {
-    if (srcModel == null)
+    if (srcmodel == null)
     {
-      srcModel = new EObjectContainmentEList<SrcModel>(SrcModel.class, this, TransfoDslPackage.TRANSFORMATION__SRC_MODEL);
+      srcmodel = new EObjectContainmentEList<SrcModel>(SrcModel.class, this, TransfoDslPackage.TRANSFORMATION__SRCMODEL);
     }
-    return srcModel;
+    return srcmodel;
   }
 
   /**
@@ -169,13 +169,13 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<TrgModel> getTargetModel()
+  public EList<TrgModel> getTargetmodel()
   {
-    if (targetModel == null)
+    if (targetmodel == null)
     {
-      targetModel = new EObjectContainmentEList<TrgModel>(TrgModel.class, this, TransfoDslPackage.TRANSFORMATION__TARGET_MODEL);
+      targetmodel = new EObjectContainmentEList<TrgModel>(TrgModel.class, this, TransfoDslPackage.TRANSFORMATION__TARGETMODEL);
     }
-    return targetModel;
+    return targetmodel;
   }
 
   /**
@@ -188,12 +188,12 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case TransfoDslPackage.TRANSFORMATION__SRC_MODEL:
-        return ((InternalEList<?>)getSrcModel()).basicRemove(otherEnd, msgs);
+      case TransfoDslPackage.TRANSFORMATION__SRCMODEL:
+        return ((InternalEList<?>)getSrcmodel()).basicRemove(otherEnd, msgs);
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         return ((InternalEList<?>)getLayer()).basicRemove(otherEnd, msgs);
-      case TransfoDslPackage.TRANSFORMATION__TARGET_MODEL:
-        return ((InternalEList<?>)getTargetModel()).basicRemove(otherEnd, msgs);
+      case TransfoDslPackage.TRANSFORMATION__TARGETMODEL:
+        return ((InternalEList<?>)getTargetmodel()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -210,12 +210,12 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
     {
       case TransfoDslPackage.TRANSFORMATION__NAME:
         return getName();
-      case TransfoDslPackage.TRANSFORMATION__SRC_MODEL:
-        return getSrcModel();
+      case TransfoDslPackage.TRANSFORMATION__SRCMODEL:
+        return getSrcmodel();
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         return getLayer();
-      case TransfoDslPackage.TRANSFORMATION__TARGET_MODEL:
-        return getTargetModel();
+      case TransfoDslPackage.TRANSFORMATION__TARGETMODEL:
+        return getTargetmodel();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -234,17 +234,17 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
       case TransfoDslPackage.TRANSFORMATION__NAME:
         setName((String)newValue);
         return;
-      case TransfoDslPackage.TRANSFORMATION__SRC_MODEL:
-        getSrcModel().clear();
-        getSrcModel().addAll((Collection<? extends SrcModel>)newValue);
+      case TransfoDslPackage.TRANSFORMATION__SRCMODEL:
+        getSrcmodel().clear();
+        getSrcmodel().addAll((Collection<? extends SrcModel>)newValue);
         return;
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         getLayer().clear();
         getLayer().addAll((Collection<? extends Layer>)newValue);
         return;
-      case TransfoDslPackage.TRANSFORMATION__TARGET_MODEL:
-        getTargetModel().clear();
-        getTargetModel().addAll((Collection<? extends TrgModel>)newValue);
+      case TransfoDslPackage.TRANSFORMATION__TARGETMODEL:
+        getTargetmodel().clear();
+        getTargetmodel().addAll((Collection<? extends TrgModel>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -263,14 +263,14 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
       case TransfoDslPackage.TRANSFORMATION__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TransfoDslPackage.TRANSFORMATION__SRC_MODEL:
-        getSrcModel().clear();
+      case TransfoDslPackage.TRANSFORMATION__SRCMODEL:
+        getSrcmodel().clear();
         return;
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         getLayer().clear();
         return;
-      case TransfoDslPackage.TRANSFORMATION__TARGET_MODEL:
-        getTargetModel().clear();
+      case TransfoDslPackage.TRANSFORMATION__TARGETMODEL:
+        getTargetmodel().clear();
         return;
     }
     super.eUnset(featureID);
@@ -288,12 +288,12 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
     {
       case TransfoDslPackage.TRANSFORMATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TransfoDslPackage.TRANSFORMATION__SRC_MODEL:
-        return srcModel != null && !srcModel.isEmpty();
+      case TransfoDslPackage.TRANSFORMATION__SRCMODEL:
+        return srcmodel != null && !srcmodel.isEmpty();
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         return layer != null && !layer.isEmpty();
-      case TransfoDslPackage.TRANSFORMATION__TARGET_MODEL:
-        return targetModel != null && !targetModel.isEmpty();
+      case TransfoDslPackage.TRANSFORMATION__TARGETMODEL:
+        return targetmodel != null && !targetmodel.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -5,12 +5,12 @@ package org.xtext.project.tdsl.transfoDsl.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
 import org.xtext.project.tdsl.transfoDsl.SrcModel;
 import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
 
@@ -23,7 +23,7 @@ import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
  * <ul>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.SrcModelImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.SrcModelImpl#getImportURI <em>Import URI</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.SrcModelImpl#getSorcemetamodel <em>Sorcemetamodel</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.SrcModelImpl#getSrcmetamodel <em>Srcmetamodel</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,14 +72,14 @@ public class SrcModelImpl extends MinimalEObjectImpl.Container implements SrcMod
   protected String importURI = IMPORT_URI_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSorcemetamodel() <em>Sorcemetamodel</em>}' reference.
+   * The cached value of the '{@link #getSrcmetamodel() <em>Srcmetamodel</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSorcemetamodel()
+   * @see #getSrcmetamodel()
    * @generated
    * @ordered
    */
-  protected SrcMetamodel sorcemetamodel;
+  protected EPackage srcmetamodel;
 
   /**
    * <!-- begin-user-doc -->
@@ -153,19 +153,19 @@ public class SrcModelImpl extends MinimalEObjectImpl.Container implements SrcMod
    * <!-- end-user-doc -->
    * @generated
    */
-  public SrcMetamodel getSorcemetamodel()
+  public EPackage getSrcmetamodel()
   {
-    if (sorcemetamodel != null && sorcemetamodel.eIsProxy())
+    if (srcmetamodel != null && srcmetamodel.eIsProxy())
     {
-      InternalEObject oldSorcemetamodel = (InternalEObject)sorcemetamodel;
-      sorcemetamodel = (SrcMetamodel)eResolveProxy(oldSorcemetamodel);
-      if (sorcemetamodel != oldSorcemetamodel)
+      InternalEObject oldSrcmetamodel = (InternalEObject)srcmetamodel;
+      srcmetamodel = (EPackage)eResolveProxy(oldSrcmetamodel);
+      if (srcmetamodel != oldSrcmetamodel)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TransfoDslPackage.SRC_MODEL__SORCEMETAMODEL, oldSorcemetamodel, sorcemetamodel));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TransfoDslPackage.SRC_MODEL__SRCMETAMODEL, oldSrcmetamodel, srcmetamodel));
       }
     }
-    return sorcemetamodel;
+    return srcmetamodel;
   }
 
   /**
@@ -173,9 +173,9 @@ public class SrcModelImpl extends MinimalEObjectImpl.Container implements SrcMod
    * <!-- end-user-doc -->
    * @generated
    */
-  public SrcMetamodel basicGetSorcemetamodel()
+  public EPackage basicGetSrcmetamodel()
   {
-    return sorcemetamodel;
+    return srcmetamodel;
   }
 
   /**
@@ -183,12 +183,12 @@ public class SrcModelImpl extends MinimalEObjectImpl.Container implements SrcMod
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSorcemetamodel(SrcMetamodel newSorcemetamodel)
+  public void setSrcmetamodel(EPackage newSrcmetamodel)
   {
-    SrcMetamodel oldSorcemetamodel = sorcemetamodel;
-    sorcemetamodel = newSorcemetamodel;
+    EPackage oldSrcmetamodel = srcmetamodel;
+    srcmetamodel = newSrcmetamodel;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.SRC_MODEL__SORCEMETAMODEL, oldSorcemetamodel, sorcemetamodel));
+      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.SRC_MODEL__SRCMETAMODEL, oldSrcmetamodel, srcmetamodel));
   }
 
   /**
@@ -205,9 +205,9 @@ public class SrcModelImpl extends MinimalEObjectImpl.Container implements SrcMod
         return getName();
       case TransfoDslPackage.SRC_MODEL__IMPORT_URI:
         return getImportURI();
-      case TransfoDslPackage.SRC_MODEL__SORCEMETAMODEL:
-        if (resolve) return getSorcemetamodel();
-        return basicGetSorcemetamodel();
+      case TransfoDslPackage.SRC_MODEL__SRCMETAMODEL:
+        if (resolve) return getSrcmetamodel();
+        return basicGetSrcmetamodel();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -228,8 +228,8 @@ public class SrcModelImpl extends MinimalEObjectImpl.Container implements SrcMod
       case TransfoDslPackage.SRC_MODEL__IMPORT_URI:
         setImportURI((String)newValue);
         return;
-      case TransfoDslPackage.SRC_MODEL__SORCEMETAMODEL:
-        setSorcemetamodel((SrcMetamodel)newValue);
+      case TransfoDslPackage.SRC_MODEL__SRCMETAMODEL:
+        setSrcmetamodel((EPackage)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -251,8 +251,8 @@ public class SrcModelImpl extends MinimalEObjectImpl.Container implements SrcMod
       case TransfoDslPackage.SRC_MODEL__IMPORT_URI:
         setImportURI(IMPORT_URI_EDEFAULT);
         return;
-      case TransfoDslPackage.SRC_MODEL__SORCEMETAMODEL:
-        setSorcemetamodel((SrcMetamodel)null);
+      case TransfoDslPackage.SRC_MODEL__SRCMETAMODEL:
+        setSrcmetamodel((EPackage)null);
         return;
     }
     super.eUnset(featureID);
@@ -272,8 +272,8 @@ public class SrcModelImpl extends MinimalEObjectImpl.Container implements SrcMod
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TransfoDslPackage.SRC_MODEL__IMPORT_URI:
         return IMPORT_URI_EDEFAULT == null ? importURI != null : !IMPORT_URI_EDEFAULT.equals(importURI);
-      case TransfoDslPackage.SRC_MODEL__SORCEMETAMODEL:
-        return sorcemetamodel != null;
+      case TransfoDslPackage.SRC_MODEL__SRCMETAMODEL:
+        return srcmetamodel != null;
     }
     return super.eIsSet(featureID);
   }

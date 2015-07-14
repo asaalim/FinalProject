@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'transformation'", "'{'", "'}'", "'OUT'", "'IN'", "'import'", "'apply'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'transformation'", "'{'", "'}'", "'OUT'", "'IN'", "'conforms'", "'apply'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
@@ -114,7 +114,7 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTransformation"
-    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:76:1: ruleTransformation returns [EObject current=null] : (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcModel_3_0= ruleSrcModel ) ) ( (lv_layer_4_0= ruleLayer ) )+ ( (lv_targetModel_5_0= ruleTrgModel ) ) otherlv_6= '}' ) ;
+    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:76:1: ruleTransformation returns [EObject current=null] : (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmodel_3_0= ruleSrcModel ) ) ( (lv_layer_4_0= ruleLayer ) )+ ( (lv_targetmodel_5_0= ruleTrgModel ) ) otherlv_6= '}' ) ;
     public final EObject ruleTransformation() throws RecognitionException {
         EObject current = null;
 
@@ -122,21 +122,21 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
         Token lv_name_1_0=null;
         Token otherlv_2=null;
         Token otherlv_6=null;
-        EObject lv_srcModel_3_0 = null;
+        EObject lv_srcmodel_3_0 = null;
 
         EObject lv_layer_4_0 = null;
 
-        EObject lv_targetModel_5_0 = null;
+        EObject lv_targetmodel_5_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:79:28: ( (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcModel_3_0= ruleSrcModel ) ) ( (lv_layer_4_0= ruleLayer ) )+ ( (lv_targetModel_5_0= ruleTrgModel ) ) otherlv_6= '}' ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:1: (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcModel_3_0= ruleSrcModel ) ) ( (lv_layer_4_0= ruleLayer ) )+ ( (lv_targetModel_5_0= ruleTrgModel ) ) otherlv_6= '}' )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:79:28: ( (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmodel_3_0= ruleSrcModel ) ) ( (lv_layer_4_0= ruleLayer ) )+ ( (lv_targetmodel_5_0= ruleTrgModel ) ) otherlv_6= '}' ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:1: (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmodel_3_0= ruleSrcModel ) ) ( (lv_layer_4_0= ruleLayer ) )+ ( (lv_targetmodel_5_0= ruleTrgModel ) ) otherlv_6= '}' )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:1: (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcModel_3_0= ruleSrcModel ) ) ( (lv_layer_4_0= ruleLayer ) )+ ( (lv_targetModel_5_0= ruleTrgModel ) ) otherlv_6= '}' )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:3: otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcModel_3_0= ruleSrcModel ) ) ( (lv_layer_4_0= ruleLayer ) )+ ( (lv_targetModel_5_0= ruleTrgModel ) ) otherlv_6= '}'
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:1: (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmodel_3_0= ruleSrcModel ) ) ( (lv_layer_4_0= ruleLayer ) )+ ( (lv_targetmodel_5_0= ruleTrgModel ) ) otherlv_6= '}' )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:3: otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmodel_3_0= ruleSrcModel ) ) ( (lv_layer_4_0= ruleLayer ) )+ ( (lv_targetmodel_5_0= ruleTrgModel ) ) otherlv_6= '}'
             {
             otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleTransformation122); 
 
@@ -172,17 +172,17 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_2, grammarAccess.getTransformationAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:106:1: ( (lv_srcModel_3_0= ruleSrcModel ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:107:1: (lv_srcModel_3_0= ruleSrcModel )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:106:1: ( (lv_srcmodel_3_0= ruleSrcModel ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:107:1: (lv_srcmodel_3_0= ruleSrcModel )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:107:1: (lv_srcModel_3_0= ruleSrcModel )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:108:3: lv_srcModel_3_0= ruleSrcModel
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:107:1: (lv_srcmodel_3_0= ruleSrcModel )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:108:3: lv_srcmodel_3_0= ruleSrcModel
             {
              
-            	        newCompositeNode(grammarAccess.getTransformationAccess().getSrcModelSrcModelParserRuleCall_3_0()); 
+            	        newCompositeNode(grammarAccess.getTransformationAccess().getSrcmodelSrcModelParserRuleCall_3_0()); 
             	    
             pushFollow(FOLLOW_ruleSrcModel_in_ruleTransformation177);
-            lv_srcModel_3_0=ruleSrcModel();
+            lv_srcmodel_3_0=ruleSrcModel();
 
             state._fsp--;
 
@@ -192,8 +192,8 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
             	        }
                    		add(
                    			current, 
-                   			"srcModel",
-                    		lv_srcModel_3_0, 
+                   			"srcmodel",
+                    		lv_srcmodel_3_0, 
                     		"SrcModel");
             	        afterParserOrEnumRuleCall();
             	    
@@ -257,17 +257,17 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
                 cnt1++;
             } while (true);
 
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:142:3: ( (lv_targetModel_5_0= ruleTrgModel ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:143:1: (lv_targetModel_5_0= ruleTrgModel )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:142:3: ( (lv_targetmodel_5_0= ruleTrgModel ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:143:1: (lv_targetmodel_5_0= ruleTrgModel )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:143:1: (lv_targetModel_5_0= ruleTrgModel )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:144:3: lv_targetModel_5_0= ruleTrgModel
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:143:1: (lv_targetmodel_5_0= ruleTrgModel )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:144:3: lv_targetmodel_5_0= ruleTrgModel
             {
              
-            	        newCompositeNode(grammarAccess.getTransformationAccess().getTargetModelTrgModelParserRuleCall_5_0()); 
+            	        newCompositeNode(grammarAccess.getTransformationAccess().getTargetmodelTrgModelParserRuleCall_5_0()); 
             	    
             pushFollow(FOLLOW_ruleTrgModel_in_ruleTransformation220);
-            lv_targetModel_5_0=ruleTrgModel();
+            lv_targetmodel_5_0=ruleTrgModel();
 
             state._fsp--;
 
@@ -277,8 +277,8 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
             	        }
                    		add(
                    			current, 
-                   			"targetModel",
-                    		lv_targetModel_5_0, 
+                   			"targetmodel",
+                    		lv_targetmodel_5_0, 
                     		"TrgModel");
             	        afterParserOrEnumRuleCall();
             	    
@@ -479,7 +479,7 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSrcModel"
-    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:242:1: ruleSrcModel returns [EObject current=null] : (otherlv_0= 'IN' ( (lv_name_1_0= RULE_ID ) ) ( (lv_importURI_2_0= RULE_STRING ) ) (otherlv_3= 'import' ( (otherlv_4= RULE_ID ) ) ) ) ;
+    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:242:1: ruleSrcModel returns [EObject current=null] : (otherlv_0= 'IN' ( (lv_name_1_0= RULE_ID ) ) ( (lv_importURI_2_0= RULE_STRING ) ) (otherlv_3= 'conforms' ( (otherlv_4= RULE_ID ) ) ) ) ;
     public final EObject ruleSrcModel() throws RecognitionException {
         EObject current = null;
 
@@ -492,11 +492,11 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:245:28: ( (otherlv_0= 'IN' ( (lv_name_1_0= RULE_ID ) ) ( (lv_importURI_2_0= RULE_STRING ) ) (otherlv_3= 'import' ( (otherlv_4= RULE_ID ) ) ) ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:246:1: (otherlv_0= 'IN' ( (lv_name_1_0= RULE_ID ) ) ( (lv_importURI_2_0= RULE_STRING ) ) (otherlv_3= 'import' ( (otherlv_4= RULE_ID ) ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:245:28: ( (otherlv_0= 'IN' ( (lv_name_1_0= RULE_ID ) ) ( (lv_importURI_2_0= RULE_STRING ) ) (otherlv_3= 'conforms' ( (otherlv_4= RULE_ID ) ) ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:246:1: (otherlv_0= 'IN' ( (lv_name_1_0= RULE_ID ) ) ( (lv_importURI_2_0= RULE_STRING ) ) (otherlv_3= 'conforms' ( (otherlv_4= RULE_ID ) ) ) )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:246:1: (otherlv_0= 'IN' ( (lv_name_1_0= RULE_ID ) ) ( (lv_importURI_2_0= RULE_STRING ) ) (otherlv_3= 'import' ( (otherlv_4= RULE_ID ) ) ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:246:3: otherlv_0= 'IN' ( (lv_name_1_0= RULE_ID ) ) ( (lv_importURI_2_0= RULE_STRING ) ) (otherlv_3= 'import' ( (otherlv_4= RULE_ID ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:246:1: (otherlv_0= 'IN' ( (lv_name_1_0= RULE_ID ) ) ( (lv_importURI_2_0= RULE_STRING ) ) (otherlv_3= 'conforms' ( (otherlv_4= RULE_ID ) ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:246:3: otherlv_0= 'IN' ( (lv_name_1_0= RULE_ID ) ) ( (lv_importURI_2_0= RULE_STRING ) ) (otherlv_3= 'conforms' ( (otherlv_4= RULE_ID ) ) )
             {
             otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleSrcModel442); 
 
@@ -554,12 +554,12 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:286:2: (otherlv_3= 'import' ( (otherlv_4= RULE_ID ) ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:286:4: otherlv_3= 'import' ( (otherlv_4= RULE_ID ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:286:2: (otherlv_3= 'conforms' ( (otherlv_4= RULE_ID ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:286:4: otherlv_3= 'conforms' ( (otherlv_4= RULE_ID ) )
             {
             otherlv_3=(Token)match(input,16,FOLLOW_16_in_ruleSrcModel499); 
 
-                	newLeafNode(otherlv_3, grammarAccess.getSrcModelAccess().getImportKeyword_3_0());
+                	newLeafNode(otherlv_3, grammarAccess.getSrcModelAccess().getConformsKeyword_3_0());
                 
             // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:290:1: ( (otherlv_4= RULE_ID ) )
             // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:291:1: (otherlv_4= RULE_ID )
@@ -574,7 +574,7 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
                     
             otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSrcModel519); 
 
-            		newLeafNode(otherlv_4, grammarAccess.getSrcModelAccess().getSorcemetamodelSrcMetamodelCrossReference_3_1_0()); 
+            		newLeafNode(otherlv_4, grammarAccess.getSrcModelAccess().getSrcmetamodelEPackageCrossReference_3_1_0()); 
             	
 
             }
@@ -606,7 +606,7 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLayer"
-    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:315:1: entryRuleLayer returns [EObject current=null] : iv_ruleLayer= ruleLayer EOF ;
+    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:313:1: entryRuleLayer returns [EObject current=null] : iv_ruleLayer= ruleLayer EOF ;
     public final EObject entryRuleLayer() throws RecognitionException {
         EObject current = null;
 
@@ -614,17 +614,17 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:316:2: (iv_ruleLayer= ruleLayer EOF )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:317:2: iv_ruleLayer= ruleLayer EOF
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:314:2: (iv_ruleLayer= ruleLayer EOF )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:315:2: iv_ruleLayer= ruleLayer EOF
             {
              newCompositeNode(grammarAccess.getLayerRule()); 
-            pushFollow(FOLLOW_ruleLayer_in_entryRuleLayer560);
+            pushFollow(FOLLOW_ruleLayer_in_entryRuleLayer558);
             iv_ruleLayer=ruleLayer();
 
             state._fsp--;
 
              current =iv_ruleLayer; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLayer570); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLayer568); 
 
             }
 
@@ -642,7 +642,7 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLayer"
-    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:324:1: ruleLayer returns [EObject current=null] : (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:322:1: ruleLayer returns [EObject current=null] : (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleLayer() throws RecognitionException {
         EObject current = null;
 
@@ -652,23 +652,23 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:327:28: ( (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:328:1: (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:325:28: ( (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:326:1: (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:328:1: (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:328:3: otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:326:1: (otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:326:3: otherlv_0= 'apply' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleLayer607); 
+            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleLayer605); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLayerAccess().getApplyKeyword_0());
                 
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:332:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:333:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:330:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:331:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:333:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:334:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:331:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:332:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLayer624); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLayer622); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getLayerAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -733,9 +733,9 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_STRING_in_ruleSrcModel481 = new BitSet(new long[]{0x0000000000010000L});
     public static final BitSet FOLLOW_16_in_ruleSrcModel499 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleSrcModel519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLayer_in_entryRuleLayer560 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLayer570 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleLayer607 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLayer624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLayer_in_entryRuleLayer558 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLayer568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleLayer605 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLayer622 = new BitSet(new long[]{0x0000000000000002L});
 
 }

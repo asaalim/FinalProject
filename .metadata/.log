@@ -598,3 +598,15 @@ org.osgi.service.prefs.BackingStoreException: Exception loading preferences from
 !MESSAGE Save operation warnings.
 !SUBENTRY 1 org.eclipse.core.resources 2 234 2015-07-12 01:04:17.334
 !MESSAGE The project description file (.project) for 'Metamodels' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.wst.sse.ui 2 2 2015-07-14 04:38:41.601
+!MESSAGE StructuredTextEditor being used without StructuredDocument
+
+!ENTRY org.eclipse.wst.sse.ui 2 2 2015-07-14 04:38:41.603
+!MESSAGE          Input Name: plugin.xml
+
+!ENTRY org.eclipse.wst.sse.ui 2 2 2015-07-14 04:38:41.604
+!MESSAGE         Unexpected IDocumentProvider implementation: org.eclipse.ui.editors.text.TextFileDocumentProvider
+
+!ENTRY org.eclipse.wst.sse.ui 2 2 2015-07-14 04:38:41.604
+!MESSAGE         Unexpected IDocument implementation: org.eclipse.core.internal.filebuffers.SynchronizableDocument

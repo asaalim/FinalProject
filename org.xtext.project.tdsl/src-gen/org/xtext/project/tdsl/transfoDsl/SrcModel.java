@@ -3,6 +3,7 @@
 package org.xtext.project.tdsl.transfoDsl;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.SrcModel#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.SrcModel#getImportURI <em>Import URI</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.SrcModel#getSorcemetamodel <em>Sorcemetamodel</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.SrcModel#getSrcmetamodel <em>Srcmetamodel</em>}</li>
  * </ul>
  * </p>
  *
@@ -77,29 +78,29 @@ public interface SrcModel extends EObject
   void setImportURI(String value);
 
   /**
-   * Returns the value of the '<em><b>Sorcemetamodel</b></em>' reference.
+   * Returns the value of the '<em><b>Srcmetamodel</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Sorcemetamodel</em>' reference isn't clear,
+   * If the meaning of the '<em>Srcmetamodel</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Sorcemetamodel</em>' reference.
-   * @see #setSorcemetamodel(SrcMetamodel)
-   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getSrcModel_Sorcemetamodel()
+   * @return the value of the '<em>Srcmetamodel</em>' reference.
+   * @see #setSrcmetamodel(EPackage)
+   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getSrcModel_Srcmetamodel()
    * @model
    * @generated
    */
-  SrcMetamodel getSorcemetamodel();
+  EPackage getSrcmetamodel();
 
   /**
-   * Sets the value of the '{@link org.xtext.project.tdsl.transfoDsl.SrcModel#getSorcemetamodel <em>Sorcemetamodel</em>}' reference.
+   * Sets the value of the '{@link org.xtext.project.tdsl.transfoDsl.SrcModel#getSrcmetamodel <em>Srcmetamodel</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Sorcemetamodel</em>' reference.
-   * @see #getSorcemetamodel()
+   * @param value the new value of the '<em>Srcmetamodel</em>' reference.
+   * @see #getSrcmetamodel()
    * @generated
    */
-  void setSorcemetamodel(SrcMetamodel value);
+  void setSrcmetamodel(EPackage value);
 
 } // SrcModel

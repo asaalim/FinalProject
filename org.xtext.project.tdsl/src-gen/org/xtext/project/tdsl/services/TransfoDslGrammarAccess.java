@@ -25,19 +25,19 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSrcModelAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cSrcModelSrcModelParserRuleCall_3_0 = (RuleCall)cSrcModelAssignment_3.eContents().get(0);
+		private final Assignment cSrcmodelAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSrcmodelSrcModelParserRuleCall_3_0 = (RuleCall)cSrcmodelAssignment_3.eContents().get(0);
 		private final Assignment cLayerAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cLayerLayerParserRuleCall_4_0 = (RuleCall)cLayerAssignment_4.eContents().get(0);
-		private final Assignment cTargetModelAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cTargetModelTrgModelParserRuleCall_5_0 = (RuleCall)cTargetModelAssignment_5.eContents().get(0);
+		private final Assignment cTargetmodelAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTargetmodelTrgModelParserRuleCall_5_0 = (RuleCall)cTargetmodelAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Transformation:
-		//	"transformation" name=ID "{" srcModel+=SrcModel layer+=Layer+ targetModel+=TrgModel "}";
+		//	"transformation" name=ID "{" srcmodel+=SrcModel layer+=Layer+ targetmodel+=TrgModel "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"transformation" name=ID "{" srcModel+=SrcModel layer+=Layer+ targetModel+=TrgModel "}"
+		//"transformation" name=ID "{" srcmodel+=SrcModel layer+=Layer+ targetmodel+=TrgModel "}"
 		public Group getGroup() { return cGroup; }
 
 		//"transformation"
@@ -52,11 +52,11 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//srcModel+=SrcModel
-		public Assignment getSrcModelAssignment_3() { return cSrcModelAssignment_3; }
+		//srcmodel+=SrcModel
+		public Assignment getSrcmodelAssignment_3() { return cSrcmodelAssignment_3; }
 
 		//SrcModel
-		public RuleCall getSrcModelSrcModelParserRuleCall_3_0() { return cSrcModelSrcModelParserRuleCall_3_0; }
+		public RuleCall getSrcmodelSrcModelParserRuleCall_3_0() { return cSrcmodelSrcModelParserRuleCall_3_0; }
 
 		//layer+=Layer+
 		public Assignment getLayerAssignment_4() { return cLayerAssignment_4; }
@@ -64,11 +64,11 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Layer
 		public RuleCall getLayerLayerParserRuleCall_4_0() { return cLayerLayerParserRuleCall_4_0; }
 
-		//targetModel+=TrgModel
-		public Assignment getTargetModelAssignment_5() { return cTargetModelAssignment_5; }
+		//targetmodel+=TrgModel
+		public Assignment getTargetmodelAssignment_5() { return cTargetmodelAssignment_5; }
 
 		//TrgModel
-		public RuleCall getTargetModelTrgModelParserRuleCall_5_0() { return cTargetModelTrgModelParserRuleCall_5_0; }
+		public RuleCall getTargetmodelTrgModelParserRuleCall_5_0() { return cTargetmodelTrgModelParserRuleCall_5_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -115,16 +115,16 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cImportURIAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cImportURISTRINGTerminalRuleCall_2_0 = (RuleCall)cImportURIAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cImportKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cSorcemetamodelAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cSorcemetamodelSrcMetamodelCrossReference_3_1_0 = (CrossReference)cSorcemetamodelAssignment_3_1.eContents().get(0);
-		private final RuleCall cSorcemetamodelSrcMetamodelIDTerminalRuleCall_3_1_0_1 = (RuleCall)cSorcemetamodelSrcMetamodelCrossReference_3_1_0.eContents().get(1);
+		private final Keyword cConformsKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cSrcmetamodelAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cSrcmetamodelEPackageCrossReference_3_1_0 = (CrossReference)cSrcmetamodelAssignment_3_1.eContents().get(0);
+		private final RuleCall cSrcmetamodelEPackageIDTerminalRuleCall_3_1_0_1 = (RuleCall)cSrcmetamodelEPackageCrossReference_3_1_0.eContents().get(1);
 		
 		//SrcModel:
-		//	"IN" name=ID importURI=STRING ("import" sorcemetamodel=[SrcMetamodel]);
+		//	"IN" name=ID importURI=STRING ("conforms" srcmetamodel=[ecore::EPackage]);
 		@Override public ParserRule getRule() { return rule; }
 
-		//"IN" name=ID importURI=STRING ("import" sorcemetamodel=[SrcMetamodel])
+		//"IN" name=ID importURI=STRING ("conforms" srcmetamodel=[ecore::EPackage])
 		public Group getGroup() { return cGroup; }
 
 		//"IN"
@@ -142,76 +142,52 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getImportURISTRINGTerminalRuleCall_2_0() { return cImportURISTRINGTerminalRuleCall_2_0; }
 
-		//"import" sorcemetamodel=[SrcMetamodel]
+		//"conforms" srcmetamodel=[ecore::EPackage]
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"import"
-		public Keyword getImportKeyword_3_0() { return cImportKeyword_3_0; }
+		//"conforms"
+		public Keyword getConformsKeyword_3_0() { return cConformsKeyword_3_0; }
 
-		//sorcemetamodel=[SrcMetamodel]
-		public Assignment getSorcemetamodelAssignment_3_1() { return cSorcemetamodelAssignment_3_1; }
+		//srcmetamodel=[ecore::EPackage]
+		public Assignment getSrcmetamodelAssignment_3_1() { return cSrcmetamodelAssignment_3_1; }
 
-		//[SrcMetamodel]
-		public CrossReference getSorcemetamodelSrcMetamodelCrossReference_3_1_0() { return cSorcemetamodelSrcMetamodelCrossReference_3_1_0; }
+		//[ecore::EPackage]
+		public CrossReference getSrcmetamodelEPackageCrossReference_3_1_0() { return cSrcmetamodelEPackageCrossReference_3_1_0; }
 
 		//ID
-		public RuleCall getSorcemetamodelSrcMetamodelIDTerminalRuleCall_3_1_0_1() { return cSorcemetamodelSrcMetamodelIDTerminalRuleCall_3_1_0_1; }
+		public RuleCall getSrcmetamodelEPackageIDTerminalRuleCall_3_1_0_1() { return cSrcmetamodelEPackageIDTerminalRuleCall_3_1_0_1; }
 	}
 
-	public class SrcMetamodelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SrcMetamodel");
+	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedName");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cIsAKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cPackageAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cPackagePackageCrossReference_1_0 = (CrossReference)cPackageAssignment_1.eContents().get(0);
-		private final RuleCall cPackagePackageIDTerminalRuleCall_1_0_1 = (RuleCall)cPackagePackageCrossReference_1_0.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
 		
-		//SrcMetamodel:
-		//	"is a" package=[Package];
+		/// *SrcMetamodel:
+		//	//eClass=[ecore::EPackage]
+		//	ePackage=[sourcemetamodel::]
+		//	//ePackage=[ecore::EPackage]
+		//;* / QualifiedName:
+		//	ID ("." ID)*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"is a" package=[Package]
+		//ID ("." ID)*
 		public Group getGroup() { return cGroup; }
 
-		//"is a"
-		public Keyword getIsAKeyword_0() { return cIsAKeyword_0; }
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
 
-		//package=[Package]
-		public Assignment getPackageAssignment_1() { return cPackageAssignment_1; }
+		//("." ID)*
+		public Group getGroup_1() { return cGroup_1; }
 
-		//[Package]
-		public CrossReference getPackagePackageCrossReference_1_0() { return cPackagePackageCrossReference_1_0; }
+		//"."
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
 
 		//ID
-		public RuleCall getPackagePackageIDTerminalRuleCall_1_0_1() { return cPackagePackageIDTerminalRuleCall_1_0_1; }
-	}
-
-	public class PackageElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Package");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Assignment cImportURIAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cImportURISTRINGTerminalRuleCall_1_0 = (RuleCall)cImportURIAssignment_1.eContents().get(0);
-		
-		//Package:
-		//	name=ID importURI=STRING;
-		@Override public ParserRule getRule() { return rule; }
-
-		//name=ID importURI=STRING
-		public Group getGroup() { return cGroup; }
-
-		//name=ID
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
-
-		//importURI=STRING
-		public Assignment getImportURIAssignment_1() { return cImportURIAssignment_1; }
-
-		//STRING
-		public RuleCall getImportURISTRINGTerminalRuleCall_1_0() { return cImportURISTRINGTerminalRuleCall_1_0; }
+		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
 	}
 
 	public class LayerElements extends AbstractParserRuleElementFinder {
@@ -269,8 +245,7 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final TransformationElements pTransformation;
 	private final TrgModelElements pTrgModel;
 	private final SrcModelElements pSrcModel;
-	private final SrcMetamodelElements pSrcMetamodel;
-	private final PackageElements pPackage;
+	private final QualifiedNameElements pQualifiedName;
 	private final LayerElements pLayer;
 	
 	private final Grammar grammar;
@@ -285,8 +260,7 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pTransformation = new TransformationElements();
 		this.pTrgModel = new TrgModelElements();
 		this.pSrcModel = new SrcModelElements();
-		this.pSrcMetamodel = new SrcMetamodelElements();
-		this.pPackage = new PackageElements();
+		this.pQualifiedName = new QualifiedNameElements();
 		this.pLayer = new LayerElements();
 	}
 	
@@ -318,7 +292,7 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Transformation:
-	//	"transformation" name=ID "{" srcModel+=SrcModel layer+=Layer+ targetModel+=TrgModel "}";
+	//	"transformation" name=ID "{" srcmodel+=SrcModel layer+=Layer+ targetmodel+=TrgModel "}";
 	public TransformationElements getTransformationAccess() {
 		return pTransformation;
 	}
@@ -338,7 +312,7 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SrcModel:
-	//	"IN" name=ID importURI=STRING ("import" sorcemetamodel=[SrcMetamodel]);
+	//	"IN" name=ID importURI=STRING ("conforms" srcmetamodel=[ecore::EPackage]);
 	public SrcModelElements getSrcModelAccess() {
 		return pSrcModel;
 	}
@@ -347,24 +321,18 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getSrcModelAccess().getRule();
 	}
 
-	//SrcMetamodel:
-	//	"is a" package=[Package];
-	public SrcMetamodelElements getSrcMetamodelAccess() {
-		return pSrcMetamodel;
+	/// *SrcMetamodel:
+	//	//eClass=[ecore::EPackage]
+	//	ePackage=[sourcemetamodel::]
+	//	//ePackage=[ecore::EPackage]
+	//;* / QualifiedName:
+	//	ID ("." ID)*;
+	public QualifiedNameElements getQualifiedNameAccess() {
+		return pQualifiedName;
 	}
 	
-	public ParserRule getSrcMetamodelRule() {
-		return getSrcMetamodelAccess().getRule();
-	}
-
-	//Package:
-	//	name=ID importURI=STRING;
-	public PackageElements getPackageAccess() {
-		return pPackage;
-	}
-	
-	public ParserRule getPackageRule() {
-		return getPackageAccess().getRule();
+	public ParserRule getQualifiedNameRule() {
+		return getQualifiedNameAccess().getRule();
 	}
 
 	/// *Operation:
