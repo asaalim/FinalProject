@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTransfoDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'transformation'", "'{'", "'}'", "'OUT'", "'IN'", "'conforms'", "'apply'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'transformation'", "'{'", "'}'", "'USE'", "'IN'", "'conforms'", "'apply'", "'OUT'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
@@ -33,6 +33,7 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int RULE_INT=6;
+    public static final int T__18=18;
     public static final int T__11=11;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__12=12;
@@ -154,21 +155,21 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleTransformation"
 
 
-    // $ANTLR start "entryRuleTrgModel"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:88:1: entryRuleTrgModel : ruleTrgModel EOF ;
-    public final void entryRuleTrgModel() throws RecognitionException {
+    // $ANTLR start "entryRuleSrcMetamodel"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:88:1: entryRuleSrcMetamodel : ruleSrcMetamodel EOF ;
+    public final void entryRuleSrcMetamodel() throws RecognitionException {
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:89:1: ( ruleTrgModel EOF )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:90:1: ruleTrgModel EOF
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:89:1: ( ruleSrcMetamodel EOF )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:90:1: ruleSrcMetamodel EOF
             {
-             before(grammarAccess.getTrgModelRule()); 
-            pushFollow(FOLLOW_ruleTrgModel_in_entryRuleTrgModel121);
-            ruleTrgModel();
+             before(grammarAccess.getSrcMetamodelRule()); 
+            pushFollow(FOLLOW_ruleSrcMetamodel_in_entryRuleSrcMetamodel121);
+            ruleSrcMetamodel();
 
             state._fsp--;
 
-             after(grammarAccess.getTrgModelRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTrgModel128); 
+             after(grammarAccess.getSrcMetamodelRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSrcMetamodel128); 
 
             }
 
@@ -181,35 +182,35 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "entryRuleTrgModel"
+    // $ANTLR end "entryRuleSrcMetamodel"
 
 
-    // $ANTLR start "ruleTrgModel"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:97:1: ruleTrgModel : ( ( rule__TrgModel__Group__0 ) ) ;
-    public final void ruleTrgModel() throws RecognitionException {
+    // $ANTLR start "ruleSrcMetamodel"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:97:1: ruleSrcMetamodel : ( ( rule__SrcMetamodel__Group__0 ) ) ;
+    public final void ruleSrcMetamodel() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:101:2: ( ( ( rule__TrgModel__Group__0 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:102:1: ( ( rule__TrgModel__Group__0 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:101:2: ( ( ( rule__SrcMetamodel__Group__0 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:102:1: ( ( rule__SrcMetamodel__Group__0 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:102:1: ( ( rule__TrgModel__Group__0 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:103:1: ( rule__TrgModel__Group__0 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:102:1: ( ( rule__SrcMetamodel__Group__0 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:103:1: ( rule__SrcMetamodel__Group__0 )
             {
-             before(grammarAccess.getTrgModelAccess().getGroup()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:104:1: ( rule__TrgModel__Group__0 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:104:2: rule__TrgModel__Group__0
+             before(grammarAccess.getSrcMetamodelAccess().getGroup()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:104:1: ( rule__SrcMetamodel__Group__0 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:104:2: rule__SrcMetamodel__Group__0
             {
-            pushFollow(FOLLOW_rule__TrgModel__Group__0_in_ruleTrgModel154);
-            rule__TrgModel__Group__0();
+            pushFollow(FOLLOW_rule__SrcMetamodel__Group__0_in_ruleSrcMetamodel154);
+            rule__SrcMetamodel__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTrgModelAccess().getGroup()); 
+             after(grammarAccess.getSrcMetamodelAccess().getGroup()); 
 
             }
 
@@ -228,7 +229,7 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "ruleTrgModel"
+    // $ANTLR end "ruleSrcMetamodel"
 
 
     // $ANTLR start "entryRuleSrcModel"
@@ -309,20 +310,20 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleLayer"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:146:1: entryRuleLayer : ruleLayer EOF ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:144:1: entryRuleLayer : ruleLayer EOF ;
     public final void entryRuleLayer() throws RecognitionException {
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:147:1: ( ruleLayer EOF )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:148:1: ruleLayer EOF
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:145:1: ( ruleLayer EOF )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:146:1: ruleLayer EOF
             {
              before(grammarAccess.getLayerRule()); 
-            pushFollow(FOLLOW_ruleLayer_in_entryRuleLayer243);
+            pushFollow(FOLLOW_ruleLayer_in_entryRuleLayer241);
             ruleLayer();
 
             state._fsp--;
 
              after(grammarAccess.getLayerRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLayer250); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLayer248); 
 
             }
 
@@ -339,23 +340,23 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleLayer"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:155:1: ruleLayer : ( ( rule__Layer__Group__0 ) ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:153:1: ruleLayer : ( ( rule__Layer__Group__0 ) ) ;
     public final void ruleLayer() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:159:2: ( ( ( rule__Layer__Group__0 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:160:1: ( ( rule__Layer__Group__0 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:157:2: ( ( ( rule__Layer__Group__0 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:158:1: ( ( rule__Layer__Group__0 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:160:1: ( ( rule__Layer__Group__0 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:161:1: ( rule__Layer__Group__0 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:158:1: ( ( rule__Layer__Group__0 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:159:1: ( rule__Layer__Group__0 )
             {
              before(grammarAccess.getLayerAccess().getGroup()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:162:1: ( rule__Layer__Group__0 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:162:2: rule__Layer__Group__0
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:160:1: ( rule__Layer__Group__0 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:160:2: rule__Layer__Group__0
             {
-            pushFollow(FOLLOW_rule__Layer__Group__0_in_ruleLayer276);
+            pushFollow(FOLLOW_rule__Layer__Group__0_in_ruleLayer274);
             rule__Layer__Group__0();
 
             state._fsp--;
@@ -385,22 +386,99 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleLayer"
 
 
+    // $ANTLR start "entryRuleTrgModel"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:172:1: entryRuleTrgModel : ruleTrgModel EOF ;
+    public final void entryRuleTrgModel() throws RecognitionException {
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:173:1: ( ruleTrgModel EOF )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:174:1: ruleTrgModel EOF
+            {
+             before(grammarAccess.getTrgModelRule()); 
+            pushFollow(FOLLOW_ruleTrgModel_in_entryRuleTrgModel301);
+            ruleTrgModel();
+
+            state._fsp--;
+
+             after(grammarAccess.getTrgModelRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTrgModel308); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleTrgModel"
+
+
+    // $ANTLR start "ruleTrgModel"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:181:1: ruleTrgModel : ( ( rule__TrgModel__Group__0 ) ) ;
+    public final void ruleTrgModel() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:185:2: ( ( ( rule__TrgModel__Group__0 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:186:1: ( ( rule__TrgModel__Group__0 ) )
+            {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:186:1: ( ( rule__TrgModel__Group__0 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:187:1: ( rule__TrgModel__Group__0 )
+            {
+             before(grammarAccess.getTrgModelAccess().getGroup()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:188:1: ( rule__TrgModel__Group__0 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:188:2: rule__TrgModel__Group__0
+            {
+            pushFollow(FOLLOW_rule__TrgModel__Group__0_in_ruleTrgModel334);
+            rule__TrgModel__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getTrgModelAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleTrgModel"
+
+
     // $ANTLR start "rule__Transformation__Group__0"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:176:1: rule__Transformation__Group__0 : rule__Transformation__Group__0__Impl rule__Transformation__Group__1 ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:204:1: rule__Transformation__Group__0 : rule__Transformation__Group__0__Impl rule__Transformation__Group__1 ;
     public final void rule__Transformation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:180:1: ( rule__Transformation__Group__0__Impl rule__Transformation__Group__1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:181:2: rule__Transformation__Group__0__Impl rule__Transformation__Group__1
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:208:1: ( rule__Transformation__Group__0__Impl rule__Transformation__Group__1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:209:2: rule__Transformation__Group__0__Impl rule__Transformation__Group__1
             {
-            pushFollow(FOLLOW_rule__Transformation__Group__0__Impl_in_rule__Transformation__Group__0310);
+            pushFollow(FOLLOW_rule__Transformation__Group__0__Impl_in_rule__Transformation__Group__0370);
             rule__Transformation__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Transformation__Group__1_in_rule__Transformation__Group__0313);
+            pushFollow(FOLLOW_rule__Transformation__Group__1_in_rule__Transformation__Group__0373);
             rule__Transformation__Group__1();
 
             state._fsp--;
@@ -424,20 +502,20 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__0__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:188:1: rule__Transformation__Group__0__Impl : ( 'transformation' ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:216:1: rule__Transformation__Group__0__Impl : ( 'transformation' ) ;
     public final void rule__Transformation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:192:1: ( ( 'transformation' ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:193:1: ( 'transformation' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:220:1: ( ( 'transformation' ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:221:1: ( 'transformation' )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:193:1: ( 'transformation' )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:194:1: 'transformation'
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:221:1: ( 'transformation' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:222:1: 'transformation'
             {
              before(grammarAccess.getTransformationAccess().getTransformationKeyword_0()); 
-            match(input,11,FOLLOW_11_in_rule__Transformation__Group__0__Impl341); 
+            match(input,11,FOLLOW_11_in_rule__Transformation__Group__0__Impl401); 
              after(grammarAccess.getTransformationAccess().getTransformationKeyword_0()); 
 
             }
@@ -461,21 +539,21 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:207:1: rule__Transformation__Group__1 : rule__Transformation__Group__1__Impl rule__Transformation__Group__2 ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:235:1: rule__Transformation__Group__1 : rule__Transformation__Group__1__Impl rule__Transformation__Group__2 ;
     public final void rule__Transformation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:211:1: ( rule__Transformation__Group__1__Impl rule__Transformation__Group__2 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:212:2: rule__Transformation__Group__1__Impl rule__Transformation__Group__2
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:239:1: ( rule__Transformation__Group__1__Impl rule__Transformation__Group__2 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:240:2: rule__Transformation__Group__1__Impl rule__Transformation__Group__2
             {
-            pushFollow(FOLLOW_rule__Transformation__Group__1__Impl_in_rule__Transformation__Group__1372);
+            pushFollow(FOLLOW_rule__Transformation__Group__1__Impl_in_rule__Transformation__Group__1432);
             rule__Transformation__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Transformation__Group__2_in_rule__Transformation__Group__1375);
+            pushFollow(FOLLOW_rule__Transformation__Group__2_in_rule__Transformation__Group__1435);
             rule__Transformation__Group__2();
 
             state._fsp--;
@@ -499,23 +577,23 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__1__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:219:1: rule__Transformation__Group__1__Impl : ( ( rule__Transformation__NameAssignment_1 ) ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:247:1: rule__Transformation__Group__1__Impl : ( ( rule__Transformation__NameAssignment_1 ) ) ;
     public final void rule__Transformation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:223:1: ( ( ( rule__Transformation__NameAssignment_1 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:224:1: ( ( rule__Transformation__NameAssignment_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:251:1: ( ( ( rule__Transformation__NameAssignment_1 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:252:1: ( ( rule__Transformation__NameAssignment_1 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:224:1: ( ( rule__Transformation__NameAssignment_1 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:225:1: ( rule__Transformation__NameAssignment_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:252:1: ( ( rule__Transformation__NameAssignment_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:253:1: ( rule__Transformation__NameAssignment_1 )
             {
              before(grammarAccess.getTransformationAccess().getNameAssignment_1()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:226:1: ( rule__Transformation__NameAssignment_1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:226:2: rule__Transformation__NameAssignment_1
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:254:1: ( rule__Transformation__NameAssignment_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:254:2: rule__Transformation__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Transformation__NameAssignment_1_in_rule__Transformation__Group__1__Impl402);
+            pushFollow(FOLLOW_rule__Transformation__NameAssignment_1_in_rule__Transformation__Group__1__Impl462);
             rule__Transformation__NameAssignment_1();
 
             state._fsp--;
@@ -546,21 +624,21 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__2"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:236:1: rule__Transformation__Group__2 : rule__Transformation__Group__2__Impl rule__Transformation__Group__3 ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:264:1: rule__Transformation__Group__2 : rule__Transformation__Group__2__Impl rule__Transformation__Group__3 ;
     public final void rule__Transformation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:240:1: ( rule__Transformation__Group__2__Impl rule__Transformation__Group__3 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:241:2: rule__Transformation__Group__2__Impl rule__Transformation__Group__3
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:268:1: ( rule__Transformation__Group__2__Impl rule__Transformation__Group__3 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:269:2: rule__Transformation__Group__2__Impl rule__Transformation__Group__3
             {
-            pushFollow(FOLLOW_rule__Transformation__Group__2__Impl_in_rule__Transformation__Group__2432);
+            pushFollow(FOLLOW_rule__Transformation__Group__2__Impl_in_rule__Transformation__Group__2492);
             rule__Transformation__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Transformation__Group__3_in_rule__Transformation__Group__2435);
+            pushFollow(FOLLOW_rule__Transformation__Group__3_in_rule__Transformation__Group__2495);
             rule__Transformation__Group__3();
 
             state._fsp--;
@@ -584,20 +662,20 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__2__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:248:1: rule__Transformation__Group__2__Impl : ( '{' ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:276:1: rule__Transformation__Group__2__Impl : ( '{' ) ;
     public final void rule__Transformation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:252:1: ( ( '{' ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:253:1: ( '{' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:280:1: ( ( '{' ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:281:1: ( '{' )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:253:1: ( '{' )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:254:1: '{'
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:281:1: ( '{' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:282:1: '{'
             {
              before(grammarAccess.getTransformationAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,12,FOLLOW_12_in_rule__Transformation__Group__2__Impl463); 
+            match(input,12,FOLLOW_12_in_rule__Transformation__Group__2__Impl523); 
              after(grammarAccess.getTransformationAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -621,21 +699,21 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__3"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:267:1: rule__Transformation__Group__3 : rule__Transformation__Group__3__Impl rule__Transformation__Group__4 ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:295:1: rule__Transformation__Group__3 : rule__Transformation__Group__3__Impl rule__Transformation__Group__4 ;
     public final void rule__Transformation__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:271:1: ( rule__Transformation__Group__3__Impl rule__Transformation__Group__4 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:272:2: rule__Transformation__Group__3__Impl rule__Transformation__Group__4
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:299:1: ( rule__Transformation__Group__3__Impl rule__Transformation__Group__4 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:300:2: rule__Transformation__Group__3__Impl rule__Transformation__Group__4
             {
-            pushFollow(FOLLOW_rule__Transformation__Group__3__Impl_in_rule__Transformation__Group__3494);
+            pushFollow(FOLLOW_rule__Transformation__Group__3__Impl_in_rule__Transformation__Group__3554);
             rule__Transformation__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Transformation__Group__4_in_rule__Transformation__Group__3497);
+            pushFollow(FOLLOW_rule__Transformation__Group__4_in_rule__Transformation__Group__3557);
             rule__Transformation__Group__4();
 
             state._fsp--;
@@ -659,31 +737,31 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__3__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:279:1: rule__Transformation__Group__3__Impl : ( ( rule__Transformation__SrcmodelAssignment_3 ) ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:307:1: rule__Transformation__Group__3__Impl : ( ( rule__Transformation__SrcmetamodelAssignment_3 ) ) ;
     public final void rule__Transformation__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:283:1: ( ( ( rule__Transformation__SrcmodelAssignment_3 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:284:1: ( ( rule__Transformation__SrcmodelAssignment_3 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:311:1: ( ( ( rule__Transformation__SrcmetamodelAssignment_3 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:312:1: ( ( rule__Transformation__SrcmetamodelAssignment_3 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:284:1: ( ( rule__Transformation__SrcmodelAssignment_3 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:285:1: ( rule__Transformation__SrcmodelAssignment_3 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:312:1: ( ( rule__Transformation__SrcmetamodelAssignment_3 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:313:1: ( rule__Transformation__SrcmetamodelAssignment_3 )
             {
-             before(grammarAccess.getTransformationAccess().getSrcmodelAssignment_3()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:286:1: ( rule__Transformation__SrcmodelAssignment_3 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:286:2: rule__Transformation__SrcmodelAssignment_3
+             before(grammarAccess.getTransformationAccess().getSrcmetamodelAssignment_3()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:314:1: ( rule__Transformation__SrcmetamodelAssignment_3 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:314:2: rule__Transformation__SrcmetamodelAssignment_3
             {
-            pushFollow(FOLLOW_rule__Transformation__SrcmodelAssignment_3_in_rule__Transformation__Group__3__Impl524);
-            rule__Transformation__SrcmodelAssignment_3();
+            pushFollow(FOLLOW_rule__Transformation__SrcmetamodelAssignment_3_in_rule__Transformation__Group__3__Impl584);
+            rule__Transformation__SrcmetamodelAssignment_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTransformationAccess().getSrcmodelAssignment_3()); 
+             after(grammarAccess.getTransformationAccess().getSrcmetamodelAssignment_3()); 
 
             }
 
@@ -706,21 +784,21 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__4"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:296:1: rule__Transformation__Group__4 : rule__Transformation__Group__4__Impl rule__Transformation__Group__5 ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:324:1: rule__Transformation__Group__4 : rule__Transformation__Group__4__Impl rule__Transformation__Group__5 ;
     public final void rule__Transformation__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:300:1: ( rule__Transformation__Group__4__Impl rule__Transformation__Group__5 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:301:2: rule__Transformation__Group__4__Impl rule__Transformation__Group__5
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:328:1: ( rule__Transformation__Group__4__Impl rule__Transformation__Group__5 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:329:2: rule__Transformation__Group__4__Impl rule__Transformation__Group__5
             {
-            pushFollow(FOLLOW_rule__Transformation__Group__4__Impl_in_rule__Transformation__Group__4554);
+            pushFollow(FOLLOW_rule__Transformation__Group__4__Impl_in_rule__Transformation__Group__4614);
             rule__Transformation__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Transformation__Group__5_in_rule__Transformation__Group__4557);
+            pushFollow(FOLLOW_rule__Transformation__Group__5_in_rule__Transformation__Group__4617);
             rule__Transformation__Group__5();
 
             state._fsp--;
@@ -744,74 +822,31 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__4__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:308:1: rule__Transformation__Group__4__Impl : ( ( ( rule__Transformation__LayerAssignment_4 ) ) ( ( rule__Transformation__LayerAssignment_4 )* ) ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:336:1: rule__Transformation__Group__4__Impl : ( ( rule__Transformation__SrcmodelAssignment_4 ) ) ;
     public final void rule__Transformation__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:312:1: ( ( ( ( rule__Transformation__LayerAssignment_4 ) ) ( ( rule__Transformation__LayerAssignment_4 )* ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:313:1: ( ( ( rule__Transformation__LayerAssignment_4 ) ) ( ( rule__Transformation__LayerAssignment_4 )* ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:340:1: ( ( ( rule__Transformation__SrcmodelAssignment_4 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:341:1: ( ( rule__Transformation__SrcmodelAssignment_4 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:313:1: ( ( ( rule__Transformation__LayerAssignment_4 ) ) ( ( rule__Transformation__LayerAssignment_4 )* ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:314:1: ( ( rule__Transformation__LayerAssignment_4 ) ) ( ( rule__Transformation__LayerAssignment_4 )* )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:341:1: ( ( rule__Transformation__SrcmodelAssignment_4 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:342:1: ( rule__Transformation__SrcmodelAssignment_4 )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:314:1: ( ( rule__Transformation__LayerAssignment_4 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:315:1: ( rule__Transformation__LayerAssignment_4 )
+             before(grammarAccess.getTransformationAccess().getSrcmodelAssignment_4()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:343:1: ( rule__Transformation__SrcmodelAssignment_4 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:343:2: rule__Transformation__SrcmodelAssignment_4
             {
-             before(grammarAccess.getTransformationAccess().getLayerAssignment_4()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:316:1: ( rule__Transformation__LayerAssignment_4 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:316:2: rule__Transformation__LayerAssignment_4
-            {
-            pushFollow(FOLLOW_rule__Transformation__LayerAssignment_4_in_rule__Transformation__Group__4__Impl586);
-            rule__Transformation__LayerAssignment_4();
+            pushFollow(FOLLOW_rule__Transformation__SrcmodelAssignment_4_in_rule__Transformation__Group__4__Impl644);
+            rule__Transformation__SrcmodelAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTransformationAccess().getLayerAssignment_4()); 
-
-            }
-
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:319:1: ( ( rule__Transformation__LayerAssignment_4 )* )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:320:1: ( rule__Transformation__LayerAssignment_4 )*
-            {
-             before(grammarAccess.getTransformationAccess().getLayerAssignment_4()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:321:1: ( rule__Transformation__LayerAssignment_4 )*
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
-
-                if ( (LA1_0==17) ) {
-                    alt1=1;
-                }
-
-
-                switch (alt1) {
-            	case 1 :
-            	    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:321:2: rule__Transformation__LayerAssignment_4
-            	    {
-            	    pushFollow(FOLLOW_rule__Transformation__LayerAssignment_4_in_rule__Transformation__Group__4__Impl598);
-            	    rule__Transformation__LayerAssignment_4();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop1;
-                }
-            } while (true);
-
-             after(grammarAccess.getTransformationAccess().getLayerAssignment_4()); 
-
-            }
-
+             after(grammarAccess.getTransformationAccess().getSrcmodelAssignment_4()); 
 
             }
 
@@ -834,21 +869,21 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__5"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:332:1: rule__Transformation__Group__5 : rule__Transformation__Group__5__Impl rule__Transformation__Group__6 ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:353:1: rule__Transformation__Group__5 : rule__Transformation__Group__5__Impl rule__Transformation__Group__6 ;
     public final void rule__Transformation__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:336:1: ( rule__Transformation__Group__5__Impl rule__Transformation__Group__6 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:337:2: rule__Transformation__Group__5__Impl rule__Transformation__Group__6
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:357:1: ( rule__Transformation__Group__5__Impl rule__Transformation__Group__6 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:358:2: rule__Transformation__Group__5__Impl rule__Transformation__Group__6
             {
-            pushFollow(FOLLOW_rule__Transformation__Group__5__Impl_in_rule__Transformation__Group__5631);
+            pushFollow(FOLLOW_rule__Transformation__Group__5__Impl_in_rule__Transformation__Group__5674);
             rule__Transformation__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Transformation__Group__6_in_rule__Transformation__Group__5634);
+            pushFollow(FOLLOW_rule__Transformation__Group__6_in_rule__Transformation__Group__5677);
             rule__Transformation__Group__6();
 
             state._fsp--;
@@ -872,31 +907,74 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__5__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:344:1: rule__Transformation__Group__5__Impl : ( ( rule__Transformation__TargetmodelAssignment_5 ) ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:365:1: rule__Transformation__Group__5__Impl : ( ( ( rule__Transformation__LayerAssignment_5 ) ) ( ( rule__Transformation__LayerAssignment_5 )* ) ) ;
     public final void rule__Transformation__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:348:1: ( ( ( rule__Transformation__TargetmodelAssignment_5 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:349:1: ( ( rule__Transformation__TargetmodelAssignment_5 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:369:1: ( ( ( ( rule__Transformation__LayerAssignment_5 ) ) ( ( rule__Transformation__LayerAssignment_5 )* ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:370:1: ( ( ( rule__Transformation__LayerAssignment_5 ) ) ( ( rule__Transformation__LayerAssignment_5 )* ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:349:1: ( ( rule__Transformation__TargetmodelAssignment_5 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:350:1: ( rule__Transformation__TargetmodelAssignment_5 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:370:1: ( ( ( rule__Transformation__LayerAssignment_5 ) ) ( ( rule__Transformation__LayerAssignment_5 )* ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:371:1: ( ( rule__Transformation__LayerAssignment_5 ) ) ( ( rule__Transformation__LayerAssignment_5 )* )
             {
-             before(grammarAccess.getTransformationAccess().getTargetmodelAssignment_5()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:351:1: ( rule__Transformation__TargetmodelAssignment_5 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:351:2: rule__Transformation__TargetmodelAssignment_5
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:371:1: ( ( rule__Transformation__LayerAssignment_5 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:372:1: ( rule__Transformation__LayerAssignment_5 )
             {
-            pushFollow(FOLLOW_rule__Transformation__TargetmodelAssignment_5_in_rule__Transformation__Group__5__Impl661);
-            rule__Transformation__TargetmodelAssignment_5();
+             before(grammarAccess.getTransformationAccess().getLayerAssignment_5()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:373:1: ( rule__Transformation__LayerAssignment_5 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:373:2: rule__Transformation__LayerAssignment_5
+            {
+            pushFollow(FOLLOW_rule__Transformation__LayerAssignment_5_in_rule__Transformation__Group__5__Impl706);
+            rule__Transformation__LayerAssignment_5();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTransformationAccess().getTargetmodelAssignment_5()); 
+             after(grammarAccess.getTransformationAccess().getLayerAssignment_5()); 
+
+            }
+
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:376:1: ( ( rule__Transformation__LayerAssignment_5 )* )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:377:1: ( rule__Transformation__LayerAssignment_5 )*
+            {
+             before(grammarAccess.getTransformationAccess().getLayerAssignment_5()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:378:1: ( rule__Transformation__LayerAssignment_5 )*
+            loop1:
+            do {
+                int alt1=2;
+                int LA1_0 = input.LA(1);
+
+                if ( (LA1_0==17) ) {
+                    alt1=1;
+                }
+
+
+                switch (alt1) {
+            	case 1 :
+            	    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:378:2: rule__Transformation__LayerAssignment_5
+            	    {
+            	    pushFollow(FOLLOW_rule__Transformation__LayerAssignment_5_in_rule__Transformation__Group__5__Impl718);
+            	    rule__Transformation__LayerAssignment_5();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop1;
+                }
+            } while (true);
+
+             after(grammarAccess.getTransformationAccess().getLayerAssignment_5()); 
+
+            }
+
 
             }
 
@@ -919,17 +997,22 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__6"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:361:1: rule__Transformation__Group__6 : rule__Transformation__Group__6__Impl ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:389:1: rule__Transformation__Group__6 : rule__Transformation__Group__6__Impl rule__Transformation__Group__7 ;
     public final void rule__Transformation__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:365:1: ( rule__Transformation__Group__6__Impl )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:366:2: rule__Transformation__Group__6__Impl
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:393:1: ( rule__Transformation__Group__6__Impl rule__Transformation__Group__7 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:394:2: rule__Transformation__Group__6__Impl rule__Transformation__Group__7
             {
-            pushFollow(FOLLOW_rule__Transformation__Group__6__Impl_in_rule__Transformation__Group__6691);
+            pushFollow(FOLLOW_rule__Transformation__Group__6__Impl_in_rule__Transformation__Group__6751);
             rule__Transformation__Group__6__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Transformation__Group__7_in_rule__Transformation__Group__6754);
+            rule__Transformation__Group__7();
 
             state._fsp--;
 
@@ -952,21 +1035,31 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__Group__6__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:372:1: rule__Transformation__Group__6__Impl : ( '}' ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:401:1: rule__Transformation__Group__6__Impl : ( ( rule__Transformation__TargetmodelAssignment_6 ) ) ;
     public final void rule__Transformation__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:376:1: ( ( '}' ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:377:1: ( '}' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:405:1: ( ( ( rule__Transformation__TargetmodelAssignment_6 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:406:1: ( ( rule__Transformation__TargetmodelAssignment_6 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:377:1: ( '}' )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:378:1: '}'
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:406:1: ( ( rule__Transformation__TargetmodelAssignment_6 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:407:1: ( rule__Transformation__TargetmodelAssignment_6 )
             {
-             before(grammarAccess.getTransformationAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,13,FOLLOW_13_in_rule__Transformation__Group__6__Impl719); 
-             after(grammarAccess.getTransformationAccess().getRightCurlyBracketKeyword_6()); 
+             before(grammarAccess.getTransformationAccess().getTargetmodelAssignment_6()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:408:1: ( rule__Transformation__TargetmodelAssignment_6 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:408:2: rule__Transformation__TargetmodelAssignment_6
+            {
+            pushFollow(FOLLOW_rule__Transformation__TargetmodelAssignment_6_in_rule__Transformation__Group__6__Impl781);
+            rule__Transformation__TargetmodelAssignment_6();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getTransformationAccess().getTargetmodelAssignment_6()); 
 
             }
 
@@ -988,23 +1081,18 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Transformation__Group__6__Impl"
 
 
-    // $ANTLR start "rule__TrgModel__Group__0"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:405:1: rule__TrgModel__Group__0 : rule__TrgModel__Group__0__Impl rule__TrgModel__Group__1 ;
-    public final void rule__TrgModel__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Transformation__Group__7"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:418:1: rule__Transformation__Group__7 : rule__Transformation__Group__7__Impl ;
+    public final void rule__Transformation__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:409:1: ( rule__TrgModel__Group__0__Impl rule__TrgModel__Group__1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:410:2: rule__TrgModel__Group__0__Impl rule__TrgModel__Group__1
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:422:1: ( rule__Transformation__Group__7__Impl )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:423:2: rule__Transformation__Group__7__Impl
             {
-            pushFollow(FOLLOW_rule__TrgModel__Group__0__Impl_in_rule__TrgModel__Group__0764);
-            rule__TrgModel__Group__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__TrgModel__Group__1_in_rule__TrgModel__Group__0767);
-            rule__TrgModel__Group__1();
+            pushFollow(FOLLOW_rule__Transformation__Group__7__Impl_in_rule__Transformation__Group__7811);
+            rule__Transformation__Group__7__Impl();
 
             state._fsp--;
 
@@ -1023,25 +1111,25 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgModel__Group__0"
+    // $ANTLR end "rule__Transformation__Group__7"
 
 
-    // $ANTLR start "rule__TrgModel__Group__0__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:417:1: rule__TrgModel__Group__0__Impl : ( 'OUT' ) ;
-    public final void rule__TrgModel__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Transformation__Group__7__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:429:1: rule__Transformation__Group__7__Impl : ( '}' ) ;
+    public final void rule__Transformation__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:421:1: ( ( 'OUT' ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:422:1: ( 'OUT' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:433:1: ( ( '}' ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:434:1: ( '}' )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:422:1: ( 'OUT' )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:423:1: 'OUT'
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:434:1: ( '}' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:435:1: '}'
             {
-             before(grammarAccess.getTrgModelAccess().getOUTKeyword_0()); 
-            match(input,14,FOLLOW_14_in_rule__TrgModel__Group__0__Impl795); 
-             after(grammarAccess.getTrgModelAccess().getOUTKeyword_0()); 
+             before(grammarAccess.getTransformationAccess().getRightCurlyBracketKeyword_7()); 
+            match(input,13,FOLLOW_13_in_rule__Transformation__Group__7__Impl839); 
+             after(grammarAccess.getTransformationAccess().getRightCurlyBracketKeyword_7()); 
 
             }
 
@@ -1060,26 +1148,26 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgModel__Group__0__Impl"
+    // $ANTLR end "rule__Transformation__Group__7__Impl"
 
 
-    // $ANTLR start "rule__TrgModel__Group__1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:436:1: rule__TrgModel__Group__1 : rule__TrgModel__Group__1__Impl rule__TrgModel__Group__2 ;
-    public final void rule__TrgModel__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__SrcMetamodel__Group__0"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:464:1: rule__SrcMetamodel__Group__0 : rule__SrcMetamodel__Group__0__Impl rule__SrcMetamodel__Group__1 ;
+    public final void rule__SrcMetamodel__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:440:1: ( rule__TrgModel__Group__1__Impl rule__TrgModel__Group__2 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:441:2: rule__TrgModel__Group__1__Impl rule__TrgModel__Group__2
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:468:1: ( rule__SrcMetamodel__Group__0__Impl rule__SrcMetamodel__Group__1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:469:2: rule__SrcMetamodel__Group__0__Impl rule__SrcMetamodel__Group__1
             {
-            pushFollow(FOLLOW_rule__TrgModel__Group__1__Impl_in_rule__TrgModel__Group__1826);
-            rule__TrgModel__Group__1__Impl();
+            pushFollow(FOLLOW_rule__SrcMetamodel__Group__0__Impl_in_rule__SrcMetamodel__Group__0886);
+            rule__SrcMetamodel__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TrgModel__Group__2_in_rule__TrgModel__Group__1829);
-            rule__TrgModel__Group__2();
+            pushFollow(FOLLOW_rule__SrcMetamodel__Group__1_in_rule__SrcMetamodel__Group__0889);
+            rule__SrcMetamodel__Group__1();
 
             state._fsp--;
 
@@ -1098,35 +1186,25 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgModel__Group__1"
+    // $ANTLR end "rule__SrcMetamodel__Group__0"
 
 
-    // $ANTLR start "rule__TrgModel__Group__1__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:448:1: rule__TrgModel__Group__1__Impl : ( ( rule__TrgModel__NameAssignment_1 ) ) ;
-    public final void rule__TrgModel__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SrcMetamodel__Group__0__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:476:1: rule__SrcMetamodel__Group__0__Impl : ( 'USE' ) ;
+    public final void rule__SrcMetamodel__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:452:1: ( ( ( rule__TrgModel__NameAssignment_1 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:453:1: ( ( rule__TrgModel__NameAssignment_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:480:1: ( ( 'USE' ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:481:1: ( 'USE' )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:453:1: ( ( rule__TrgModel__NameAssignment_1 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:454:1: ( rule__TrgModel__NameAssignment_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:481:1: ( 'USE' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:482:1: 'USE'
             {
-             before(grammarAccess.getTrgModelAccess().getNameAssignment_1()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:455:1: ( rule__TrgModel__NameAssignment_1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:455:2: rule__TrgModel__NameAssignment_1
-            {
-            pushFollow(FOLLOW_rule__TrgModel__NameAssignment_1_in_rule__TrgModel__Group__1__Impl856);
-            rule__TrgModel__NameAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getTrgModelAccess().getNameAssignment_1()); 
+             before(grammarAccess.getSrcMetamodelAccess().getUSEKeyword_0()); 
+            match(input,14,FOLLOW_14_in_rule__SrcMetamodel__Group__0__Impl917); 
+             after(grammarAccess.getSrcMetamodelAccess().getUSEKeyword_0()); 
 
             }
 
@@ -1145,21 +1223,26 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgModel__Group__1__Impl"
+    // $ANTLR end "rule__SrcMetamodel__Group__0__Impl"
 
 
-    // $ANTLR start "rule__TrgModel__Group__2"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:465:1: rule__TrgModel__Group__2 : rule__TrgModel__Group__2__Impl ;
-    public final void rule__TrgModel__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__SrcMetamodel__Group__1"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:495:1: rule__SrcMetamodel__Group__1 : rule__SrcMetamodel__Group__1__Impl rule__SrcMetamodel__Group__2 ;
+    public final void rule__SrcMetamodel__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:469:1: ( rule__TrgModel__Group__2__Impl )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:470:2: rule__TrgModel__Group__2__Impl
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:499:1: ( rule__SrcMetamodel__Group__1__Impl rule__SrcMetamodel__Group__2 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:500:2: rule__SrcMetamodel__Group__1__Impl rule__SrcMetamodel__Group__2
             {
-            pushFollow(FOLLOW_rule__TrgModel__Group__2__Impl_in_rule__TrgModel__Group__2886);
-            rule__TrgModel__Group__2__Impl();
+            pushFollow(FOLLOW_rule__SrcMetamodel__Group__1__Impl_in_rule__SrcMetamodel__Group__1948);
+            rule__SrcMetamodel__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SrcMetamodel__Group__2_in_rule__SrcMetamodel__Group__1951);
+            rule__SrcMetamodel__Group__2();
 
             state._fsp--;
 
@@ -1178,35 +1261,35 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgModel__Group__2"
+    // $ANTLR end "rule__SrcMetamodel__Group__1"
 
 
-    // $ANTLR start "rule__TrgModel__Group__2__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:476:1: rule__TrgModel__Group__2__Impl : ( ( rule__TrgModel__FilepathAssignment_2 ) ) ;
-    public final void rule__TrgModel__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SrcMetamodel__Group__1__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:507:1: rule__SrcMetamodel__Group__1__Impl : ( ( rule__SrcMetamodel__NameAssignment_1 ) ) ;
+    public final void rule__SrcMetamodel__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:480:1: ( ( ( rule__TrgModel__FilepathAssignment_2 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:481:1: ( ( rule__TrgModel__FilepathAssignment_2 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:511:1: ( ( ( rule__SrcMetamodel__NameAssignment_1 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:512:1: ( ( rule__SrcMetamodel__NameAssignment_1 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:481:1: ( ( rule__TrgModel__FilepathAssignment_2 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:482:1: ( rule__TrgModel__FilepathAssignment_2 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:512:1: ( ( rule__SrcMetamodel__NameAssignment_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:513:1: ( rule__SrcMetamodel__NameAssignment_1 )
             {
-             before(grammarAccess.getTrgModelAccess().getFilepathAssignment_2()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:483:1: ( rule__TrgModel__FilepathAssignment_2 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:483:2: rule__TrgModel__FilepathAssignment_2
+             before(grammarAccess.getSrcMetamodelAccess().getNameAssignment_1()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:514:1: ( rule__SrcMetamodel__NameAssignment_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:514:2: rule__SrcMetamodel__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__TrgModel__FilepathAssignment_2_in_rule__TrgModel__Group__2__Impl913);
-            rule__TrgModel__FilepathAssignment_2();
+            pushFollow(FOLLOW_rule__SrcMetamodel__NameAssignment_1_in_rule__SrcMetamodel__Group__1__Impl978);
+            rule__SrcMetamodel__NameAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTrgModelAccess().getFilepathAssignment_2()); 
+             after(grammarAccess.getSrcMetamodelAccess().getNameAssignment_1()); 
 
             }
 
@@ -1225,25 +1308,105 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgModel__Group__2__Impl"
+    // $ANTLR end "rule__SrcMetamodel__Group__1__Impl"
+
+
+    // $ANTLR start "rule__SrcMetamodel__Group__2"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:524:1: rule__SrcMetamodel__Group__2 : rule__SrcMetamodel__Group__2__Impl ;
+    public final void rule__SrcMetamodel__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:528:1: ( rule__SrcMetamodel__Group__2__Impl )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:529:2: rule__SrcMetamodel__Group__2__Impl
+            {
+            pushFollow(FOLLOW_rule__SrcMetamodel__Group__2__Impl_in_rule__SrcMetamodel__Group__21008);
+            rule__SrcMetamodel__Group__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SrcMetamodel__Group__2"
+
+
+    // $ANTLR start "rule__SrcMetamodel__Group__2__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:535:1: rule__SrcMetamodel__Group__2__Impl : ( ( rule__SrcMetamodel__ImportURIAssignment_2 ) ) ;
+    public final void rule__SrcMetamodel__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:539:1: ( ( ( rule__SrcMetamodel__ImportURIAssignment_2 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:540:1: ( ( rule__SrcMetamodel__ImportURIAssignment_2 ) )
+            {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:540:1: ( ( rule__SrcMetamodel__ImportURIAssignment_2 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:541:1: ( rule__SrcMetamodel__ImportURIAssignment_2 )
+            {
+             before(grammarAccess.getSrcMetamodelAccess().getImportURIAssignment_2()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:542:1: ( rule__SrcMetamodel__ImportURIAssignment_2 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:542:2: rule__SrcMetamodel__ImportURIAssignment_2
+            {
+            pushFollow(FOLLOW_rule__SrcMetamodel__ImportURIAssignment_2_in_rule__SrcMetamodel__Group__2__Impl1035);
+            rule__SrcMetamodel__ImportURIAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSrcMetamodelAccess().getImportURIAssignment_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SrcMetamodel__Group__2__Impl"
 
 
     // $ANTLR start "rule__SrcModel__Group__0"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:499:1: rule__SrcModel__Group__0 : rule__SrcModel__Group__0__Impl rule__SrcModel__Group__1 ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:558:1: rule__SrcModel__Group__0 : rule__SrcModel__Group__0__Impl rule__SrcModel__Group__1 ;
     public final void rule__SrcModel__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:503:1: ( rule__SrcModel__Group__0__Impl rule__SrcModel__Group__1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:504:2: rule__SrcModel__Group__0__Impl rule__SrcModel__Group__1
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:562:1: ( rule__SrcModel__Group__0__Impl rule__SrcModel__Group__1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:563:2: rule__SrcModel__Group__0__Impl rule__SrcModel__Group__1
             {
-            pushFollow(FOLLOW_rule__SrcModel__Group__0__Impl_in_rule__SrcModel__Group__0949);
+            pushFollow(FOLLOW_rule__SrcModel__Group__0__Impl_in_rule__SrcModel__Group__01071);
             rule__SrcModel__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SrcModel__Group__1_in_rule__SrcModel__Group__0952);
+            pushFollow(FOLLOW_rule__SrcModel__Group__1_in_rule__SrcModel__Group__01074);
             rule__SrcModel__Group__1();
 
             state._fsp--;
@@ -1267,20 +1430,20 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SrcModel__Group__0__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:511:1: rule__SrcModel__Group__0__Impl : ( 'IN' ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:570:1: rule__SrcModel__Group__0__Impl : ( 'IN' ) ;
     public final void rule__SrcModel__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:515:1: ( ( 'IN' ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:516:1: ( 'IN' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:574:1: ( ( 'IN' ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:575:1: ( 'IN' )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:516:1: ( 'IN' )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:517:1: 'IN'
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:575:1: ( 'IN' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:576:1: 'IN'
             {
              before(grammarAccess.getSrcModelAccess().getINKeyword_0()); 
-            match(input,15,FOLLOW_15_in_rule__SrcModel__Group__0__Impl980); 
+            match(input,15,FOLLOW_15_in_rule__SrcModel__Group__0__Impl1102); 
              after(grammarAccess.getSrcModelAccess().getINKeyword_0()); 
 
             }
@@ -1304,21 +1467,21 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SrcModel__Group__1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:530:1: rule__SrcModel__Group__1 : rule__SrcModel__Group__1__Impl rule__SrcModel__Group__2 ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:589:1: rule__SrcModel__Group__1 : rule__SrcModel__Group__1__Impl rule__SrcModel__Group__2 ;
     public final void rule__SrcModel__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:534:1: ( rule__SrcModel__Group__1__Impl rule__SrcModel__Group__2 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:535:2: rule__SrcModel__Group__1__Impl rule__SrcModel__Group__2
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:593:1: ( rule__SrcModel__Group__1__Impl rule__SrcModel__Group__2 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:594:2: rule__SrcModel__Group__1__Impl rule__SrcModel__Group__2
             {
-            pushFollow(FOLLOW_rule__SrcModel__Group__1__Impl_in_rule__SrcModel__Group__11011);
+            pushFollow(FOLLOW_rule__SrcModel__Group__1__Impl_in_rule__SrcModel__Group__11133);
             rule__SrcModel__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SrcModel__Group__2_in_rule__SrcModel__Group__11014);
+            pushFollow(FOLLOW_rule__SrcModel__Group__2_in_rule__SrcModel__Group__11136);
             rule__SrcModel__Group__2();
 
             state._fsp--;
@@ -1342,23 +1505,23 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SrcModel__Group__1__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:542:1: rule__SrcModel__Group__1__Impl : ( ( rule__SrcModel__NameAssignment_1 ) ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:601:1: rule__SrcModel__Group__1__Impl : ( ( rule__SrcModel__NameAssignment_1 ) ) ;
     public final void rule__SrcModel__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:546:1: ( ( ( rule__SrcModel__NameAssignment_1 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:547:1: ( ( rule__SrcModel__NameAssignment_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:605:1: ( ( ( rule__SrcModel__NameAssignment_1 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:606:1: ( ( rule__SrcModel__NameAssignment_1 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:547:1: ( ( rule__SrcModel__NameAssignment_1 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:548:1: ( rule__SrcModel__NameAssignment_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:606:1: ( ( rule__SrcModel__NameAssignment_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:607:1: ( rule__SrcModel__NameAssignment_1 )
             {
              before(grammarAccess.getSrcModelAccess().getNameAssignment_1()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:549:1: ( rule__SrcModel__NameAssignment_1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:549:2: rule__SrcModel__NameAssignment_1
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:608:1: ( rule__SrcModel__NameAssignment_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:608:2: rule__SrcModel__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__SrcModel__NameAssignment_1_in_rule__SrcModel__Group__1__Impl1041);
+            pushFollow(FOLLOW_rule__SrcModel__NameAssignment_1_in_rule__SrcModel__Group__1__Impl1163);
             rule__SrcModel__NameAssignment_1();
 
             state._fsp--;
@@ -1389,22 +1552,17 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SrcModel__Group__2"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:559:1: rule__SrcModel__Group__2 : rule__SrcModel__Group__2__Impl rule__SrcModel__Group__3 ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:618:1: rule__SrcModel__Group__2 : rule__SrcModel__Group__2__Impl ;
     public final void rule__SrcModel__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:563:1: ( rule__SrcModel__Group__2__Impl rule__SrcModel__Group__3 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:564:2: rule__SrcModel__Group__2__Impl rule__SrcModel__Group__3
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:622:1: ( rule__SrcModel__Group__2__Impl )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:623:2: rule__SrcModel__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__SrcModel__Group__2__Impl_in_rule__SrcModel__Group__21071);
+            pushFollow(FOLLOW_rule__SrcModel__Group__2__Impl_in_rule__SrcModel__Group__21193);
             rule__SrcModel__Group__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SrcModel__Group__3_in_rule__SrcModel__Group__21074);
-            rule__SrcModel__Group__3();
 
             state._fsp--;
 
@@ -1427,31 +1585,31 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SrcModel__Group__2__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:571:1: rule__SrcModel__Group__2__Impl : ( ( rule__SrcModel__ImportURIAssignment_2 ) ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:629:1: rule__SrcModel__Group__2__Impl : ( ( rule__SrcModel__Group_2__0 ) ) ;
     public final void rule__SrcModel__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:575:1: ( ( ( rule__SrcModel__ImportURIAssignment_2 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:576:1: ( ( rule__SrcModel__ImportURIAssignment_2 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:633:1: ( ( ( rule__SrcModel__Group_2__0 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:634:1: ( ( rule__SrcModel__Group_2__0 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:576:1: ( ( rule__SrcModel__ImportURIAssignment_2 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:577:1: ( rule__SrcModel__ImportURIAssignment_2 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:634:1: ( ( rule__SrcModel__Group_2__0 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:635:1: ( rule__SrcModel__Group_2__0 )
             {
-             before(grammarAccess.getSrcModelAccess().getImportURIAssignment_2()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:578:1: ( rule__SrcModel__ImportURIAssignment_2 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:578:2: rule__SrcModel__ImportURIAssignment_2
+             before(grammarAccess.getSrcModelAccess().getGroup_2()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:636:1: ( rule__SrcModel__Group_2__0 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:636:2: rule__SrcModel__Group_2__0
             {
-            pushFollow(FOLLOW_rule__SrcModel__ImportURIAssignment_2_in_rule__SrcModel__Group__2__Impl1101);
-            rule__SrcModel__ImportURIAssignment_2();
+            pushFollow(FOLLOW_rule__SrcModel__Group_2__0_in_rule__SrcModel__Group__2__Impl1220);
+            rule__SrcModel__Group_2__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSrcModelAccess().getImportURIAssignment_2()); 
+             after(grammarAccess.getSrcModelAccess().getGroup_2()); 
 
             }
 
@@ -1473,18 +1631,23 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__SrcModel__Group__2__Impl"
 
 
-    // $ANTLR start "rule__SrcModel__Group__3"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:588:1: rule__SrcModel__Group__3 : rule__SrcModel__Group__3__Impl ;
-    public final void rule__SrcModel__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__SrcModel__Group_2__0"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:652:1: rule__SrcModel__Group_2__0 : rule__SrcModel__Group_2__0__Impl rule__SrcModel__Group_2__1 ;
+    public final void rule__SrcModel__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:592:1: ( rule__SrcModel__Group__3__Impl )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:593:2: rule__SrcModel__Group__3__Impl
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:656:1: ( rule__SrcModel__Group_2__0__Impl rule__SrcModel__Group_2__1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:657:2: rule__SrcModel__Group_2__0__Impl rule__SrcModel__Group_2__1
             {
-            pushFollow(FOLLOW_rule__SrcModel__Group__3__Impl_in_rule__SrcModel__Group__31131);
-            rule__SrcModel__Group__3__Impl();
+            pushFollow(FOLLOW_rule__SrcModel__Group_2__0__Impl_in_rule__SrcModel__Group_2__01256);
+            rule__SrcModel__Group_2__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__SrcModel__Group_2__1_in_rule__SrcModel__Group_2__01259);
+            rule__SrcModel__Group_2__1();
 
             state._fsp--;
 
@@ -1503,35 +1666,25 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__SrcModel__Group__3"
+    // $ANTLR end "rule__SrcModel__Group_2__0"
 
 
-    // $ANTLR start "rule__SrcModel__Group__3__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:599:1: rule__SrcModel__Group__3__Impl : ( ( rule__SrcModel__Group_3__0 ) ) ;
-    public final void rule__SrcModel__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SrcModel__Group_2__0__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:664:1: rule__SrcModel__Group_2__0__Impl : ( 'conforms' ) ;
+    public final void rule__SrcModel__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:603:1: ( ( ( rule__SrcModel__Group_3__0 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:604:1: ( ( rule__SrcModel__Group_3__0 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:668:1: ( ( 'conforms' ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:669:1: ( 'conforms' )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:604:1: ( ( rule__SrcModel__Group_3__0 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:605:1: ( rule__SrcModel__Group_3__0 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:669:1: ( 'conforms' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:670:1: 'conforms'
             {
-             before(grammarAccess.getSrcModelAccess().getGroup_3()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:606:1: ( rule__SrcModel__Group_3__0 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:606:2: rule__SrcModel__Group_3__0
-            {
-            pushFollow(FOLLOW_rule__SrcModel__Group_3__0_in_rule__SrcModel__Group__3__Impl1158);
-            rule__SrcModel__Group_3__0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSrcModelAccess().getGroup_3()); 
+             before(grammarAccess.getSrcModelAccess().getConformsKeyword_2_0()); 
+            match(input,16,FOLLOW_16_in_rule__SrcModel__Group_2__0__Impl1287); 
+             after(grammarAccess.getSrcModelAccess().getConformsKeyword_2_0()); 
 
             }
 
@@ -1550,26 +1703,21 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__SrcModel__Group__3__Impl"
+    // $ANTLR end "rule__SrcModel__Group_2__0__Impl"
 
 
-    // $ANTLR start "rule__SrcModel__Group_3__0"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:624:1: rule__SrcModel__Group_3__0 : rule__SrcModel__Group_3__0__Impl rule__SrcModel__Group_3__1 ;
-    public final void rule__SrcModel__Group_3__0() throws RecognitionException {
+    // $ANTLR start "rule__SrcModel__Group_2__1"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:683:1: rule__SrcModel__Group_2__1 : rule__SrcModel__Group_2__1__Impl ;
+    public final void rule__SrcModel__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:628:1: ( rule__SrcModel__Group_3__0__Impl rule__SrcModel__Group_3__1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:629:2: rule__SrcModel__Group_3__0__Impl rule__SrcModel__Group_3__1
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:687:1: ( rule__SrcModel__Group_2__1__Impl )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:688:2: rule__SrcModel__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__SrcModel__Group_3__0__Impl_in_rule__SrcModel__Group_3__01196);
-            rule__SrcModel__Group_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SrcModel__Group_3__1_in_rule__SrcModel__Group_3__01199);
-            rule__SrcModel__Group_3__1();
+            pushFollow(FOLLOW_rule__SrcModel__Group_2__1__Impl_in_rule__SrcModel__Group_2__11318);
+            rule__SrcModel__Group_2__1__Impl();
 
             state._fsp--;
 
@@ -1588,105 +1736,35 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__SrcModel__Group_3__0"
+    // $ANTLR end "rule__SrcModel__Group_2__1"
 
 
-    // $ANTLR start "rule__SrcModel__Group_3__0__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:636:1: rule__SrcModel__Group_3__0__Impl : ( 'conforms' ) ;
-    public final void rule__SrcModel__Group_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:640:1: ( ( 'conforms' ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:641:1: ( 'conforms' )
-            {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:641:1: ( 'conforms' )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:642:1: 'conforms'
-            {
-             before(grammarAccess.getSrcModelAccess().getConformsKeyword_3_0()); 
-            match(input,16,FOLLOW_16_in_rule__SrcModel__Group_3__0__Impl1227); 
-             after(grammarAccess.getSrcModelAccess().getConformsKeyword_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SrcModel__Group_3__0__Impl"
-
-
-    // $ANTLR start "rule__SrcModel__Group_3__1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:655:1: rule__SrcModel__Group_3__1 : rule__SrcModel__Group_3__1__Impl ;
-    public final void rule__SrcModel__Group_3__1() throws RecognitionException {
+    // $ANTLR start "rule__SrcModel__Group_2__1__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:694:1: rule__SrcModel__Group_2__1__Impl : ( ( rule__SrcModel__SourcemetamodelAssignment_2_1 ) ) ;
+    public final void rule__SrcModel__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:659:1: ( rule__SrcModel__Group_3__1__Impl )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:660:2: rule__SrcModel__Group_3__1__Impl
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:698:1: ( ( ( rule__SrcModel__SourcemetamodelAssignment_2_1 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:699:1: ( ( rule__SrcModel__SourcemetamodelAssignment_2_1 ) )
             {
-            pushFollow(FOLLOW_rule__SrcModel__Group_3__1__Impl_in_rule__SrcModel__Group_3__11258);
-            rule__SrcModel__Group_3__1__Impl();
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:699:1: ( ( rule__SrcModel__SourcemetamodelAssignment_2_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:700:1: ( rule__SrcModel__SourcemetamodelAssignment_2_1 )
+            {
+             before(grammarAccess.getSrcModelAccess().getSourcemetamodelAssignment_2_1()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:701:1: ( rule__SrcModel__SourcemetamodelAssignment_2_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:701:2: rule__SrcModel__SourcemetamodelAssignment_2_1
+            {
+            pushFollow(FOLLOW_rule__SrcModel__SourcemetamodelAssignment_2_1_in_rule__SrcModel__Group_2__1__Impl1345);
+            rule__SrcModel__SourcemetamodelAssignment_2_1();
 
             state._fsp--;
 
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SrcModel__Group_3__1"
-
-
-    // $ANTLR start "rule__SrcModel__Group_3__1__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:666:1: rule__SrcModel__Group_3__1__Impl : ( ( rule__SrcModel__SrcmetamodelAssignment_3_1 ) ) ;
-    public final void rule__SrcModel__Group_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:670:1: ( ( ( rule__SrcModel__SrcmetamodelAssignment_3_1 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:671:1: ( ( rule__SrcModel__SrcmetamodelAssignment_3_1 ) )
-            {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:671:1: ( ( rule__SrcModel__SrcmetamodelAssignment_3_1 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:672:1: ( rule__SrcModel__SrcmetamodelAssignment_3_1 )
-            {
-             before(grammarAccess.getSrcModelAccess().getSrcmetamodelAssignment_3_1()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:673:1: ( rule__SrcModel__SrcmetamodelAssignment_3_1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:673:2: rule__SrcModel__SrcmetamodelAssignment_3_1
-            {
-            pushFollow(FOLLOW_rule__SrcModel__SrcmetamodelAssignment_3_1_in_rule__SrcModel__Group_3__1__Impl1285);
-            rule__SrcModel__SrcmetamodelAssignment_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSrcModelAccess().getSrcmetamodelAssignment_3_1()); 
+             after(grammarAccess.getSrcModelAccess().getSourcemetamodelAssignment_2_1()); 
 
             }
 
@@ -1705,25 +1783,25 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__SrcModel__Group_3__1__Impl"
+    // $ANTLR end "rule__SrcModel__Group_2__1__Impl"
 
 
     // $ANTLR start "rule__Layer__Group__0"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:689:1: rule__Layer__Group__0 : rule__Layer__Group__0__Impl rule__Layer__Group__1 ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:715:1: rule__Layer__Group__0 : rule__Layer__Group__0__Impl rule__Layer__Group__1 ;
     public final void rule__Layer__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:693:1: ( rule__Layer__Group__0__Impl rule__Layer__Group__1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:694:2: rule__Layer__Group__0__Impl rule__Layer__Group__1
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:719:1: ( rule__Layer__Group__0__Impl rule__Layer__Group__1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:720:2: rule__Layer__Group__0__Impl rule__Layer__Group__1
             {
-            pushFollow(FOLLOW_rule__Layer__Group__0__Impl_in_rule__Layer__Group__01321);
+            pushFollow(FOLLOW_rule__Layer__Group__0__Impl_in_rule__Layer__Group__01379);
             rule__Layer__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Layer__Group__1_in_rule__Layer__Group__01324);
+            pushFollow(FOLLOW_rule__Layer__Group__1_in_rule__Layer__Group__01382);
             rule__Layer__Group__1();
 
             state._fsp--;
@@ -1747,20 +1825,20 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layer__Group__0__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:701:1: rule__Layer__Group__0__Impl : ( 'apply' ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:727:1: rule__Layer__Group__0__Impl : ( 'apply' ) ;
     public final void rule__Layer__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:705:1: ( ( 'apply' ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:706:1: ( 'apply' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:731:1: ( ( 'apply' ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:732:1: ( 'apply' )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:706:1: ( 'apply' )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:707:1: 'apply'
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:732:1: ( 'apply' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:733:1: 'apply'
             {
              before(grammarAccess.getLayerAccess().getApplyKeyword_0()); 
-            match(input,17,FOLLOW_17_in_rule__Layer__Group__0__Impl1352); 
+            match(input,17,FOLLOW_17_in_rule__Layer__Group__0__Impl1410); 
              after(grammarAccess.getLayerAccess().getApplyKeyword_0()); 
 
             }
@@ -1784,16 +1862,16 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layer__Group__1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:720:1: rule__Layer__Group__1 : rule__Layer__Group__1__Impl ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:746:1: rule__Layer__Group__1 : rule__Layer__Group__1__Impl ;
     public final void rule__Layer__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:724:1: ( rule__Layer__Group__1__Impl )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:725:2: rule__Layer__Group__1__Impl
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:750:1: ( rule__Layer__Group__1__Impl )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:751:2: rule__Layer__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Layer__Group__1__Impl_in_rule__Layer__Group__11383);
+            pushFollow(FOLLOW_rule__Layer__Group__1__Impl_in_rule__Layer__Group__11441);
             rule__Layer__Group__1__Impl();
 
             state._fsp--;
@@ -1817,23 +1895,23 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layer__Group__1__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:731:1: rule__Layer__Group__1__Impl : ( ( rule__Layer__NameAssignment_1 ) ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:757:1: rule__Layer__Group__1__Impl : ( ( rule__Layer__NameAssignment_1 ) ) ;
     public final void rule__Layer__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:735:1: ( ( ( rule__Layer__NameAssignment_1 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:736:1: ( ( rule__Layer__NameAssignment_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:761:1: ( ( ( rule__Layer__NameAssignment_1 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:762:1: ( ( rule__Layer__NameAssignment_1 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:736:1: ( ( rule__Layer__NameAssignment_1 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:737:1: ( rule__Layer__NameAssignment_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:762:1: ( ( rule__Layer__NameAssignment_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:763:1: ( rule__Layer__NameAssignment_1 )
             {
              before(grammarAccess.getLayerAccess().getNameAssignment_1()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:738:1: ( rule__Layer__NameAssignment_1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:738:2: rule__Layer__NameAssignment_1
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:764:1: ( rule__Layer__NameAssignment_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:764:2: rule__Layer__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Layer__NameAssignment_1_in_rule__Layer__Group__1__Impl1410);
+            pushFollow(FOLLOW_rule__Layer__NameAssignment_1_in_rule__Layer__Group__1__Impl1468);
             rule__Layer__NameAssignment_1();
 
             state._fsp--;
@@ -1863,21 +1941,261 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Layer__Group__1__Impl"
 
 
+    // $ANTLR start "rule__TrgModel__Group__0"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:778:1: rule__TrgModel__Group__0 : rule__TrgModel__Group__0__Impl rule__TrgModel__Group__1 ;
+    public final void rule__TrgModel__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:782:1: ( rule__TrgModel__Group__0__Impl rule__TrgModel__Group__1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:783:2: rule__TrgModel__Group__0__Impl rule__TrgModel__Group__1
+            {
+            pushFollow(FOLLOW_rule__TrgModel__Group__0__Impl_in_rule__TrgModel__Group__01502);
+            rule__TrgModel__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__TrgModel__Group__1_in_rule__TrgModel__Group__01505);
+            rule__TrgModel__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TrgModel__Group__0"
+
+
+    // $ANTLR start "rule__TrgModel__Group__0__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:790:1: rule__TrgModel__Group__0__Impl : ( 'OUT' ) ;
+    public final void rule__TrgModel__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:794:1: ( ( 'OUT' ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:795:1: ( 'OUT' )
+            {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:795:1: ( 'OUT' )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:796:1: 'OUT'
+            {
+             before(grammarAccess.getTrgModelAccess().getOUTKeyword_0()); 
+            match(input,18,FOLLOW_18_in_rule__TrgModel__Group__0__Impl1533); 
+             after(grammarAccess.getTrgModelAccess().getOUTKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TrgModel__Group__0__Impl"
+
+
+    // $ANTLR start "rule__TrgModel__Group__1"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:809:1: rule__TrgModel__Group__1 : rule__TrgModel__Group__1__Impl rule__TrgModel__Group__2 ;
+    public final void rule__TrgModel__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:813:1: ( rule__TrgModel__Group__1__Impl rule__TrgModel__Group__2 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:814:2: rule__TrgModel__Group__1__Impl rule__TrgModel__Group__2
+            {
+            pushFollow(FOLLOW_rule__TrgModel__Group__1__Impl_in_rule__TrgModel__Group__11564);
+            rule__TrgModel__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__TrgModel__Group__2_in_rule__TrgModel__Group__11567);
+            rule__TrgModel__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TrgModel__Group__1"
+
+
+    // $ANTLR start "rule__TrgModel__Group__1__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:821:1: rule__TrgModel__Group__1__Impl : ( ( rule__TrgModel__NameAssignment_1 ) ) ;
+    public final void rule__TrgModel__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:825:1: ( ( ( rule__TrgModel__NameAssignment_1 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:826:1: ( ( rule__TrgModel__NameAssignment_1 ) )
+            {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:826:1: ( ( rule__TrgModel__NameAssignment_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:827:1: ( rule__TrgModel__NameAssignment_1 )
+            {
+             before(grammarAccess.getTrgModelAccess().getNameAssignment_1()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:828:1: ( rule__TrgModel__NameAssignment_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:828:2: rule__TrgModel__NameAssignment_1
+            {
+            pushFollow(FOLLOW_rule__TrgModel__NameAssignment_1_in_rule__TrgModel__Group__1__Impl1594);
+            rule__TrgModel__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getTrgModelAccess().getNameAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TrgModel__Group__1__Impl"
+
+
+    // $ANTLR start "rule__TrgModel__Group__2"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:838:1: rule__TrgModel__Group__2 : rule__TrgModel__Group__2__Impl ;
+    public final void rule__TrgModel__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:842:1: ( rule__TrgModel__Group__2__Impl )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:843:2: rule__TrgModel__Group__2__Impl
+            {
+            pushFollow(FOLLOW_rule__TrgModel__Group__2__Impl_in_rule__TrgModel__Group__21624);
+            rule__TrgModel__Group__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TrgModel__Group__2"
+
+
+    // $ANTLR start "rule__TrgModel__Group__2__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:849:1: rule__TrgModel__Group__2__Impl : ( ( rule__TrgModel__FilepathAssignment_2 ) ) ;
+    public final void rule__TrgModel__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:853:1: ( ( ( rule__TrgModel__FilepathAssignment_2 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:854:1: ( ( rule__TrgModel__FilepathAssignment_2 ) )
+            {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:854:1: ( ( rule__TrgModel__FilepathAssignment_2 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:855:1: ( rule__TrgModel__FilepathAssignment_2 )
+            {
+             before(grammarAccess.getTrgModelAccess().getFilepathAssignment_2()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:856:1: ( rule__TrgModel__FilepathAssignment_2 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:856:2: rule__TrgModel__FilepathAssignment_2
+            {
+            pushFollow(FOLLOW_rule__TrgModel__FilepathAssignment_2_in_rule__TrgModel__Group__2__Impl1651);
+            rule__TrgModel__FilepathAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getTrgModelAccess().getFilepathAssignment_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__TrgModel__Group__2__Impl"
+
+
     // $ANTLR start "rule__Transformation__NameAssignment_1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:753:1: rule__Transformation__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:875:1: rule__Transformation__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Transformation__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:757:1: ( ( RULE_ID ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:758:1: ( RULE_ID )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:879:1: ( ( RULE_ID ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:880:1: ( RULE_ID )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:758:1: ( RULE_ID )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:759:1: RULE_ID
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:880:1: ( RULE_ID )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:881:1: RULE_ID
             {
              before(grammarAccess.getTransformationAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Transformation__NameAssignment_11449); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Transformation__NameAssignment_11694); 
              after(grammarAccess.getTransformationAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -1900,26 +2218,67 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Transformation__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Transformation__SrcmodelAssignment_3"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:768:1: rule__Transformation__SrcmodelAssignment_3 : ( ruleSrcModel ) ;
-    public final void rule__Transformation__SrcmodelAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Transformation__SrcmetamodelAssignment_3"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:890:1: rule__Transformation__SrcmetamodelAssignment_3 : ( ruleSrcMetamodel ) ;
+    public final void rule__Transformation__SrcmetamodelAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:772:1: ( ( ruleSrcModel ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:773:1: ( ruleSrcModel )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:894:1: ( ( ruleSrcMetamodel ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:895:1: ( ruleSrcMetamodel )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:773:1: ( ruleSrcModel )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:774:1: ruleSrcModel
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:895:1: ( ruleSrcMetamodel )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:896:1: ruleSrcMetamodel
             {
-             before(grammarAccess.getTransformationAccess().getSrcmodelSrcModelParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleSrcModel_in_rule__Transformation__SrcmodelAssignment_31480);
+             before(grammarAccess.getTransformationAccess().getSrcmetamodelSrcMetamodelParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleSrcMetamodel_in_rule__Transformation__SrcmetamodelAssignment_31725);
+            ruleSrcMetamodel();
+
+            state._fsp--;
+
+             after(grammarAccess.getTransformationAccess().getSrcmetamodelSrcMetamodelParserRuleCall_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Transformation__SrcmetamodelAssignment_3"
+
+
+    // $ANTLR start "rule__Transformation__SrcmodelAssignment_4"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:905:1: rule__Transformation__SrcmodelAssignment_4 : ( ruleSrcModel ) ;
+    public final void rule__Transformation__SrcmodelAssignment_4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:909:1: ( ( ruleSrcModel ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:910:1: ( ruleSrcModel )
+            {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:910:1: ( ruleSrcModel )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:911:1: ruleSrcModel
+            {
+             before(grammarAccess.getTransformationAccess().getSrcmodelSrcModelParserRuleCall_4_0()); 
+            pushFollow(FOLLOW_ruleSrcModel_in_rule__Transformation__SrcmodelAssignment_41756);
             ruleSrcModel();
 
             state._fsp--;
 
-             after(grammarAccess.getTransformationAccess().getSrcmodelSrcModelParserRuleCall_3_0()); 
+             after(grammarAccess.getTransformationAccess().getSrcmodelSrcModelParserRuleCall_4_0()); 
 
             }
 
@@ -1938,29 +2297,29 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Transformation__SrcmodelAssignment_3"
+    // $ANTLR end "rule__Transformation__SrcmodelAssignment_4"
 
 
-    // $ANTLR start "rule__Transformation__LayerAssignment_4"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:783:1: rule__Transformation__LayerAssignment_4 : ( ruleLayer ) ;
-    public final void rule__Transformation__LayerAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__Transformation__LayerAssignment_5"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:920:1: rule__Transformation__LayerAssignment_5 : ( ruleLayer ) ;
+    public final void rule__Transformation__LayerAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:787:1: ( ( ruleLayer ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:788:1: ( ruleLayer )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:924:1: ( ( ruleLayer ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:925:1: ( ruleLayer )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:788:1: ( ruleLayer )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:789:1: ruleLayer
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:925:1: ( ruleLayer )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:926:1: ruleLayer
             {
-             before(grammarAccess.getTransformationAccess().getLayerLayerParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleLayer_in_rule__Transformation__LayerAssignment_41511);
+             before(grammarAccess.getTransformationAccess().getLayerLayerParserRuleCall_5_0()); 
+            pushFollow(FOLLOW_ruleLayer_in_rule__Transformation__LayerAssignment_51787);
             ruleLayer();
 
             state._fsp--;
 
-             after(grammarAccess.getTransformationAccess().getLayerLayerParserRuleCall_4_0()); 
+             after(grammarAccess.getTransformationAccess().getLayerLayerParserRuleCall_5_0()); 
 
             }
 
@@ -1979,29 +2338,29 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Transformation__LayerAssignment_4"
+    // $ANTLR end "rule__Transformation__LayerAssignment_5"
 
 
-    // $ANTLR start "rule__Transformation__TargetmodelAssignment_5"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:798:1: rule__Transformation__TargetmodelAssignment_5 : ( ruleTrgModel ) ;
-    public final void rule__Transformation__TargetmodelAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__Transformation__TargetmodelAssignment_6"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:935:1: rule__Transformation__TargetmodelAssignment_6 : ( ruleTrgModel ) ;
+    public final void rule__Transformation__TargetmodelAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:802:1: ( ( ruleTrgModel ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:803:1: ( ruleTrgModel )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:939:1: ( ( ruleTrgModel ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:940:1: ( ruleTrgModel )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:803:1: ( ruleTrgModel )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:804:1: ruleTrgModel
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:940:1: ( ruleTrgModel )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:941:1: ruleTrgModel
             {
-             before(grammarAccess.getTransformationAccess().getTargetmodelTrgModelParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleTrgModel_in_rule__Transformation__TargetmodelAssignment_51542);
+             before(grammarAccess.getTransformationAccess().getTargetmodelTrgModelParserRuleCall_6_0()); 
+            pushFollow(FOLLOW_ruleTrgModel_in_rule__Transformation__TargetmodelAssignment_61818);
             ruleTrgModel();
 
             state._fsp--;
 
-             after(grammarAccess.getTransformationAccess().getTargetmodelTrgModelParserRuleCall_5_0()); 
+             after(grammarAccess.getTransformationAccess().getTargetmodelTrgModelParserRuleCall_6_0()); 
 
             }
 
@@ -2020,24 +2379,217 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Transformation__TargetmodelAssignment_5"
+    // $ANTLR end "rule__Transformation__TargetmodelAssignment_6"
+
+
+    // $ANTLR start "rule__SrcMetamodel__NameAssignment_1"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:950:1: rule__SrcMetamodel__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__SrcMetamodel__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:954:1: ( ( RULE_ID ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:955:1: ( RULE_ID )
+            {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:955:1: ( RULE_ID )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:956:1: RULE_ID
+            {
+             before(grammarAccess.getSrcMetamodelAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SrcMetamodel__NameAssignment_11849); 
+             after(grammarAccess.getSrcMetamodelAccess().getNameIDTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SrcMetamodel__NameAssignment_1"
+
+
+    // $ANTLR start "rule__SrcMetamodel__ImportURIAssignment_2"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:965:1: rule__SrcMetamodel__ImportURIAssignment_2 : ( RULE_STRING ) ;
+    public final void rule__SrcMetamodel__ImportURIAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:969:1: ( ( RULE_STRING ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:970:1: ( RULE_STRING )
+            {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:970:1: ( RULE_STRING )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:971:1: RULE_STRING
+            {
+             before(grammarAccess.getSrcMetamodelAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SrcMetamodel__ImportURIAssignment_21880); 
+             after(grammarAccess.getSrcMetamodelAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SrcMetamodel__ImportURIAssignment_2"
+
+
+    // $ANTLR start "rule__SrcModel__NameAssignment_1"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:980:1: rule__SrcModel__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__SrcModel__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:984:1: ( ( RULE_ID ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:985:1: ( RULE_ID )
+            {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:985:1: ( RULE_ID )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:986:1: RULE_ID
+            {
+             before(grammarAccess.getSrcModelAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SrcModel__NameAssignment_11911); 
+             after(grammarAccess.getSrcModelAccess().getNameIDTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SrcModel__NameAssignment_1"
+
+
+    // $ANTLR start "rule__SrcModel__SourcemetamodelAssignment_2_1"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:995:1: rule__SrcModel__SourcemetamodelAssignment_2_1 : ( ( RULE_ID ) ) ;
+    public final void rule__SrcModel__SourcemetamodelAssignment_2_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:999:1: ( ( ( RULE_ID ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1000:1: ( ( RULE_ID ) )
+            {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1000:1: ( ( RULE_ID ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1001:1: ( RULE_ID )
+            {
+             before(grammarAccess.getSrcModelAccess().getSourcemetamodelSrcMetamodelCrossReference_2_1_0()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1002:1: ( RULE_ID )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1003:1: RULE_ID
+            {
+             before(grammarAccess.getSrcModelAccess().getSourcemetamodelSrcMetamodelIDTerminalRuleCall_2_1_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SrcModel__SourcemetamodelAssignment_2_11946); 
+             after(grammarAccess.getSrcModelAccess().getSourcemetamodelSrcMetamodelIDTerminalRuleCall_2_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getSrcModelAccess().getSourcemetamodelSrcMetamodelCrossReference_2_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SrcModel__SourcemetamodelAssignment_2_1"
+
+
+    // $ANTLR start "rule__Layer__NameAssignment_1"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1014:1: rule__Layer__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Layer__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1018:1: ( ( RULE_ID ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1019:1: ( RULE_ID )
+            {
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1019:1: ( RULE_ID )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1020:1: RULE_ID
+            {
+             before(grammarAccess.getLayerAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Layer__NameAssignment_11981); 
+             after(grammarAccess.getLayerAccess().getNameIDTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Layer__NameAssignment_1"
 
 
     // $ANTLR start "rule__TrgModel__NameAssignment_1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:813:1: rule__TrgModel__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1029:1: rule__TrgModel__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__TrgModel__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:817:1: ( ( RULE_ID ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:818:1: ( RULE_ID )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1033:1: ( ( RULE_ID ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1034:1: ( RULE_ID )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:818:1: ( RULE_ID )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:819:1: RULE_ID
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1034:1: ( RULE_ID )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1035:1: RULE_ID
             {
              before(grammarAccess.getTrgModelAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TrgModel__NameAssignment_11573); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TrgModel__NameAssignment_12012); 
              after(grammarAccess.getTrgModelAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -2061,20 +2613,20 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TrgModel__FilepathAssignment_2"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:828:1: rule__TrgModel__FilepathAssignment_2 : ( RULE_STRING ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1044:1: rule__TrgModel__FilepathAssignment_2 : ( RULE_STRING ) ;
     public final void rule__TrgModel__FilepathAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:832:1: ( ( RULE_STRING ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:833:1: ( RULE_STRING )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1048:1: ( ( RULE_STRING ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1049:1: ( RULE_STRING )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:833:1: ( RULE_STRING )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:834:1: RULE_STRING
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1049:1: ( RULE_STRING )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1050:1: RULE_STRING
             {
              before(grammarAccess.getTrgModelAccess().getFilepathSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TrgModel__FilepathAssignment_21604); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TrgModel__FilepathAssignment_22043); 
              after(grammarAccess.getTrgModelAccess().getFilepathSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -2096,162 +2648,6 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     }
     // $ANTLR end "rule__TrgModel__FilepathAssignment_2"
 
-
-    // $ANTLR start "rule__SrcModel__NameAssignment_1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:843:1: rule__SrcModel__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__SrcModel__NameAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:847:1: ( ( RULE_ID ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:848:1: ( RULE_ID )
-            {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:848:1: ( RULE_ID )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:849:1: RULE_ID
-            {
-             before(grammarAccess.getSrcModelAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SrcModel__NameAssignment_11635); 
-             after(grammarAccess.getSrcModelAccess().getNameIDTerminalRuleCall_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SrcModel__NameAssignment_1"
-
-
-    // $ANTLR start "rule__SrcModel__ImportURIAssignment_2"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:858:1: rule__SrcModel__ImportURIAssignment_2 : ( RULE_STRING ) ;
-    public final void rule__SrcModel__ImportURIAssignment_2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:862:1: ( ( RULE_STRING ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:863:1: ( RULE_STRING )
-            {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:863:1: ( RULE_STRING )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:864:1: RULE_STRING
-            {
-             before(grammarAccess.getSrcModelAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SrcModel__ImportURIAssignment_21666); 
-             after(grammarAccess.getSrcModelAccess().getImportURISTRINGTerminalRuleCall_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SrcModel__ImportURIAssignment_2"
-
-
-    // $ANTLR start "rule__SrcModel__SrcmetamodelAssignment_3_1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:873:1: rule__SrcModel__SrcmetamodelAssignment_3_1 : ( ( RULE_ID ) ) ;
-    public final void rule__SrcModel__SrcmetamodelAssignment_3_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:877:1: ( ( ( RULE_ID ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:878:1: ( ( RULE_ID ) )
-            {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:878:1: ( ( RULE_ID ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:879:1: ( RULE_ID )
-            {
-             before(grammarAccess.getSrcModelAccess().getSrcmetamodelEPackageCrossReference_3_1_0()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:880:1: ( RULE_ID )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:881:1: RULE_ID
-            {
-             before(grammarAccess.getSrcModelAccess().getSrcmetamodelEPackageIDTerminalRuleCall_3_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SrcModel__SrcmetamodelAssignment_3_11701); 
-             after(grammarAccess.getSrcModelAccess().getSrcmetamodelEPackageIDTerminalRuleCall_3_1_0_1()); 
-
-            }
-
-             after(grammarAccess.getSrcModelAccess().getSrcmetamodelEPackageCrossReference_3_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SrcModel__SrcmetamodelAssignment_3_1"
-
-
-    // $ANTLR start "rule__Layer__NameAssignment_1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:892:1: rule__Layer__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Layer__NameAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:896:1: ( ( RULE_ID ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:897:1: ( RULE_ID )
-            {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:897:1: ( RULE_ID )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:898:1: RULE_ID
-            {
-             before(grammarAccess.getLayerAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Layer__NameAssignment_11736); 
-             after(grammarAccess.getLayerAccess().getNameIDTerminalRuleCall_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Layer__NameAssignment_1"
-
     // Delegated rules
 
 
@@ -2260,74 +2656,87 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_ruleTransformation_in_entryRuleTransformation61 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTransformation68 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Transformation__Group__0_in_ruleTransformation94 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTrgModel_in_entryRuleTrgModel121 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTrgModel128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgModel__Group__0_in_ruleTrgModel154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSrcMetamodel_in_entryRuleSrcMetamodel121 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSrcMetamodel128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcMetamodel__Group__0_in_ruleSrcMetamodel154 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSrcModel_in_entryRuleSrcModel181 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSrcModel188 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SrcModel__Group__0_in_ruleSrcModel214 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLayer_in_entryRuleLayer243 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLayer250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Layer__Group__0_in_ruleLayer276 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__0__Impl_in_rule__Transformation__Group__0310 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__1_in_rule__Transformation__Group__0313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Transformation__Group__0__Impl341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__1__Impl_in_rule__Transformation__Group__1372 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__2_in_rule__Transformation__Group__1375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transformation__NameAssignment_1_in_rule__Transformation__Group__1__Impl402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__2__Impl_in_rule__Transformation__Group__2432 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__3_in_rule__Transformation__Group__2435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Transformation__Group__2__Impl463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__3__Impl_in_rule__Transformation__Group__3494 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__4_in_rule__Transformation__Group__3497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transformation__SrcmodelAssignment_3_in_rule__Transformation__Group__3__Impl524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__4__Impl_in_rule__Transformation__Group__4554 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__5_in_rule__Transformation__Group__4557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transformation__LayerAssignment_4_in_rule__Transformation__Group__4__Impl586 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_rule__Transformation__LayerAssignment_4_in_rule__Transformation__Group__4__Impl598 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__5__Impl_in_rule__Transformation__Group__5631 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__6_in_rule__Transformation__Group__5634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transformation__TargetmodelAssignment_5_in_rule__Transformation__Group__5__Impl661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transformation__Group__6__Impl_in_rule__Transformation__Group__6691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Transformation__Group__6__Impl719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgModel__Group__0__Impl_in_rule__TrgModel__Group__0764 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TrgModel__Group__1_in_rule__TrgModel__Group__0767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__TrgModel__Group__0__Impl795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgModel__Group__1__Impl_in_rule__TrgModel__Group__1826 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__TrgModel__Group__2_in_rule__TrgModel__Group__1829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgModel__NameAssignment_1_in_rule__TrgModel__Group__1__Impl856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgModel__Group__2__Impl_in_rule__TrgModel__Group__2886 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgModel__FilepathAssignment_2_in_rule__TrgModel__Group__2__Impl913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SrcModel__Group__0__Impl_in_rule__SrcModel__Group__0949 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__SrcModel__Group__1_in_rule__SrcModel__Group__0952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__SrcModel__Group__0__Impl980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SrcModel__Group__1__Impl_in_rule__SrcModel__Group__11011 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SrcModel__Group__2_in_rule__SrcModel__Group__11014 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SrcModel__NameAssignment_1_in_rule__SrcModel__Group__1__Impl1041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SrcModel__Group__2__Impl_in_rule__SrcModel__Group__21071 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__SrcModel__Group__3_in_rule__SrcModel__Group__21074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SrcModel__ImportURIAssignment_2_in_rule__SrcModel__Group__2__Impl1101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SrcModel__Group__3__Impl_in_rule__SrcModel__Group__31131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SrcModel__Group_3__0_in_rule__SrcModel__Group__3__Impl1158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SrcModel__Group_3__0__Impl_in_rule__SrcModel__Group_3__01196 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__SrcModel__Group_3__1_in_rule__SrcModel__Group_3__01199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__SrcModel__Group_3__0__Impl1227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SrcModel__Group_3__1__Impl_in_rule__SrcModel__Group_3__11258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SrcModel__SrcmetamodelAssignment_3_1_in_rule__SrcModel__Group_3__1__Impl1285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Layer__Group__0__Impl_in_rule__Layer__Group__01321 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Layer__Group__1_in_rule__Layer__Group__01324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Layer__Group__0__Impl1352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Layer__Group__1__Impl_in_rule__Layer__Group__11383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Layer__NameAssignment_1_in_rule__Layer__Group__1__Impl1410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Transformation__NameAssignment_11449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSrcModel_in_rule__Transformation__SrcmodelAssignment_31480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLayer_in_rule__Transformation__LayerAssignment_41511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTrgModel_in_rule__Transformation__TargetmodelAssignment_51542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__TrgModel__NameAssignment_11573 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TrgModel__FilepathAssignment_21604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SrcModel__NameAssignment_11635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SrcModel__ImportURIAssignment_21666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SrcModel__SrcmetamodelAssignment_3_11701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Layer__NameAssignment_11736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLayer_in_entryRuleLayer241 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLayer248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Layer__Group__0_in_ruleLayer274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTrgModel_in_entryRuleTrgModel301 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTrgModel308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgModel__Group__0_in_ruleTrgModel334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__0__Impl_in_rule__Transformation__Group__0370 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__1_in_rule__Transformation__Group__0373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__Transformation__Group__0__Impl401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__1__Impl_in_rule__Transformation__Group__1432 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__2_in_rule__Transformation__Group__1435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__NameAssignment_1_in_rule__Transformation__Group__1__Impl462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__2__Impl_in_rule__Transformation__Group__2492 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__3_in_rule__Transformation__Group__2495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Transformation__Group__2__Impl523 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__3__Impl_in_rule__Transformation__Group__3554 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__4_in_rule__Transformation__Group__3557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__SrcmetamodelAssignment_3_in_rule__Transformation__Group__3__Impl584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__4__Impl_in_rule__Transformation__Group__4614 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__5_in_rule__Transformation__Group__4617 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__SrcmodelAssignment_4_in_rule__Transformation__Group__4__Impl644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__5__Impl_in_rule__Transformation__Group__5674 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__6_in_rule__Transformation__Group__5677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__LayerAssignment_5_in_rule__Transformation__Group__5__Impl706 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_rule__Transformation__LayerAssignment_5_in_rule__Transformation__Group__5__Impl718 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__6__Impl_in_rule__Transformation__Group__6751 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__7_in_rule__Transformation__Group__6754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__TargetmodelAssignment_6_in_rule__Transformation__Group__6__Impl781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transformation__Group__7__Impl_in_rule__Transformation__Group__7811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Transformation__Group__7__Impl839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcMetamodel__Group__0__Impl_in_rule__SrcMetamodel__Group__0886 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__SrcMetamodel__Group__1_in_rule__SrcMetamodel__Group__0889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__SrcMetamodel__Group__0__Impl917 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcMetamodel__Group__1__Impl_in_rule__SrcMetamodel__Group__1948 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__SrcMetamodel__Group__2_in_rule__SrcMetamodel__Group__1951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcMetamodel__NameAssignment_1_in_rule__SrcMetamodel__Group__1__Impl978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcMetamodel__Group__2__Impl_in_rule__SrcMetamodel__Group__21008 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcMetamodel__ImportURIAssignment_2_in_rule__SrcMetamodel__Group__2__Impl1035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcModel__Group__0__Impl_in_rule__SrcModel__Group__01071 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__SrcModel__Group__1_in_rule__SrcModel__Group__01074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__SrcModel__Group__0__Impl1102 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcModel__Group__1__Impl_in_rule__SrcModel__Group__11133 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__SrcModel__Group__2_in_rule__SrcModel__Group__11136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcModel__NameAssignment_1_in_rule__SrcModel__Group__1__Impl1163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcModel__Group__2__Impl_in_rule__SrcModel__Group__21193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcModel__Group_2__0_in_rule__SrcModel__Group__2__Impl1220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcModel__Group_2__0__Impl_in_rule__SrcModel__Group_2__01256 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__SrcModel__Group_2__1_in_rule__SrcModel__Group_2__01259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__SrcModel__Group_2__0__Impl1287 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcModel__Group_2__1__Impl_in_rule__SrcModel__Group_2__11318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SrcModel__SourcemetamodelAssignment_2_1_in_rule__SrcModel__Group_2__1__Impl1345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Layer__Group__0__Impl_in_rule__Layer__Group__01379 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Layer__Group__1_in_rule__Layer__Group__01382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Layer__Group__0__Impl1410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Layer__Group__1__Impl_in_rule__Layer__Group__11441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Layer__NameAssignment_1_in_rule__Layer__Group__1__Impl1468 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgModel__Group__0__Impl_in_rule__TrgModel__Group__01502 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__TrgModel__Group__1_in_rule__TrgModel__Group__01505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__TrgModel__Group__0__Impl1533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgModel__Group__1__Impl_in_rule__TrgModel__Group__11564 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__TrgModel__Group__2_in_rule__TrgModel__Group__11567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgModel__NameAssignment_1_in_rule__TrgModel__Group__1__Impl1594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgModel__Group__2__Impl_in_rule__TrgModel__Group__21624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgModel__FilepathAssignment_2_in_rule__TrgModel__Group__2__Impl1651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Transformation__NameAssignment_11694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSrcMetamodel_in_rule__Transformation__SrcmetamodelAssignment_31725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSrcModel_in_rule__Transformation__SrcmodelAssignment_41756 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLayer_in_rule__Transformation__LayerAssignment_51787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTrgModel_in_rule__Transformation__TargetmodelAssignment_61818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SrcMetamodel__NameAssignment_11849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SrcMetamodel__ImportURIAssignment_21880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SrcModel__NameAssignment_11911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SrcModel__SourcemetamodelAssignment_2_11946 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Layer__NameAssignment_11981 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__TrgModel__NameAssignment_12012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TrgModel__FilepathAssignment_22043 = new BitSet(new long[]{0x0000000000000002L});
 
 }

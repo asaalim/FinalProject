@@ -7,6 +7,8 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.xtext.project.tdsl.transfoDsl.Transformation
+import org.xtext.project.tdsl.transfoDsl.SrcModel
+import org.xtext.project.tdsl.transfoDsl.SrcMetamodel
 
 /**
  * Generates code from your model files on save.
@@ -22,6 +24,6 @@ class TransfoDslGenerator implements IGenerator {
 //				.map[name]
 //				.join(', '))
 	resource.allContents.filter(typeof(Transformation)).forEach[t |new TransformationRunner().run(t)]
-	resource.allContents.filter(typeof(Transformation)).forEach[new TransformationRunner()]
+	resource.allContents.filter(typeof(SrcMetamodel)).forEach[smm|new TransformationRunner().loadModel(smm)]
 	}
 }

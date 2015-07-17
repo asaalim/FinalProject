@@ -17,31 +17,22 @@ Workflow {
     	platformUri = "${runtimeProject}/.."
     	
     	/////This chunk of code inserted by Adeela/////////////
-    	uriMap = {
-            from = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
-            to = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
-        }
+    	/*   uriMap = {
+            from = "platform:/plugin/org.xtext.project.tdsl/model/Composed.genmodel"
+            to = "platform:/resource/org.xtext.project.tdsl/model/Composed.genmodel"
+       		 }
         uriMap = {
-            from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel"
-            to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+            from = "platform:/plugin/org.xtext.project.tdsl/model/Composed.ecore"
+			to = "platform:/resource/org.xtext.project.tdsl/model/Composed.ecore"
         }
-        uriMap = {
-            from = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.ecore"
-            to = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.ecore"
-        }
-        uriMap = {
-            from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore"
-            to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore"
-        }
-        registerGeneratedEPackage = "org.eclipse.emf.ecore.EcorePackage"
-        registerGeneratedEPackage = "org.eclipse.emf.codegen.ecore.genmodel.GenModelPackage"
-        registerGenModelFile = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
-        registerGenModelFile = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+    	registerGeneratedEPackage = "platform:/plugin/org.xtext.project.tdsl/model/Composed.ecore"
+  		registerGenModelFile = "platform:/resource/org.xtext.project.tdsl/model/Composed.genmodel"*/
+    	
      	/////This chunk of code inserted by Adeela/////////////
      
     	// The following two lines can be removed, if Xbase is not used.
-    	//registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
-    	//registerGenModelFile = "platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel"
+    	registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
+    	registerGenModelFile = "platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel"
     }
     
     component = DirectoryCleaner {

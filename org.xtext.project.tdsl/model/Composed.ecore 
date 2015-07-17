@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="ASCII"?>
+<transfoDsl:SrcMetamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:transfoDsl="http://www.xtext.org/project/tdsl/TransfoDsl" name="Composed" importURI="http://org.xtext.project.tdsl/model/Composed.ecore"/>

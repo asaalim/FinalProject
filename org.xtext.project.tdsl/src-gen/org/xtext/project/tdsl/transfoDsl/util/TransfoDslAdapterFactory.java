@@ -80,9 +80,9 @@ public class TransfoDslAdapterFactory extends AdapterFactoryImpl
         return createTransformationAdapter();
       }
       @Override
-      public Adapter caseTrgModel(TrgModel object)
+      public Adapter caseSrcMetamodel(SrcMetamodel object)
       {
-        return createTrgModelAdapter();
+        return createSrcMetamodelAdapter();
       }
       @Override
       public Adapter caseSrcModel(SrcModel object)
@@ -93,6 +93,11 @@ public class TransfoDslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseLayer(Layer object)
       {
         return createLayerAdapter();
+      }
+      @Override
+      public Adapter caseTrgModel(TrgModel object)
+      {
+        return createTrgModelAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -132,16 +137,16 @@ public class TransfoDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.project.tdsl.transfoDsl.TrgModel <em>Trg Model</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.project.tdsl.transfoDsl.SrcMetamodel <em>Src Metamodel</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.project.tdsl.transfoDsl.TrgModel
+   * @see org.xtext.project.tdsl.transfoDsl.SrcMetamodel
    * @generated
    */
-  public Adapter createTrgModelAdapter()
+  public Adapter createSrcMetamodelAdapter()
   {
     return null;
   }
@@ -172,6 +177,21 @@ public class TransfoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createLayerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.project.tdsl.transfoDsl.TrgModel <em>Trg Model</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.project.tdsl.transfoDsl.TrgModel
+   * @generated
+   */
+  public Adapter createTrgModelAdapter()
   {
     return null;
   }

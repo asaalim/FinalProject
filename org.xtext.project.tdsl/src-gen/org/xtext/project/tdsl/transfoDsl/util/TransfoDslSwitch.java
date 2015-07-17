@@ -79,10 +79,10 @@ public class TransfoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TransfoDslPackage.TRG_MODEL:
+      case TransfoDslPackage.SRC_METAMODEL:
       {
-        TrgModel trgModel = (TrgModel)theEObject;
-        T result = caseTrgModel(trgModel);
+        SrcMetamodel srcMetamodel = (SrcMetamodel)theEObject;
+        T result = caseSrcMetamodel(srcMetamodel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -97,6 +97,13 @@ public class TransfoDslSwitch<T> extends Switch<T>
       {
         Layer layer = (Layer)theEObject;
         T result = caseLayer(layer);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TransfoDslPackage.TRG_MODEL:
+      {
+        TrgModel trgModel = (TrgModel)theEObject;
+        T result = caseTrgModel(trgModel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -121,17 +128,17 @@ public class TransfoDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Trg Model</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Src Metamodel</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Trg Model</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Src Metamodel</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTrgModel(TrgModel object)
+  public T caseSrcMetamodel(SrcMetamodel object)
   {
     return null;
   }
@@ -164,6 +171,22 @@ public class TransfoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseLayer(Layer object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Trg Model</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Trg Model</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTrgModel(TrgModel object)
   {
     return null;
   }

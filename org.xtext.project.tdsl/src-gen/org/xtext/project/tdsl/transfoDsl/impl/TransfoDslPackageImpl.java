@@ -6,11 +6,11 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.project.tdsl.transfoDsl.Layer;
+import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
 import org.xtext.project.tdsl.transfoDsl.SrcModel;
 import org.xtext.project.tdsl.transfoDsl.TransfoDslFactory;
 import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
@@ -37,7 +37,7 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass trgModelEClass = null;
+  private EClass srcMetamodelEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -52,6 +52,13 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
    * @generated
    */
   private EClass layerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass trgModelEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -101,9 +108,6 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
 
     isInited = true;
 
-    // Initialize simple dependencies
-    EcorePackage.eINSTANCE.eClass();
-
     // Create package meta-data objects
     theTransfoDslPackage.createPackageContents();
 
@@ -144,7 +148,7 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTransformation_Srcmodel()
+  public EReference getTransformation_Srcmetamodel()
   {
     return (EReference)transformationEClass.getEStructuralFeatures().get(1);
   }
@@ -154,7 +158,7 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTransformation_Layer()
+  public EReference getTransformation_Srcmodel()
   {
     return (EReference)transformationEClass.getEStructuralFeatures().get(2);
   }
@@ -164,9 +168,99 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTransformation_Targetmodel()
+  public EReference getTransformation_Layer()
   {
     return (EReference)transformationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTransformation_Targetmodel()
+  {
+    return (EReference)transformationEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSrcMetamodel()
+  {
+    return srcMetamodelEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSrcMetamodel_Name()
+  {
+    return (EAttribute)srcMetamodelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSrcMetamodel_ImportURI()
+  {
+    return (EAttribute)srcMetamodelEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSrcModel()
+  {
+    return srcModelEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSrcModel_Name()
+  {
+    return (EAttribute)srcModelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSrcModel_Sourcemetamodel()
+  {
+    return (EReference)srcModelEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLayer()
+  {
+    return layerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLayer_Name()
+  {
+    return (EAttribute)layerEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -204,66 +298,6 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSrcModel()
-  {
-    return srcModelEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSrcModel_Name()
-  {
-    return (EAttribute)srcModelEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSrcModel_ImportURI()
-  {
-    return (EAttribute)srcModelEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getSrcModel_Srcmetamodel()
-  {
-    return (EReference)srcModelEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLayer()
-  {
-    return layerEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getLayer_Name()
-  {
-    return (EAttribute)layerEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public TransfoDslFactory getTransfoDslFactory()
   {
     return (TransfoDslFactory)getEFactoryInstance();
@@ -291,21 +325,25 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
     // Create classes and their features
     transformationEClass = createEClass(TRANSFORMATION);
     createEAttribute(transformationEClass, TRANSFORMATION__NAME);
+    createEReference(transformationEClass, TRANSFORMATION__SRCMETAMODEL);
     createEReference(transformationEClass, TRANSFORMATION__SRCMODEL);
     createEReference(transformationEClass, TRANSFORMATION__LAYER);
     createEReference(transformationEClass, TRANSFORMATION__TARGETMODEL);
 
-    trgModelEClass = createEClass(TRG_MODEL);
-    createEAttribute(trgModelEClass, TRG_MODEL__NAME);
-    createEAttribute(trgModelEClass, TRG_MODEL__FILEPATH);
+    srcMetamodelEClass = createEClass(SRC_METAMODEL);
+    createEAttribute(srcMetamodelEClass, SRC_METAMODEL__NAME);
+    createEAttribute(srcMetamodelEClass, SRC_METAMODEL__IMPORT_URI);
 
     srcModelEClass = createEClass(SRC_MODEL);
     createEAttribute(srcModelEClass, SRC_MODEL__NAME);
-    createEAttribute(srcModelEClass, SRC_MODEL__IMPORT_URI);
-    createEReference(srcModelEClass, SRC_MODEL__SRCMETAMODEL);
+    createEReference(srcModelEClass, SRC_MODEL__SOURCEMETAMODEL);
 
     layerEClass = createEClass(LAYER);
     createEAttribute(layerEClass, LAYER__NAME);
+
+    trgModelEClass = createEClass(TRG_MODEL);
+    createEAttribute(trgModelEClass, TRG_MODEL__NAME);
+    createEAttribute(trgModelEClass, TRG_MODEL__FILEPATH);
   }
 
   /**
@@ -332,9 +370,6 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
     setNsPrefix(eNS_PREFIX);
     setNsURI(eNS_URI);
 
-    // Obtain other dependent packages
-    EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-
     // Create type parameters
 
     // Set bounds for type parameters
@@ -343,22 +378,26 @@ public class TransfoDslPackageImpl extends EPackageImpl implements TransfoDslPac
 
     // Initialize classes and features; add operations and parameters
     initEClass(transformationEClass, Transformation.class, "Transformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTransformation_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Transformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTransformation_Srcmodel(), this.getSrcModel(), null, "srcmodel", null, 0, -1, Transformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTransformation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Transformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTransformation_Srcmetamodel(), this.getSrcMetamodel(), null, "srcmetamodel", null, 0, 1, Transformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTransformation_Srcmodel(), this.getSrcModel(), null, "srcmodel", null, 0, 1, Transformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTransformation_Layer(), this.getLayer(), null, "layer", null, 0, -1, Transformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTransformation_Targetmodel(), this.getTrgModel(), null, "targetmodel", null, 0, -1, Transformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTransformation_Targetmodel(), this.getTrgModel(), null, "targetmodel", null, 0, 1, Transformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(trgModelEClass, TrgModel.class, "TrgModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTrgModel_Name(), theEcorePackage.getEString(), "name", null, 0, 1, TrgModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTrgModel_Filepath(), theEcorePackage.getEString(), "filepath", null, 0, 1, TrgModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(srcMetamodelEClass, SrcMetamodel.class, "SrcMetamodel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSrcMetamodel_Name(), ecorePackage.getEString(), "name", null, 0, 1, SrcMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSrcMetamodel_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, SrcMetamodel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(srcModelEClass, SrcModel.class, "SrcModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSrcModel_Name(), theEcorePackage.getEString(), "name", null, 0, 1, SrcModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getSrcModel_ImportURI(), theEcorePackage.getEString(), "importURI", null, 0, 1, SrcModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSrcModel_Srcmetamodel(), theEcorePackage.getEPackage(), null, "srcmetamodel", null, 0, 1, SrcModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSrcModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, SrcModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSrcModel_Sourcemetamodel(), this.getSrcMetamodel(), null, "sourcemetamodel", null, 0, 1, SrcModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(layerEClass, Layer.class, "Layer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLayer_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Layer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLayer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Layer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(trgModelEClass, TrgModel.class, "TrgModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTrgModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, TrgModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTrgModel_Filepath(), ecorePackage.getEString(), "filepath", null, 0, 1, TrgModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

@@ -32,13 +32,13 @@ public interface TransfoDslFactory extends EFactory
   Transformation createTransformation();
 
   /**
-   * Returns a new object of class '<em>Trg Model</em>'.
+   * Returns a new object of class '<em>Src Metamodel</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Trg Model</em>'.
+   * @return a new object of class '<em>Src Metamodel</em>'.
    * @generated
    */
-  TrgModel createTrgModel();
+  SrcMetamodel createSrcMetamodel();
 
   /**
    * Returns a new object of class '<em>Src Model</em>'.
@@ -57,6 +57,15 @@ public interface TransfoDslFactory extends EFactory
    * @generated
    */
   Layer createLayer();
+
+  /**
+   * Returns a new object of class '<em>Trg Model</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Trg Model</em>'.
+   * @generated
+   */
+  TrgModel createTrgModel();
 
   /**
    * Returns the package supported by this factory.
