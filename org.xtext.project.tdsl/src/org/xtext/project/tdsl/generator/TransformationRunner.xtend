@@ -13,8 +13,6 @@ import org.eclipse.emf.ecore.resource.Resource
 class TransformationRunner {
 	
 	///////////////////////Class Variables////////////////////////////
-	ResourceSet set = new ResourceSetImpl();
-	Resource packageResource = set.createResource(URI.createURI("file://Users/adeelasaalim/Documents/FinalProject/org.xtext.project.tdsl/model/Composed.ecore "));
 	
 	
 	def run(Transformation t){
@@ -42,9 +40,11 @@ class TransformationRunner {
 	} catch (IOException e) {
 	e.printStackTrace();
 		}*/
-		
-		packageResource.getContents().add(smm);
-		packageResource.save(null);
+	var ResourceSet set = new ResourceSetImpl();
+	//var Resource packageResource = set.createResource(URI.createURI("file://Users/adeelasaalim/Documents/FinalProject/org.xtext.project.tdsl/model/Composed.ecore "));
+	
+		var Resource packageResource = set.createResource(URI.createURI(smm.importURI));
+		packageResource.load(null);
 		
 	}
 	

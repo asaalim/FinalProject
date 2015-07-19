@@ -16,19 +16,6 @@ Workflow {
     	scanClassPath = true
     	platformUri = "${runtimeProject}/.."
     	
-    	/////This chunk of code inserted by Adeela/////////////
-    	/*   uriMap = {
-            from = "platform:/plugin/org.xtext.project.tdsl/model/Composed.genmodel"
-            to = "platform:/resource/org.xtext.project.tdsl/model/Composed.genmodel"
-       		 }
-        uriMap = {
-            from = "platform:/plugin/org.xtext.project.tdsl/model/Composed.ecore"
-			to = "platform:/resource/org.xtext.project.tdsl/model/Composed.ecore"
-        }
-    	registerGeneratedEPackage = "platform:/plugin/org.xtext.project.tdsl/model/Composed.ecore"
-  		registerGenModelFile = "platform:/resource/org.xtext.project.tdsl/model/Composed.genmodel"*/
-    	
-     	/////This chunk of code inserted by Adeela/////////////
      
     	// The following two lines can be removed, if Xbase is not used.
     	registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
@@ -58,6 +45,7 @@ Workflow {
     	projectNameRt = projectName
     	projectNameUi = "${projectName}.ui"
     	encoding = encoding
+    	
     	language = auto-inject {
     		uri = grammarURI
     

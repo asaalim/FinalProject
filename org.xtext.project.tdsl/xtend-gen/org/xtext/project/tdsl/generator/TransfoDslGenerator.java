@@ -13,7 +13,6 @@ import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 import org.xtext.project.tdsl.generator.TransformationRunner;
-import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
 import org.xtext.project.tdsl.transfoDsl.Transformation;
 
 /**
@@ -32,12 +31,5 @@ public class TransfoDslGenerator implements IGenerator {
       _transformationRunner.run(t);
     };
     IteratorExtensions.<Transformation>forEach(_filter, _function);
-    TreeIterator<EObject> _allContents_1 = resource.getAllContents();
-    Iterator<SrcMetamodel> _filter_1 = Iterators.<SrcMetamodel>filter(_allContents_1, SrcMetamodel.class);
-    final Procedure1<SrcMetamodel> _function_1 = (SrcMetamodel smm) -> {
-      TransformationRunner _transformationRunner = new TransformationRunner();
-      _transformationRunner.loadModel(smm);
-    };
-    IteratorExtensions.<SrcMetamodel>forEach(_filter_1, _function_1);
   }
 }
