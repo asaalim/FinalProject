@@ -12,7 +12,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransfoDsl.ecore#//Transformation/srcmetamodel"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransfoDsl.ecore#//Transformation/srcmodel"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransfoDsl.ecore#//Transformation/layer"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransfoDsl.ecore#//Transformation/targetmodel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TransfoDsl.ecore#//Transformation/targetmetamodel"/>
     </genClasses>
     <genClasses ecoreClass="TransfoDsl.ecore#//SrcMetamodel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//SrcMetamodel/name"/>
@@ -25,9 +25,9 @@
     <genClasses ecoreClass="TransfoDsl.ecore#//Layer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Layer/name"/>
     </genClasses>
-    <genClasses ecoreClass="TransfoDsl.ecore#//TrgModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//TrgModel/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//TrgModel/filepath"/>
+    <genClasses ecoreClass="TransfoDsl.ecore#//TrgMetaModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//TrgMetaModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//TrgMetaModel/filepath"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

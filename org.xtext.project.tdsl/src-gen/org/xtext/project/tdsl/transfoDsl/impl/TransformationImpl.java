@@ -23,7 +23,7 @@ import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
 import org.xtext.project.tdsl.transfoDsl.SrcModel;
 import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
 import org.xtext.project.tdsl.transfoDsl.Transformation;
-import org.xtext.project.tdsl.transfoDsl.TrgModel;
+import org.xtext.project.tdsl.transfoDsl.TrgMetaModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +36,7 @@ import org.xtext.project.tdsl.transfoDsl.TrgModel;
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getSrcmetamodel <em>Srcmetamodel</em>}</li>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getSrcmodel <em>Srcmodel</em>}</li>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getLayer <em>Layer</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getTargetmodel <em>Targetmodel</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TransformationImpl#getTargetmetamodel <em>Targetmetamodel</em>}</li>
  * </ul>
  * </p>
  *
@@ -95,14 +95,14 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
   protected EList<Layer> layer;
 
   /**
-   * The cached value of the '{@link #getTargetmodel() <em>Targetmodel</em>}' containment reference.
+   * The cached value of the '{@link #getTargetmetamodel() <em>Targetmetamodel</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTargetmodel()
+   * @see #getTargetmetamodel()
    * @generated
    * @ordered
    */
-  protected TrgModel targetmodel;
+  protected TrgMetaModel targetmetamodel;
 
   /**
    * <!-- begin-user-doc -->
@@ -263,9 +263,9 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public TrgModel getTargetmodel()
+  public TrgMetaModel getTargetmetamodel()
   {
-    return targetmodel;
+    return targetmetamodel;
   }
 
   /**
@@ -273,13 +273,13 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTargetmodel(TrgModel newTargetmodel, NotificationChain msgs)
+  public NotificationChain basicSetTargetmetamodel(TrgMetaModel newTargetmetamodel, NotificationChain msgs)
   {
-    TrgModel oldTargetmodel = targetmodel;
-    targetmodel = newTargetmodel;
+    TrgMetaModel oldTargetmetamodel = targetmetamodel;
+    targetmetamodel = newTargetmetamodel;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRANSFORMATION__TARGETMODEL, oldTargetmodel, newTargetmodel);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRANSFORMATION__TARGETMETAMODEL, oldTargetmetamodel, newTargetmetamodel);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -290,20 +290,20 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTargetmodel(TrgModel newTargetmodel)
+  public void setTargetmetamodel(TrgMetaModel newTargetmetamodel)
   {
-    if (newTargetmodel != targetmodel)
+    if (newTargetmetamodel != targetmetamodel)
     {
       NotificationChain msgs = null;
-      if (targetmodel != null)
-        msgs = ((InternalEObject)targetmodel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TransfoDslPackage.TRANSFORMATION__TARGETMODEL, null, msgs);
-      if (newTargetmodel != null)
-        msgs = ((InternalEObject)newTargetmodel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TransfoDslPackage.TRANSFORMATION__TARGETMODEL, null, msgs);
-      msgs = basicSetTargetmodel(newTargetmodel, msgs);
+      if (targetmetamodel != null)
+        msgs = ((InternalEObject)targetmetamodel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TransfoDslPackage.TRANSFORMATION__TARGETMETAMODEL, null, msgs);
+      if (newTargetmetamodel != null)
+        msgs = ((InternalEObject)newTargetmetamodel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TransfoDslPackage.TRANSFORMATION__TARGETMETAMODEL, null, msgs);
+      msgs = basicSetTargetmetamodel(newTargetmetamodel, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRANSFORMATION__TARGETMODEL, newTargetmodel, newTargetmodel));
+      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRANSFORMATION__TARGETMETAMODEL, newTargetmetamodel, newTargetmetamodel));
   }
 
   /**
@@ -322,8 +322,8 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
         return basicSetSrcmodel(null, msgs);
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         return ((InternalEList<?>)getLayer()).basicRemove(otherEnd, msgs);
-      case TransfoDslPackage.TRANSFORMATION__TARGETMODEL:
-        return basicSetTargetmodel(null, msgs);
+      case TransfoDslPackage.TRANSFORMATION__TARGETMETAMODEL:
+        return basicSetTargetmetamodel(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -346,8 +346,8 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
         return getSrcmodel();
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         return getLayer();
-      case TransfoDslPackage.TRANSFORMATION__TARGETMODEL:
-        return getTargetmodel();
+      case TransfoDslPackage.TRANSFORMATION__TARGETMETAMODEL:
+        return getTargetmetamodel();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -376,8 +376,8 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
         getLayer().clear();
         getLayer().addAll((Collection<? extends Layer>)newValue);
         return;
-      case TransfoDslPackage.TRANSFORMATION__TARGETMODEL:
-        setTargetmodel((TrgModel)newValue);
+      case TransfoDslPackage.TRANSFORMATION__TARGETMETAMODEL:
+        setTargetmetamodel((TrgMetaModel)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -405,8 +405,8 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         getLayer().clear();
         return;
-      case TransfoDslPackage.TRANSFORMATION__TARGETMODEL:
-        setTargetmodel((TrgModel)null);
+      case TransfoDslPackage.TRANSFORMATION__TARGETMETAMODEL:
+        setTargetmetamodel((TrgMetaModel)null);
         return;
     }
     super.eUnset(featureID);
@@ -430,8 +430,8 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
         return srcmodel != null;
       case TransfoDslPackage.TRANSFORMATION__LAYER:
         return layer != null && !layer.isEmpty();
-      case TransfoDslPackage.TRANSFORMATION__TARGETMODEL:
-        return targetmodel != null;
+      case TransfoDslPackage.TRANSFORMATION__TARGETMETAMODEL:
+        return targetmetamodel != null;
     }
     return super.eIsSet(featureID);
   }

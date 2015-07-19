@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getSrcmetamodel <em>Srcmetamodel</em>}</li>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getSrcmodel <em>Srcmodel</em>}</li>
  *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getLayer <em>Layer</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getTargetmodel <em>Targetmodel</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.Transformation#getTargetmetamodel <em>Targetmetamodel</em>}</li>
  * </ul>
  * </p>
  *
@@ -123,29 +123,29 @@ public interface Transformation extends EObject
   EList<Layer> getLayer();
 
   /**
-   * Returns the value of the '<em><b>Targetmodel</b></em>' containment reference.
+   * Returns the value of the '<em><b>Targetmetamodel</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Targetmodel</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Targetmetamodel</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Targetmodel</em>' containment reference.
-   * @see #setTargetmodel(TrgModel)
-   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getTransformation_Targetmodel()
+   * @return the value of the '<em>Targetmetamodel</em>' containment reference.
+   * @see #setTargetmetamodel(TrgMetaModel)
+   * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getTransformation_Targetmetamodel()
    * @model containment="true"
    * @generated
    */
-  TrgModel getTargetmodel();
+  TrgMetaModel getTargetmetamodel();
 
   /**
-   * Sets the value of the '{@link org.xtext.project.tdsl.transfoDsl.Transformation#getTargetmodel <em>Targetmodel</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.project.tdsl.transfoDsl.Transformation#getTargetmetamodel <em>Targetmetamodel</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Targetmodel</em>' containment reference.
-   * @see #getTargetmodel()
+   * @param value the new value of the '<em>Targetmetamodel</em>' containment reference.
+   * @see #getTargetmetamodel()
    * @generated
    */
-  void setTargetmodel(TrgModel value);
+  void setTargetmetamodel(TrgMetaModel value);
 
 } // Transformation

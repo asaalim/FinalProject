@@ -103,13 +103,13 @@ public interface TransfoDslPackage extends EPackage
   int TRANSFORMATION__LAYER = 3;
 
   /**
-   * The feature id for the '<em><b>Targetmodel</b></em>' containment reference.
+   * The feature id for the '<em><b>Targetmetamodel</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRANSFORMATION__TARGETMODEL = 4;
+  int TRANSFORMATION__TARGETMETAMODEL = 4;
 
   /**
    * The number of structural features of the '<em>Transformation</em>' class.
@@ -223,14 +223,14 @@ public interface TransfoDslPackage extends EPackage
   int LAYER_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.project.tdsl.transfoDsl.impl.TrgModelImpl <em>Trg Model</em>}' class.
+   * The meta object id for the '{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl <em>Trg Meta Model</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.project.tdsl.transfoDsl.impl.TrgModelImpl
-   * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getTrgModel()
+   * @see org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl
+   * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getTrgMetaModel()
    * @generated
    */
-  int TRG_MODEL = 4;
+  int TRG_META_MODEL = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -239,7 +239,7 @@ public interface TransfoDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRG_MODEL__NAME = 0;
+  int TRG_META_MODEL__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Filepath</b></em>' attribute.
@@ -248,16 +248,16 @@ public interface TransfoDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRG_MODEL__FILEPATH = 1;
+  int TRG_META_MODEL__FILEPATH = 1;
 
   /**
-   * The number of structural features of the '<em>Trg Model</em>' class.
+   * The number of structural features of the '<em>Trg Meta Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRG_MODEL_FEATURE_COUNT = 2;
+  int TRG_META_MODEL_FEATURE_COUNT = 2;
 
 
   /**
@@ -315,15 +315,15 @@ public interface TransfoDslPackage extends EPackage
   EReference getTransformation_Layer();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.project.tdsl.transfoDsl.Transformation#getTargetmodel <em>Targetmodel</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.project.tdsl.transfoDsl.Transformation#getTargetmetamodel <em>Targetmetamodel</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Targetmodel</em>'.
-   * @see org.xtext.project.tdsl.transfoDsl.Transformation#getTargetmodel()
+   * @return the meta object for the containment reference '<em>Targetmetamodel</em>'.
+   * @see org.xtext.project.tdsl.transfoDsl.Transformation#getTargetmetamodel()
    * @see #getTransformation()
    * @generated
    */
-  EReference getTransformation_Targetmodel();
+  EReference getTransformation_Targetmetamodel();
 
   /**
    * Returns the meta object for class '{@link org.xtext.project.tdsl.transfoDsl.SrcMetamodel <em>Src Metamodel</em>}'.
@@ -411,36 +411,36 @@ public interface TransfoDslPackage extends EPackage
   EAttribute getLayer_Name();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.project.tdsl.transfoDsl.TrgModel <em>Trg Model</em>}'.
+   * Returns the meta object for class '{@link org.xtext.project.tdsl.transfoDsl.TrgMetaModel <em>Trg Meta Model</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Trg Model</em>'.
-   * @see org.xtext.project.tdsl.transfoDsl.TrgModel
+   * @return the meta object for class '<em>Trg Meta Model</em>'.
+   * @see org.xtext.project.tdsl.transfoDsl.TrgMetaModel
    * @generated
    */
-  EClass getTrgModel();
+  EClass getTrgMetaModel();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.project.tdsl.transfoDsl.TrgModel#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.project.tdsl.transfoDsl.TrgMetaModel#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.project.tdsl.transfoDsl.TrgModel#getName()
-   * @see #getTrgModel()
+   * @see org.xtext.project.tdsl.transfoDsl.TrgMetaModel#getName()
+   * @see #getTrgMetaModel()
    * @generated
    */
-  EAttribute getTrgModel_Name();
+  EAttribute getTrgMetaModel_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.project.tdsl.transfoDsl.TrgModel#getFilepath <em>Filepath</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.project.tdsl.transfoDsl.TrgMetaModel#getFilepath <em>Filepath</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Filepath</em>'.
-   * @see org.xtext.project.tdsl.transfoDsl.TrgModel#getFilepath()
-   * @see #getTrgModel()
+   * @see org.xtext.project.tdsl.transfoDsl.TrgMetaModel#getFilepath()
+   * @see #getTrgMetaModel()
    * @generated
    */
-  EAttribute getTrgModel_Filepath();
+  EAttribute getTrgMetaModel_Filepath();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -508,12 +508,12 @@ public interface TransfoDslPackage extends EPackage
     EReference TRANSFORMATION__LAYER = eINSTANCE.getTransformation_Layer();
 
     /**
-     * The meta object literal for the '<em><b>Targetmodel</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Targetmetamodel</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TRANSFORMATION__TARGETMODEL = eINSTANCE.getTransformation_Targetmodel();
+    EReference TRANSFORMATION__TARGETMETAMODEL = eINSTANCE.getTransformation_Targetmetamodel();
 
     /**
      * The meta object literal for the '{@link org.xtext.project.tdsl.transfoDsl.impl.SrcMetamodelImpl <em>Src Metamodel</em>}' class.
@@ -586,14 +586,14 @@ public interface TransfoDslPackage extends EPackage
     EAttribute LAYER__NAME = eINSTANCE.getLayer_Name();
 
     /**
-     * The meta object literal for the '{@link org.xtext.project.tdsl.transfoDsl.impl.TrgModelImpl <em>Trg Model</em>}' class.
+     * The meta object literal for the '{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl <em>Trg Meta Model</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.project.tdsl.transfoDsl.impl.TrgModelImpl
-     * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getTrgModel()
+     * @see org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl
+     * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getTrgMetaModel()
      * @generated
      */
-    EClass TRG_MODEL = eINSTANCE.getTrgModel();
+    EClass TRG_META_MODEL = eINSTANCE.getTrgMetaModel();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -601,7 +601,7 @@ public interface TransfoDslPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TRG_MODEL__NAME = eINSTANCE.getTrgModel_Name();
+    EAttribute TRG_META_MODEL__NAME = eINSTANCE.getTrgMetaModel_Name();
 
     /**
      * The meta object literal for the '<em><b>Filepath</b></em>' attribute feature.
@@ -609,7 +609,7 @@ public interface TransfoDslPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TRG_MODEL__FILEPATH = eINSTANCE.getTrgModel_Filepath();
+    EAttribute TRG_META_MODEL__FILEPATH = eINSTANCE.getTrgMetaModel_Filepath();
 
   }
 

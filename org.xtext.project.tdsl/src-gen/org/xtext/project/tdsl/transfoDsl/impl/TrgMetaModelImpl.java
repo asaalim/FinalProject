@@ -10,23 +10,23 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
-import org.xtext.project.tdsl.transfoDsl.TrgModel;
+import org.xtext.project.tdsl.transfoDsl.TrgMetaModel;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Trg Model</b></em>'.
+ * An implementation of the model object '<em><b>Trg Meta Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TrgModelImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TrgModelImpl#getFilepath <em>Filepath</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl#getFilepath <em>Filepath</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TrgModelImpl extends MinimalEObjectImpl.Container implements TrgModel
+public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements TrgMetaModel
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -73,7 +73,7 @@ public class TrgModelImpl extends MinimalEObjectImpl.Container implements TrgMod
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TrgModelImpl()
+  protected TrgMetaModelImpl()
   {
     super();
   }
@@ -86,7 +86,7 @@ public class TrgModelImpl extends MinimalEObjectImpl.Container implements TrgMod
   @Override
   protected EClass eStaticClass()
   {
-    return TransfoDslPackage.Literals.TRG_MODEL;
+    return TransfoDslPackage.Literals.TRG_META_MODEL;
   }
 
   /**
@@ -109,7 +109,7 @@ public class TrgModelImpl extends MinimalEObjectImpl.Container implements TrgMod
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRG_MODEL__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRG_META_MODEL__NAME, oldName, name));
   }
 
   /**
@@ -132,7 +132,7 @@ public class TrgModelImpl extends MinimalEObjectImpl.Container implements TrgMod
     String oldFilepath = filepath;
     filepath = newFilepath;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRG_MODEL__FILEPATH, oldFilepath, filepath));
+      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRG_META_MODEL__FILEPATH, oldFilepath, filepath));
   }
 
   /**
@@ -145,9 +145,9 @@ public class TrgModelImpl extends MinimalEObjectImpl.Container implements TrgMod
   {
     switch (featureID)
     {
-      case TransfoDslPackage.TRG_MODEL__NAME:
+      case TransfoDslPackage.TRG_META_MODEL__NAME:
         return getName();
-      case TransfoDslPackage.TRG_MODEL__FILEPATH:
+      case TransfoDslPackage.TRG_META_MODEL__FILEPATH:
         return getFilepath();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -163,10 +163,10 @@ public class TrgModelImpl extends MinimalEObjectImpl.Container implements TrgMod
   {
     switch (featureID)
     {
-      case TransfoDslPackage.TRG_MODEL__NAME:
+      case TransfoDslPackage.TRG_META_MODEL__NAME:
         setName((String)newValue);
         return;
-      case TransfoDslPackage.TRG_MODEL__FILEPATH:
+      case TransfoDslPackage.TRG_META_MODEL__FILEPATH:
         setFilepath((String)newValue);
         return;
     }
@@ -183,10 +183,10 @@ public class TrgModelImpl extends MinimalEObjectImpl.Container implements TrgMod
   {
     switch (featureID)
     {
-      case TransfoDslPackage.TRG_MODEL__NAME:
+      case TransfoDslPackage.TRG_META_MODEL__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TransfoDslPackage.TRG_MODEL__FILEPATH:
+      case TransfoDslPackage.TRG_META_MODEL__FILEPATH:
         setFilepath(FILEPATH_EDEFAULT);
         return;
     }
@@ -203,9 +203,9 @@ public class TrgModelImpl extends MinimalEObjectImpl.Container implements TrgMod
   {
     switch (featureID)
     {
-      case TransfoDslPackage.TRG_MODEL__NAME:
+      case TransfoDslPackage.TRG_META_MODEL__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TransfoDslPackage.TRG_MODEL__FILEPATH:
+      case TransfoDslPackage.TRG_META_MODEL__FILEPATH:
         return FILEPATH_EDEFAULT == null ? filepath != null : !FILEPATH_EDEFAULT.equals(filepath);
     }
     return super.eIsSet(featureID);
@@ -230,4 +230,4 @@ public class TrgModelImpl extends MinimalEObjectImpl.Container implements TrgMod
     return result.toString();
   }
 
-} //TrgModelImpl
+} //TrgMetaModelImpl

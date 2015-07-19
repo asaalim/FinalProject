@@ -160,17 +160,17 @@ ruleTransformation returns [EObject current=null]
 )+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTransformationAccess().getTargetmodelTrgModelParserRuleCall_6_0()); 
+	        newCompositeNode(grammarAccess.getTransformationAccess().getTargetmetamodelTrgMetaModelParserRuleCall_6_0()); 
 	    }
-		lv_targetmodel_6_0=ruleTrgModel		{
+		lv_targetmetamodel_6_0=ruleTrgMetaModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTransformationRule());
 	        }
        		set(
        			$current, 
-       			"targetmodel",
-        		lv_targetmodel_6_0, 
-        		"TrgModel");
+       			"targetmetamodel",
+        		lv_targetmetamodel_6_0, 
+        		"TrgMetaModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -350,33 +350,33 @@ ruleLayer returns [EObject current=null]
 
 
 
-// Entry rule entryRuleTrgModel
-entryRuleTrgModel returns [EObject current=null] 
+// Entry rule entryRuleTrgMetaModel
+entryRuleTrgMetaModel returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getTrgModelRule()); }
-	 iv_ruleTrgModel=ruleTrgModel 
-	 { $current=$iv_ruleTrgModel.current; } 
+	{ newCompositeNode(grammarAccess.getTrgMetaModelRule()); }
+	 iv_ruleTrgMetaModel=ruleTrgMetaModel 
+	 { $current=$iv_ruleTrgMetaModel.current; } 
 	 EOF 
 ;
 
-// Rule TrgModel
-ruleTrgModel returns [EObject current=null] 
+// Rule TrgMetaModel
+ruleTrgMetaModel returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 (	otherlv_0='OUT' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getTrgModelAccess().getOUTKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getTrgMetaModelAccess().getOUTKeyword_0());
     }
 (
 (
 		lv_name_1_0=RULE_ID
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getTrgModelAccess().getNameIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getTrgMetaModelAccess().getNameIDTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTrgModelRule());
+	            $current = createModelElement(grammarAccess.getTrgMetaModelRule());
 	        }
        		setWithLastConsumed(
        			$current, 
@@ -390,11 +390,11 @@ ruleTrgModel returns [EObject current=null]
 (
 		lv_filepath_2_0=RULE_STRING
 		{
-			newLeafNode(lv_filepath_2_0, grammarAccess.getTrgModelAccess().getFilepathSTRINGTerminalRuleCall_2_0()); 
+			newLeafNode(lv_filepath_2_0, grammarAccess.getTrgMetaModelAccess().getFilepathSTRINGTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTrgModelRule());
+	            $current = createModelElement(grammarAccess.getTrgMetaModelRule());
 	        }
        		setWithLastConsumed(
        			$current, 

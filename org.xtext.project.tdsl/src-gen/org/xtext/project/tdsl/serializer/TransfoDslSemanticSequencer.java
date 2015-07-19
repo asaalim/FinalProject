@@ -22,7 +22,7 @@ import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
 import org.xtext.project.tdsl.transfoDsl.SrcModel;
 import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
 import org.xtext.project.tdsl.transfoDsl.Transformation;
-import org.xtext.project.tdsl.transfoDsl.TrgModel;
+import org.xtext.project.tdsl.transfoDsl.TrgMetaModel;
 
 @SuppressWarnings("all")
 public class TransfoDslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -45,8 +45,8 @@ public class TransfoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case TransfoDslPackage.TRANSFORMATION:
 				sequence_Transformation(context, (Transformation) semanticObject); 
 				return; 
-			case TransfoDslPackage.TRG_MODEL:
-				sequence_TrgModel(context, (TrgModel) semanticObject); 
+			case TransfoDslPackage.TRG_META_MODEL:
+				sequence_TrgMetaModel(context, (TrgMetaModel) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -108,7 +108,7 @@ public class TransfoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (name=ID srcmetamodel=SrcMetamodel srcmodel=SrcModel layer+=Layer+ targetmodel=TrgModel)
+	 *     (name=ID srcmetamodel=SrcMetamodel srcmodel=SrcModel layer+=Layer+ targetmetamodel=TrgMetaModel)
 	 */
 	protected void sequence_Transformation(EObject context, Transformation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -119,17 +119,17 @@ public class TransfoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 * Constraint:
 	 *     (name=ID filepath=STRING)
 	 */
-	protected void sequence_TrgModel(EObject context, TrgModel semanticObject) {
+	protected void sequence_TrgMetaModel(EObject context, TrgMetaModel semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.TRG_MODEL__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.TRG_MODEL__NAME));
-			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.TRG_MODEL__FILEPATH) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.TRG_MODEL__FILEPATH));
+			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.TRG_META_MODEL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.TRG_META_MODEL__NAME));
+			if(transientValues.isValueTransient(semanticObject, TransfoDslPackage.Literals.TRG_META_MODEL__FILEPATH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TransfoDslPackage.Literals.TRG_META_MODEL__FILEPATH));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTrgModelAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getTrgModelAccess().getFilepathSTRINGTerminalRuleCall_2_0(), semanticObject.getFilepath());
+		feeder.accept(grammarAccess.getTrgMetaModelAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getTrgMetaModelAccess().getFilepathSTRINGTerminalRuleCall_2_0(), semanticObject.getFilepath());
 		feeder.finish();
 	}
 }

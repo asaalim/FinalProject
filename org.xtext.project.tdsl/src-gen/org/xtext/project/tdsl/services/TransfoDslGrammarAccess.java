@@ -31,15 +31,16 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSrcmodelSrcModelParserRuleCall_4_0 = (RuleCall)cSrcmodelAssignment_4.eContents().get(0);
 		private final Assignment cLayerAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cLayerLayerParserRuleCall_5_0 = (RuleCall)cLayerAssignment_5.eContents().get(0);
-		private final Assignment cTargetmodelAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cTargetmodelTrgModelParserRuleCall_6_0 = (RuleCall)cTargetmodelAssignment_6.eContents().get(0);
+		private final Assignment cTargetmetamodelAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cTargetmetamodelTrgMetaModelParserRuleCall_6_0 = (RuleCall)cTargetmetamodelAssignment_6.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Transformation:
-		//	"transformation" name=ID "{" srcmetamodel=SrcMetamodel srcmodel=SrcModel layer+=Layer+ targetmodel=TrgModel "}";
+		//	"transformation" name=ID "{" srcmetamodel=SrcMetamodel srcmodel=SrcModel layer+=Layer+ targetmetamodel=TrgMetaModel
+		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"transformation" name=ID "{" srcmetamodel=SrcMetamodel srcmodel=SrcModel layer+=Layer+ targetmodel=TrgModel "}"
+		//"transformation" name=ID "{" srcmetamodel=SrcMetamodel srcmodel=SrcModel layer+=Layer+ targetmetamodel=TrgMetaModel "}"
 		public Group getGroup() { return cGroup; }
 
 		//"transformation"
@@ -72,11 +73,11 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Layer
 		public RuleCall getLayerLayerParserRuleCall_5_0() { return cLayerLayerParserRuleCall_5_0; }
 
-		//targetmodel=TrgModel
-		public Assignment getTargetmodelAssignment_6() { return cTargetmodelAssignment_6; }
+		//targetmetamodel=TrgMetaModel
+		public Assignment getTargetmetamodelAssignment_6() { return cTargetmetamodelAssignment_6; }
 
-		//TrgModel
-		public RuleCall getTargetmodelTrgModelParserRuleCall_6_0() { return cTargetmodelTrgModelParserRuleCall_6_0; }
+		//TrgMetaModel
+		public RuleCall getTargetmetamodelTrgMetaModelParserRuleCall_6_0() { return cTargetmetamodelTrgMetaModelParserRuleCall_6_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
@@ -182,8 +183,8 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 	}
 
-	public class TrgModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TrgModel");
+	public class TrgMetaModelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TrgMetaModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cOUTKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -191,7 +192,7 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cFilepathAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cFilepathSTRINGTerminalRuleCall_2_0 = (RuleCall)cFilepathAssignment_2.eContents().get(0);
 		
-		//TrgModel:
+		//TrgMetaModel:
 		//	"OUT" name=ID filepath=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
@@ -274,7 +275,7 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final SrcMetamodelElements pSrcMetamodel;
 	private final SrcModelElements pSrcModel;
 	private final LayerElements pLayer;
-	private final TrgModelElements pTrgModel;
+	private final TrgMetaModelElements pTrgMetaModel;
 	private final QualifiedNameElements pQualifiedName;
 	
 	private final Grammar grammar;
@@ -290,7 +291,7 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pSrcMetamodel = new SrcMetamodelElements();
 		this.pSrcModel = new SrcModelElements();
 		this.pLayer = new LayerElements();
-		this.pTrgModel = new TrgModelElements();
+		this.pTrgMetaModel = new TrgMetaModelElements();
 		this.pQualifiedName = new QualifiedNameElements();
 	}
 	
@@ -322,7 +323,8 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Transformation:
-	//	"transformation" name=ID "{" srcmetamodel=SrcMetamodel srcmodel=SrcModel layer+=Layer+ targetmodel=TrgModel "}";
+	//	"transformation" name=ID "{" srcmetamodel=SrcMetamodel srcmodel=SrcModel layer+=Layer+ targetmetamodel=TrgMetaModel
+	//	"}";
 	public TransformationElements getTransformationAccess() {
 		return pTransformation;
 	}
@@ -361,14 +363,14 @@ public class TransfoDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getLayerAccess().getRule();
 	}
 
-	//TrgModel:
+	//TrgMetaModel:
 	//	"OUT" name=ID filepath=STRING;
-	public TrgModelElements getTrgModelAccess() {
-		return pTrgModel;
+	public TrgMetaModelElements getTrgMetaModelAccess() {
+		return pTrgMetaModel;
 	}
 	
-	public ParserRule getTrgModelRule() {
-		return getTrgModelAccess().getRule();
+	public ParserRule getTrgMetaModelRule() {
+		return getTrgMetaModelAccess().getRule();
 	}
 
 	/// *Operation:

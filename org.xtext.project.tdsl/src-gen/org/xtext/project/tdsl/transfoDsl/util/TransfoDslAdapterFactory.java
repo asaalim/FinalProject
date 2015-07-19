@@ -95,9 +95,9 @@ public class TransfoDslAdapterFactory extends AdapterFactoryImpl
         return createLayerAdapter();
       }
       @Override
-      public Adapter caseTrgModel(TrgModel object)
+      public Adapter caseTrgMetaModel(TrgMetaModel object)
       {
-        return createTrgModelAdapter();
+        return createTrgMetaModelAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -182,16 +182,16 @@ public class TransfoDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.project.tdsl.transfoDsl.TrgModel <em>Trg Model</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.project.tdsl.transfoDsl.TrgMetaModel <em>Trg Meta Model</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.project.tdsl.transfoDsl.TrgModel
+   * @see org.xtext.project.tdsl.transfoDsl.TrgMetaModel
    * @generated
    */
-  public Adapter createTrgModelAdapter()
+  public Adapter createTrgMetaModelAdapter()
   {
     return null;
   }

@@ -42,21 +42,21 @@ public class TransfoDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSrcModelAccess().getGroup(), "rule__SrcModel__Group__0");
 					put(grammarAccess.getSrcModelAccess().getGroup_2(), "rule__SrcModel__Group_2__0");
 					put(grammarAccess.getLayerAccess().getGroup(), "rule__Layer__Group__0");
-					put(grammarAccess.getTrgModelAccess().getGroup(), "rule__TrgModel__Group__0");
+					put(grammarAccess.getTrgMetaModelAccess().getGroup(), "rule__TrgMetaModel__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getTransformationAccess().getNameAssignment_1(), "rule__Transformation__NameAssignment_1");
 					put(grammarAccess.getTransformationAccess().getSrcmetamodelAssignment_3(), "rule__Transformation__SrcmetamodelAssignment_3");
 					put(grammarAccess.getTransformationAccess().getSrcmodelAssignment_4(), "rule__Transformation__SrcmodelAssignment_4");
 					put(grammarAccess.getTransformationAccess().getLayerAssignment_5(), "rule__Transformation__LayerAssignment_5");
-					put(grammarAccess.getTransformationAccess().getTargetmodelAssignment_6(), "rule__Transformation__TargetmodelAssignment_6");
+					put(grammarAccess.getTransformationAccess().getTargetmetamodelAssignment_6(), "rule__Transformation__TargetmetamodelAssignment_6");
 					put(grammarAccess.getSrcMetamodelAccess().getNameAssignment_1(), "rule__SrcMetamodel__NameAssignment_1");
 					put(grammarAccess.getSrcMetamodelAccess().getImportURIAssignment_2(), "rule__SrcMetamodel__ImportURIAssignment_2");
 					put(grammarAccess.getSrcModelAccess().getNameAssignment_1(), "rule__SrcModel__NameAssignment_1");
 					put(grammarAccess.getSrcModelAccess().getSourcemetamodelAssignment_2_1(), "rule__SrcModel__SourcemetamodelAssignment_2_1");
 					put(grammarAccess.getLayerAccess().getNameAssignment_1(), "rule__Layer__NameAssignment_1");
-					put(grammarAccess.getTrgModelAccess().getNameAssignment_1(), "rule__TrgModel__NameAssignment_1");
-					put(grammarAccess.getTrgModelAccess().getFilepathAssignment_2(), "rule__TrgModel__FilepathAssignment_2");
+					put(grammarAccess.getTrgMetaModelAccess().getNameAssignment_1(), "rule__TrgMetaModel__NameAssignment_1");
+					put(grammarAccess.getTrgMetaModelAccess().getFilepathAssignment_2(), "rule__TrgMetaModel__FilepathAssignment_2");
 				}
 			};
 		}
