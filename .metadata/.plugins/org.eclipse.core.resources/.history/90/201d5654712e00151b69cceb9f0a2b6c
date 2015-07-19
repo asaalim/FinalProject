@@ -62,7 +62,7 @@ class TransformationRunner {
     		println(ReferenceIterator.next())
     	}*/
     	
-    	return eObject
+    	copyMetamodel(eObject)
     	
     }
     

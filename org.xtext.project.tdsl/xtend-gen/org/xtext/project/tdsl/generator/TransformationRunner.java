@@ -8,21 +8,19 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
-import org.xtext.project.tdsl.transfoDsl.Transformation;
 
 @SuppressWarnings("all")
 public class TransformationRunner {
-  private EObject eObject;
-  
-  public Object run(final Transformation t) {
+  public Object run() {
     return null;
   }
   
-  public void loadModel(final SrcMetamodel smm) {
+  public EObject loadModel(final SrcMetamodel smm) {
     try {
       ResourceSet resourceSet = new ResourceSetImpl();
       Resource.Factory.Registry _resourceFactoryRegistry = resourceSet.getResourceFactoryRegistry();
@@ -41,22 +39,28 @@ public class TransformationRunner {
         InputOutput.<String>println("Resource has been failed to load.");
       }
       EList<EObject> _contents = packageResource.getContents();
-      EObject _get = _contents.get(0);
-      this.eObject = _get;
-      EList<EObject> _eContents = this.eObject.eContents();
+      EObject eObject = _contents.get(0);
+      EList<EObject> _eContents = eObject.eContents();
       boolean _isEmpty = _eContents.isEmpty();
       if (_isEmpty) {
         InputOutput.<String>println("List is empty");
       } else {
         InputOutput.<String>println("List is NOT empty.");
       }
-      Iterator<EObject> ReferenceIterator = this.eObject.eAllContents();
-      while (ReferenceIterator.hasNext()) {
-        EObject _next = ReferenceIterator.next();
-        InputOutput.<EObject>println(_next);
-      }
+      return eObject;
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
+    }
+  }
+  
+  public void copyMetamodel(final EObject eCopyObj) {
+    InputOutput.<String>println("Inside Copy Metamodel Function");
+    EcoreUtil.Copier copier = new EcoreUtil.Copier();
+    copier.copy(eCopyObj);
+    Iterator<EObject> ReferenceIterator = eCopyObj.eAllContents();
+    while (ReferenceIterator.hasNext()) {
+      EObject _next = ReferenceIterator.next();
+      InputOutput.<EObject>println(_next);
     }
   }
   

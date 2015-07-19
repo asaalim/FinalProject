@@ -17,12 +17,12 @@ class TransformationRunner {
 	
 	///////////////////////Class Variables////////////////////////////
 	
-		def run(){
+	
+	def run(){
 		//1// Load Model
 		//2// Run Model
 		//3// Derive Layer
 		//4// Execute Layer
-		
 		
 	}
 	
@@ -62,7 +62,7 @@ class TransformationRunner {
     		println(ReferenceIterator.next())
     	}*/
     	
-    	return eObject
+    	copyMetamodel(eObject)
     	
     }
     

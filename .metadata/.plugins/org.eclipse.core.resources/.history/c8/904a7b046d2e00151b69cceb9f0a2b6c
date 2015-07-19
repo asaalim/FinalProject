@@ -16,13 +16,13 @@ import org.eclipse.emf.ecore.util.EcoreUtil.Copier
 class TransformationRunner {
 	
 	///////////////////////Class Variables////////////////////////////
+	var EObject eObject;
 	
-		def run(){
+	def run(Transformation t){
 		//1// Load Model
 		//2// Run Model
 		//3// Derive Layer
 		//4// Execute Layer
-		
 		
 	}
 	
@@ -42,7 +42,7 @@ class TransformationRunner {
 			println("Resource has been failed to load.")
 		}
 		// Iterate through the Contents of Package
-    	var EObject eObject = packageResource.getContents.get(0) //Get the root element
+    	eObject = packageResource.getContents.get(0) //Get the root element
     	// iterate via "iterator loop"
 		/*var Iterator<EObject> ContentsIterator = eObject.eContents.iterator()
 		while (ContentsIterator.hasNext()) {
@@ -62,16 +62,16 @@ class TransformationRunner {
     		println(ReferenceIterator.next())
     	}*/
     	
-    	return eObject
+    	
     	
     }
     
     //********************************Make a copy of Metamodel************************************//
-    def copyMetamodel(EObject eCopyObj){
-    	println("Inside Copy Metamodel Function")
+    def copyMetamodel(EObject eObj){
+    	
     	 var Copier copier = new Copier();
-    	 copier.copy(eCopyObj)
-    	 var Iterator<EObject> ReferenceIterator = eCopyObj.eAllContents//Returns a Tree Iterator
+    	 copier.copy(eObj)
+    	 var Iterator<EObject> ReferenceIterator = eObject.eAllContents//Returns a Tree Iterator
     	while (ReferenceIterator.hasNext()){
     	println(ReferenceIterator.next())
     	}

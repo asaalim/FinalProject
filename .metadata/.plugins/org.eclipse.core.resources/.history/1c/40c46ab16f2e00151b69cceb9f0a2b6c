@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil.Copier
 class TransformationRunner {
 	
 	///////////////////////Class Variables////////////////////////////
-	
+
 		def run(){
 		//1// Load Model
 		//2// Run Model
@@ -62,7 +62,7 @@ class TransformationRunner {
     		println(ReferenceIterator.next())
     	}*/
     	
-    	return eObject
+    	copyMetamodel(eObject)
     	
     }
     
