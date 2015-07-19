@@ -9,6 +9,8 @@ import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.emf.ecore.resource.Resource
+import java.util.Map
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
 
 class TransformationRunner {
 	
@@ -26,27 +28,21 @@ class TransformationRunner {
 	}
 	
 	def loadModel(SrcMetamodel smm){
-		//register the package
 		
-	/*EcorePackage.eINSTANCE.eClass();
-	EPackage.Registry.INSTANCE.put(EcoreFactory.eINSTANCE.getEPackage().getNsURI(), EcoreFactory.eINSTANCE.getEPackage());
-	//get the uri
-	 URI ecoreUri = URI.createURI(EcoreFactory.eINSTANCE.getEPackage().getNsURI(), true);
-	//get the resource
-	Resource ecoreResource = xtextResourceSet.getResource(ecoreUri, true);
-	try {
-	//load it
-	ecoreResource.load(null);
-	} catch (IOException e) {
-	e.printStackTrace();
-		}*/
-	var ResourceSet set = new ResourceSetImpl();
-	//var Resource packageResource = set.createResource(URI.createURI("file://Users/adeelasaalim/Documents/FinalProject/org.xtext.project.tdsl/model/Composed.ecore "));
-	
-		var Resource packageResource = set.createResource(URI.createURI(smm.importURI));
-		packageResource.load(null);
-		
+		var ResourceSet resourceSet = new ResourceSetImpl();
+		var Map<String, Object> options = resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap();
+		options.put(Resource.Factory.Registry.DEFAULT_EXTENSION,new XMIResourceFactoryImpl())
+		var Resource packageResource = resourceSet.createResource(URI.createURI("file://Users/adeelasaalim/Documents/FinalProject"+smm.importURI)); 
+		packageResource.load(options)
+		if(packageResource.loaded)
+		{
+			println("Resource has been loaded.")
+		}
+		else
+		{
+			println("Resource has been failed to load.")
+		}
 	}
 	
-	
-}
+	}
+		

@@ -13,7 +13,7 @@ import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 import org.xtext.project.tdsl.generator.TransformationRunner;
-import org.xtext.project.tdsl.transfoDsl.Transformation;
+import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
 
 /**
  * Generates code from your model files on save.
@@ -25,11 +25,11 @@ public class TransfoDslGenerator implements IGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
     TreeIterator<EObject> _allContents = resource.getAllContents();
-    Iterator<Transformation> _filter = Iterators.<Transformation>filter(_allContents, Transformation.class);
-    final Procedure1<Transformation> _function = (Transformation t) -> {
+    Iterator<SrcMetamodel> _filter = Iterators.<SrcMetamodel>filter(_allContents, SrcMetamodel.class);
+    final Procedure1<SrcMetamodel> _function = (SrcMetamodel smm) -> {
       TransformationRunner _transformationRunner = new TransformationRunner();
-      _transformationRunner.run(t);
+      _transformationRunner.loadModel(smm);
     };
-    IteratorExtensions.<Transformation>forEach(_filter, _function);
+    IteratorExtensions.<SrcMetamodel>forEach(_filter, _function);
   }
 }

@@ -23,7 +23,7 @@ class TransfoDslGenerator implements IGenerator {
 //				.filter(typeof(Greeting))
 //				.map[name]
 //				.join(', '))
-	resource.allContents.filter(typeof(Transformation)).forEach[t |new TransformationRunner().run(t)]
-	//resource.allContents.filter(typeof(SrcMetamodel)).forEach[smm|new TransformationRunner().loadModel(smm)]
+	//resource.allContents.filter(typeof(Transformation)).forEach[t |new TransformationRunner().run(t)]
+	resource.allContents.filter(typeof(SrcMetamodel)).forEach[smm|new TransformationRunner().loadModel(smm)]
 	}
 }
