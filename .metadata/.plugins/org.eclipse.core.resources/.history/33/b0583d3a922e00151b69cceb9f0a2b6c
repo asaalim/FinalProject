@@ -1,0 +1,112 @@
+package org.xtext.project.tdsl.generator
+
+import org.xtext.project.tdsl.transfoDsl.Transformation
+import org.xtext.project.tdsl.transfoDsl.SrcMetamodel
+import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
+import org.eclipse.emf.ecore.resource.Resource
+import java.util.Map
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EClass
+import java.util.Iterator
+import org.eclipse.emf.ecore.util.EcoreUtil.Copier
+import org.eclipse.emf.common.util.EList
+import org.eclipse.emf.ecore.EPackage
+import org.eclipse.emf.ecore.EReference
+
+class TransformationRunner {
+	
+	///////////////////////Class Variables////////////////////////////
+	
+		def run(){
+		//1// Load Model
+		//2// Run Model
+		//3// Derive Layer
+		//4// Execute Layer
+		
+		
+	}
+	
+	def loadModel(SrcMetamodel smm){
+		
+		var ResourceSet resourceSet = new ResourceSetImpl();
+		 resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new XMIResourceFactoryImpl());
+		//var Map<String, Object> options = resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap();
+		//options.put(Resource.Factory.Registry.DEFAULT_EXTENSION,new XMIResourceFactoryImpl())
+		var Resource packageResource = resourceSet.createResource(URI.createURI("file://Users/adeelasaalim/Documents/FinalProject"+smm.importURI)); 
+		//packageResource.load(options)
+		packageResource.load(null)
+		if(packageResource.loaded)
+		{
+			println("Resource has been loaded.")
+		}
+		else
+		{
+			println("Resource has been failed to load.")
+		}
+		// Iterate through the Contents of Package
+    	//var EObject eObject = packageResource.getContents.get(0) //Get the root element
+    	var EPackage metapackage = packageResource.getContents().get(0) as EPackage;
+    	// iterate via "iterator loop"
+		/*var Iterator<EObject> ContentsIterator = eObject.eContents.iterator()
+		while (ContentsIterator.hasNext()) {
+			println(ContentsIterator.next());
+		}*/
+   		
+    	if(metapackage.eContents.empty)
+    	{
+    		println("List is empty")
+    	}
+    	else
+    	{
+    		println("List is NOT empty.")
+    	}
+    	/*var Iterator<EObject> ReferenceIterator = eObject.eAllContents//Returns a Tree Iterator
+    	while (ReferenceIterator.hasNext()){
+    		println(ReferenceIterator.next())
+    	}*/
+    	
+    	
+    	copyMetamodel(metapackage)
+    	
+    }
+    
+    //********************************Make a copy of Metamodel************************************//
+    def copyMetamodel(EPackage eCopyPackage){
+    	println("Inside Copy Metamodel Function")
+    	 var Copier copier = new Copier();
+    	 copier.copy(eCopyPackage)
+    
+    	 /*var Iterator<EObject> ReferenceIterator = eCopyObj.eAllContents//Returns a Tree Iterator
+    	while (ReferenceIterator.hasNext()){
+    	println(ReferenceIterator.next())
+    	}*/
+  		//var EObject result = copier.copy(eObject);
+  		//Collection results = copier.copyAll(eObjects);
+ 		 //copier.copyReferences();
+ 		 
+ 		 deriveLayer(eCopyPackage)
+     }
+  
+   //********************************Apply a Layer************************************// 
+    def deriveLayer(EPackage ePkg){
+    	println("Inside Derive Layer Function")
+    	//var Iterator<EObject> ObjIterator = eObj.eAllContents//Returns a Tree Iterator
+    	for(var i= 0 ; i < ePkg.eContents.size ; i++) //eObj.eContents returns a list
+    	{
+  			//sprintln(ePkg.eContents.get(i))
+  			println(ePkg.EClassifiers.get(i))
+  			var EClass eClass = ePkg.EClassifiers.get(i) as EClass
+  			println(eClass.EReferences.get(i))
+  				
+  			
+    	}
+    
+    	
+    	
+    }
+	
+}
+		

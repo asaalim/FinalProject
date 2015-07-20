@@ -25,6 +25,5 @@ class TransfoDslGenerator implements IGenerator {
 //				.join(', '))
 	//resource.allContents.filter(typeof(Transformation)).forEach[t |new TransformationRunner().run(t)]
 	resource.allContents.filter(typeof(SrcMetamodel)).forEach[smm|new TransformationRunner().loadModel(smm)]
-	
 	}
 }
