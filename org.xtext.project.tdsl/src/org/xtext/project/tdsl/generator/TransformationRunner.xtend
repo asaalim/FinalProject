@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EClass
 import java.util.Iterator
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier
+import org.eclipse.emf.common.util.EList
+import org.eclipse.emf.ecore.EPackage
 
 class TransformationRunner {
 	
@@ -48,7 +50,7 @@ class TransformationRunner {
 		while (ContentsIterator.hasNext()) {
 			println(ContentsIterator.next());
 		}*/
-    	
+   
     	if(eObject.eContents.empty)
     	{
     		println("List is empty")
@@ -62,7 +64,8 @@ class TransformationRunner {
     		println(ReferenceIterator.next())
     	}*/
     	
-    	return eObject
+    
+    	copyMetamodel(eObject)
     	
     }
     
@@ -71,18 +74,32 @@ class TransformationRunner {
     	println("Inside Copy Metamodel Function")
     	 var Copier copier = new Copier();
     	 copier.copy(eCopyObj)
-    	 var Iterator<EObject> ReferenceIterator = eCopyObj.eAllContents//Returns a Tree Iterator
+    
+    	 /*var Iterator<EObject> ReferenceIterator = eCopyObj.eAllContents//Returns a Tree Iterator
     	while (ReferenceIterator.hasNext()){
     	println(ReferenceIterator.next())
-    	}
+    	}*/
   		//var EObject result = copier.copy(eObject);
   		//Collection results = copier.copyAll(eObjects);
  		 //copier.copyReferences();
+ 		 
+ 		 deriveLayer(eCopyObj)
      }
   
    //********************************Apply a Layer************************************// 
-    def deriveLayer(EObject eObject){
-    	println("Remove class")
+    def deriveLayer(EObject eObj){
+    	println("Inside Derive Layer Function")
+    	//var Iterator<EObject> ObjIterator = eObj.eAllContents//Returns a Tree Iterator
+    	for(var i= 0 ; i < eObj.eContents.size ; i++) //eObj.eContents returns a list
+    	{
+  			println(eObj.eContents.get(i))
+  			
+    	}
+    	/*for(var j=0 ; j < eObj.eCrossReferences.size ; j++)
+    	{
+    		println(eObj.eContainmentFeature.EOpposite)
+    	}*/
+    	
     	
     }
 	

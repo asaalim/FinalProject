@@ -1,6 +1,5 @@
 package org.xtext.project.tdsl.generator;
 
-import java.util.Iterator;
 import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
@@ -20,7 +19,7 @@ public class TransformationRunner {
     return null;
   }
   
-  public EObject loadModel(final SrcMetamodel smm) {
+  public void loadModel(final SrcMetamodel smm) {
     try {
       ResourceSet resourceSet = new ResourceSetImpl();
       Resource.Factory.Registry _resourceFactoryRegistry = resourceSet.getResourceFactoryRegistry();
@@ -47,7 +46,7 @@ public class TransformationRunner {
       } else {
         InputOutput.<String>println("List is NOT empty.");
       }
-      return eObject;
+      this.copyMetamodel(eObject);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
@@ -57,14 +56,15 @@ public class TransformationRunner {
     InputOutput.<String>println("Inside Copy Metamodel Function");
     EcoreUtil.Copier copier = new EcoreUtil.Copier();
     copier.copy(eCopyObj);
-    Iterator<EObject> ReferenceIterator = eCopyObj.eAllContents();
-    while (ReferenceIterator.hasNext()) {
-      EObject _next = ReferenceIterator.next();
-      InputOutput.<EObject>println(_next);
-    }
+    this.deriveLayer(eCopyObj);
   }
   
-  public String deriveLayer(final EObject eObject) {
-    return InputOutput.<String>println("Remove class");
+  public void deriveLayer(final EObject eObj) {
+    InputOutput.<String>println("Inside Derive Layer Function");
+    for (int i = 0; (i < eObj.eContents().size()); i++) {
+      EList<EObject> _eContents = eObj.eContents();
+      EObject _get = _eContents.get(i);
+      InputOutput.<EObject>println(_get);
+    }
   }
 }
