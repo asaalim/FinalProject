@@ -3,6 +3,7 @@ package org.xtext.project.tdsl.generator;
 import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
@@ -15,7 +16,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.InputOutput;
-import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
 
 @SuppressWarnings("all")
@@ -45,37 +45,43 @@ public class TransformationRunner {
       EList<EObject> _contents = packageResource.getContents();
       EObject _get = _contents.get(0);
       EPackage metapackage = ((EPackage) _get);
-      EList<EObject> _eContents = metapackage.eContents();
+      EcoreUtil.Copier copier = new EcoreUtil.Copier();
+      EObject _copy = copier.copy(metapackage);
+      EPackage eCopyPackage = ((EPackage) _copy);
+      EList<EObject> _eContents = eCopyPackage.eContents();
       boolean _isEmpty = _eContents.isEmpty();
       if (_isEmpty) {
-        InputOutput.<String>println("List is empty");
+        InputOutput.<String>println("Copying failed.");
       } else {
-        InputOutput.<String>println("List is NOT empty.");
+        InputOutput.<String>println("Copying successful.");
       }
-      this.copyMetamodel(metapackage);
+      this.deriveLayer(eCopyPackage);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
   }
   
-  public void copyMetamodel(final EPackage eCopyPackage) {
-    InputOutput.<String>println("Inside Copy Metamodel Function");
-    EcoreUtil.Copier copier = new EcoreUtil.Copier();
-    copier.copy(eCopyPackage);
-    this.deriveLayer(eCopyPackage);
-  }
-  
   public void deriveLayer(final EPackage ePkg) {
-    EClass eClass = null;
     InputOutput.<String>println("Inside Derive Layer Function");
-    for (int i = 0; (i < IteratorExtensions.size(ePkg.eAllContents())); i++) {
+    EClass eClass = null;
+    for (int i = 0; (i < ePkg.eContents().size()); i++) {
       {
         EList<EClassifier> _eClassifiers = ePkg.getEClassifiers();
         EClassifier _get = _eClassifiers.get(i);
-        eClass = ((EClass) _get);
-        EList<EReference> _eReferences = eClass.getEReferences();
-        EReference _get_1 = _eReferences.get(i);
-        InputOutput.<EReference>println(_get_1);
+        InputOutput.<EClassifier>println(_get);
+        EList<EClassifier> _eClassifiers_1 = ePkg.getEClassifiers();
+        EClassifier _get_1 = _eClassifiers_1.get(i);
+        eClass = ((EClass) _get_1);
+        for (int j = 0; (j < eClass.getEReferences().size()); j++) {
+          EList<EReference> _eReferences = eClass.getEReferences();
+          EReference _get_2 = _eReferences.get(j);
+          InputOutput.<EReference>println(_get_2);
+        }
+        for (int j = 0; (j < eClass.getEAttributes().size()); j++) {
+          EList<EAttribute> _eAttributes = eClass.getEAttributes();
+          EAttribute _get_2 = _eAttributes.get(j);
+          InputOutput.<EAttribute>println(_get_2);
+        }
       }
     }
   }
