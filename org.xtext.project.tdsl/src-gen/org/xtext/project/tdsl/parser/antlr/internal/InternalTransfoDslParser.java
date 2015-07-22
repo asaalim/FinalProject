@@ -115,7 +115,7 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTransformation"
-    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:76:1: ruleTransformation returns [EObject current=null] : (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmetamodel_3_0= ruleSrcMetamodel ) ) ( (lv_srcmodel_4_0= ruleSrcModel ) ) ( (lv_layer_5_0= ruleLayer ) )+ ( (lv_targetmetamodel_6_0= ruleTrgMetaModel ) ) otherlv_7= '}' ) ;
+    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:76:1: ruleTransformation returns [EObject current=null] : (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmetamodel_3_0= ruleSrcMetamodel ) ) ( (lv_srcmodel_4_0= ruleSrcModel ) ) ( (lv_layer_5_0= ruleLayer ) )+ ( (lv_targetmetamodel_6_0= ruleTrgMetamodel ) ) otherlv_7= '}' ) ;
     public final EObject ruleTransformation() throws RecognitionException {
         EObject current = null;
 
@@ -135,11 +135,11 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:79:28: ( (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmetamodel_3_0= ruleSrcMetamodel ) ) ( (lv_srcmodel_4_0= ruleSrcModel ) ) ( (lv_layer_5_0= ruleLayer ) )+ ( (lv_targetmetamodel_6_0= ruleTrgMetaModel ) ) otherlv_7= '}' ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:1: (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmetamodel_3_0= ruleSrcMetamodel ) ) ( (lv_srcmodel_4_0= ruleSrcModel ) ) ( (lv_layer_5_0= ruleLayer ) )+ ( (lv_targetmetamodel_6_0= ruleTrgMetaModel ) ) otherlv_7= '}' )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:79:28: ( (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmetamodel_3_0= ruleSrcMetamodel ) ) ( (lv_srcmodel_4_0= ruleSrcModel ) ) ( (lv_layer_5_0= ruleLayer ) )+ ( (lv_targetmetamodel_6_0= ruleTrgMetamodel ) ) otherlv_7= '}' ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:1: (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmetamodel_3_0= ruleSrcMetamodel ) ) ( (lv_srcmodel_4_0= ruleSrcModel ) ) ( (lv_layer_5_0= ruleLayer ) )+ ( (lv_targetmetamodel_6_0= ruleTrgMetamodel ) ) otherlv_7= '}' )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:1: (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmetamodel_3_0= ruleSrcMetamodel ) ) ( (lv_srcmodel_4_0= ruleSrcModel ) ) ( (lv_layer_5_0= ruleLayer ) )+ ( (lv_targetmetamodel_6_0= ruleTrgMetaModel ) ) otherlv_7= '}' )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:3: otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmetamodel_3_0= ruleSrcMetamodel ) ) ( (lv_srcmodel_4_0= ruleSrcModel ) ) ( (lv_layer_5_0= ruleLayer ) )+ ( (lv_targetmetamodel_6_0= ruleTrgMetaModel ) ) otherlv_7= '}'
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:1: (otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmetamodel_3_0= ruleSrcMetamodel ) ) ( (lv_srcmodel_4_0= ruleSrcModel ) ) ( (lv_layer_5_0= ruleLayer ) )+ ( (lv_targetmetamodel_6_0= ruleTrgMetamodel ) ) otherlv_7= '}' )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:80:3: otherlv_0= 'transformation' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_srcmetamodel_3_0= ruleSrcMetamodel ) ) ( (lv_srcmodel_4_0= ruleSrcModel ) ) ( (lv_layer_5_0= ruleLayer ) )+ ( (lv_targetmetamodel_6_0= ruleTrgMetamodel ) ) otherlv_7= '}'
             {
             otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleTransformation122); 
 
@@ -291,17 +291,17 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
                 cnt1++;
             } while (true);
 
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:160:3: ( (lv_targetmetamodel_6_0= ruleTrgMetaModel ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:161:1: (lv_targetmetamodel_6_0= ruleTrgMetaModel )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:160:3: ( (lv_targetmetamodel_6_0= ruleTrgMetamodel ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:161:1: (lv_targetmetamodel_6_0= ruleTrgMetamodel )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:161:1: (lv_targetmetamodel_6_0= ruleTrgMetaModel )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:162:3: lv_targetmetamodel_6_0= ruleTrgMetaModel
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:161:1: (lv_targetmetamodel_6_0= ruleTrgMetamodel )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:162:3: lv_targetmetamodel_6_0= ruleTrgMetamodel
             {
              
-            	        newCompositeNode(grammarAccess.getTransformationAccess().getTargetmetamodelTrgMetaModelParserRuleCall_6_0()); 
+            	        newCompositeNode(grammarAccess.getTransformationAccess().getTargetmetamodelTrgMetamodelParserRuleCall_6_0()); 
             	    
-            pushFollow(FOLLOW_ruleTrgMetaModel_in_ruleTransformation241);
-            lv_targetmetamodel_6_0=ruleTrgMetaModel();
+            pushFollow(FOLLOW_ruleTrgMetamodel_in_ruleTransformation241);
+            lv_targetmetamodel_6_0=ruleTrgMetamodel();
 
             state._fsp--;
 
@@ -313,7 +313,7 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"targetmetamodel",
                     		lv_targetmetamodel_6_0, 
-                    		"TrgMetaModel");
+                    		"TrgMetamodel");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -715,26 +715,26 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleLayer"
 
 
-    // $ANTLR start "entryRuleTrgMetaModel"
-    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:354:1: entryRuleTrgMetaModel returns [EObject current=null] : iv_ruleTrgMetaModel= ruleTrgMetaModel EOF ;
-    public final EObject entryRuleTrgMetaModel() throws RecognitionException {
+    // $ANTLR start "entryRuleTrgMetamodel"
+    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:354:1: entryRuleTrgMetamodel returns [EObject current=null] : iv_ruleTrgMetamodel= ruleTrgMetamodel EOF ;
+    public final EObject entryRuleTrgMetamodel() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleTrgMetaModel = null;
+        EObject iv_ruleTrgMetamodel = null;
 
 
         try {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:355:2: (iv_ruleTrgMetaModel= ruleTrgMetaModel EOF )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:356:2: iv_ruleTrgMetaModel= ruleTrgMetaModel EOF
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:355:2: (iv_ruleTrgMetamodel= ruleTrgMetamodel EOF )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:356:2: iv_ruleTrgMetamodel= ruleTrgMetamodel EOF
             {
-             newCompositeNode(grammarAccess.getTrgMetaModelRule()); 
-            pushFollow(FOLLOW_ruleTrgMetaModel_in_entryRuleTrgMetaModel660);
-            iv_ruleTrgMetaModel=ruleTrgMetaModel();
+             newCompositeNode(grammarAccess.getTrgMetamodelRule()); 
+            pushFollow(FOLLOW_ruleTrgMetamodel_in_entryRuleTrgMetamodel660);
+            iv_ruleTrgMetamodel=ruleTrgMetamodel();
 
             state._fsp--;
 
-             current =iv_ruleTrgMetaModel; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTrgMetaModel670); 
+             current =iv_ruleTrgMetamodel; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTrgMetamodel670); 
 
             }
 
@@ -748,30 +748,30 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleTrgMetaModel"
+    // $ANTLR end "entryRuleTrgMetamodel"
 
 
-    // $ANTLR start "ruleTrgMetaModel"
-    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:363:1: ruleTrgMetaModel returns [EObject current=null] : (otherlv_0= 'OUT' ( (lv_name_1_0= RULE_ID ) ) ( (lv_filepath_2_0= RULE_STRING ) ) ) ;
-    public final EObject ruleTrgMetaModel() throws RecognitionException {
+    // $ANTLR start "ruleTrgMetamodel"
+    // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:363:1: ruleTrgMetamodel returns [EObject current=null] : (otherlv_0= 'OUT' ( (lv_name_1_0= RULE_ID ) ) ( (lv_nsuri_2_0= RULE_STRING ) ) ) ;
+    public final EObject ruleTrgMetamodel() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
-        Token lv_filepath_2_0=null;
+        Token lv_nsuri_2_0=null;
 
          enterRule(); 
             
         try {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:366:28: ( (otherlv_0= 'OUT' ( (lv_name_1_0= RULE_ID ) ) ( (lv_filepath_2_0= RULE_STRING ) ) ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:367:1: (otherlv_0= 'OUT' ( (lv_name_1_0= RULE_ID ) ) ( (lv_filepath_2_0= RULE_STRING ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:366:28: ( (otherlv_0= 'OUT' ( (lv_name_1_0= RULE_ID ) ) ( (lv_nsuri_2_0= RULE_STRING ) ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:367:1: (otherlv_0= 'OUT' ( (lv_name_1_0= RULE_ID ) ) ( (lv_nsuri_2_0= RULE_STRING ) ) )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:367:1: (otherlv_0= 'OUT' ( (lv_name_1_0= RULE_ID ) ) ( (lv_filepath_2_0= RULE_STRING ) ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:367:3: otherlv_0= 'OUT' ( (lv_name_1_0= RULE_ID ) ) ( (lv_filepath_2_0= RULE_STRING ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:367:1: (otherlv_0= 'OUT' ( (lv_name_1_0= RULE_ID ) ) ( (lv_nsuri_2_0= RULE_STRING ) ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:367:3: otherlv_0= 'OUT' ( (lv_name_1_0= RULE_ID ) ) ( (lv_nsuri_2_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleTrgMetaModel707); 
+            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleTrgMetamodel707); 
 
-                	newLeafNode(otherlv_0, grammarAccess.getTrgMetaModelAccess().getOUTKeyword_0());
+                	newLeafNode(otherlv_0, grammarAccess.getTrgMetamodelAccess().getOUTKeyword_0());
                 
             // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:371:1: ( (lv_name_1_0= RULE_ID ) )
             // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:372:1: (lv_name_1_0= RULE_ID )
@@ -779,13 +779,13 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
             // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:372:1: (lv_name_1_0= RULE_ID )
             // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:373:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTrgMetaModel724); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTrgMetamodel724); 
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getTrgMetaModelAccess().getNameIDTerminalRuleCall_1_0()); 
+            			newLeafNode(lv_name_1_0, grammarAccess.getTrgMetamodelAccess().getNameIDTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getTrgMetaModelRule());
+            	            current = createModelElement(grammarAccess.getTrgMetamodelRule());
             	        }
                    		setWithLastConsumed(
                    			current, 
@@ -799,24 +799,24 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:389:2: ( (lv_filepath_2_0= RULE_STRING ) )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:390:1: (lv_filepath_2_0= RULE_STRING )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:389:2: ( (lv_nsuri_2_0= RULE_STRING ) )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:390:1: (lv_nsuri_2_0= RULE_STRING )
             {
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:390:1: (lv_filepath_2_0= RULE_STRING )
-            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:391:3: lv_filepath_2_0= RULE_STRING
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:390:1: (lv_nsuri_2_0= RULE_STRING )
+            // ../org.xtext.project.tdsl/src-gen/org/xtext/project/tdsl/parser/antlr/internal/InternalTransfoDsl.g:391:3: lv_nsuri_2_0= RULE_STRING
             {
-            lv_filepath_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTrgMetaModel746); 
+            lv_nsuri_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTrgMetamodel746); 
 
-            			newLeafNode(lv_filepath_2_0, grammarAccess.getTrgMetaModelAccess().getFilepathSTRINGTerminalRuleCall_2_0()); 
+            			newLeafNode(lv_nsuri_2_0, grammarAccess.getTrgMetamodelAccess().getNsuriSTRINGTerminalRuleCall_2_0()); 
             		
 
             	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getTrgMetaModelRule());
+            	            current = createModelElement(grammarAccess.getTrgMetamodelRule());
             	        }
                    		setWithLastConsumed(
                    			current, 
-                   			"filepath",
-                    		lv_filepath_2_0, 
+                   			"nsuri",
+                    		lv_nsuri_2_0, 
                     		"STRING");
             	    
 
@@ -842,7 +842,7 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleTrgMetaModel"
+    // $ANTLR end "ruleTrgMetamodel"
 
     // Delegated rules
 
@@ -857,7 +857,7 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleSrcMetamodel_in_ruleTransformation177 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_ruleSrcModel_in_ruleTransformation198 = new BitSet(new long[]{0x0000000000020000L});
     public static final BitSet FOLLOW_ruleLayer_in_ruleTransformation219 = new BitSet(new long[]{0x0000000000060000L});
-    public static final BitSet FOLLOW_ruleTrgMetaModel_in_ruleTransformation241 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_ruleTrgMetamodel_in_ruleTransformation241 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_13_in_ruleTransformation253 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSrcMetamodel_in_entryRuleSrcMetamodel289 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSrcMetamodel299 = new BitSet(new long[]{0x0000000000000002L});
@@ -874,10 +874,10 @@ public class InternalTransfoDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleLayer565 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_17_in_ruleLayer602 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleLayer619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTrgMetaModel_in_entryRuleTrgMetaModel660 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTrgMetaModel670 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleTrgMetaModel707 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleTrgMetaModel724 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleTrgMetaModel746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTrgMetamodel_in_entryRuleTrgMetamodel660 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTrgMetamodel670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleTrgMetamodel707 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTrgMetamodel724 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleTrgMetamodel746 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -223,14 +223,14 @@ public interface TransfoDslPackage extends EPackage
   int LAYER_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl <em>Trg Meta Model</em>}' class.
+   * The meta object id for the '{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetamodelImpl <em>Trg Metamodel</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl
-   * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getTrgMetaModel()
+   * @see org.xtext.project.tdsl.transfoDsl.impl.TrgMetamodelImpl
+   * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getTrgMetamodel()
    * @generated
    */
-  int TRG_META_MODEL = 4;
+  int TRG_METAMODEL = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -239,25 +239,25 @@ public interface TransfoDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRG_META_MODEL__NAME = 0;
+  int TRG_METAMODEL__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Filepath</b></em>' attribute.
+   * The feature id for the '<em><b>Nsuri</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRG_META_MODEL__FILEPATH = 1;
+  int TRG_METAMODEL__NSURI = 1;
 
   /**
-   * The number of structural features of the '<em>Trg Meta Model</em>' class.
+   * The number of structural features of the '<em>Trg Metamodel</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRG_META_MODEL_FEATURE_COUNT = 2;
+  int TRG_METAMODEL_FEATURE_COUNT = 2;
 
 
   /**
@@ -411,36 +411,36 @@ public interface TransfoDslPackage extends EPackage
   EAttribute getLayer_Name();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.project.tdsl.transfoDsl.TrgMetaModel <em>Trg Meta Model</em>}'.
+   * Returns the meta object for class '{@link org.xtext.project.tdsl.transfoDsl.TrgMetamodel <em>Trg Metamodel</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Trg Meta Model</em>'.
-   * @see org.xtext.project.tdsl.transfoDsl.TrgMetaModel
+   * @return the meta object for class '<em>Trg Metamodel</em>'.
+   * @see org.xtext.project.tdsl.transfoDsl.TrgMetamodel
    * @generated
    */
-  EClass getTrgMetaModel();
+  EClass getTrgMetamodel();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.project.tdsl.transfoDsl.TrgMetaModel#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.project.tdsl.transfoDsl.TrgMetamodel#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.project.tdsl.transfoDsl.TrgMetaModel#getName()
-   * @see #getTrgMetaModel()
+   * @see org.xtext.project.tdsl.transfoDsl.TrgMetamodel#getName()
+   * @see #getTrgMetamodel()
    * @generated
    */
-  EAttribute getTrgMetaModel_Name();
+  EAttribute getTrgMetamodel_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.project.tdsl.transfoDsl.TrgMetaModel#getFilepath <em>Filepath</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.project.tdsl.transfoDsl.TrgMetamodel#getNsuri <em>Nsuri</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Filepath</em>'.
-   * @see org.xtext.project.tdsl.transfoDsl.TrgMetaModel#getFilepath()
-   * @see #getTrgMetaModel()
+   * @return the meta object for the attribute '<em>Nsuri</em>'.
+   * @see org.xtext.project.tdsl.transfoDsl.TrgMetamodel#getNsuri()
+   * @see #getTrgMetamodel()
    * @generated
    */
-  EAttribute getTrgMetaModel_Filepath();
+  EAttribute getTrgMetamodel_Nsuri();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -586,14 +586,14 @@ public interface TransfoDslPackage extends EPackage
     EAttribute LAYER__NAME = eINSTANCE.getLayer_Name();
 
     /**
-     * The meta object literal for the '{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl <em>Trg Meta Model</em>}' class.
+     * The meta object literal for the '{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetamodelImpl <em>Trg Metamodel</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl
-     * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getTrgMetaModel()
+     * @see org.xtext.project.tdsl.transfoDsl.impl.TrgMetamodelImpl
+     * @see org.xtext.project.tdsl.transfoDsl.impl.TransfoDslPackageImpl#getTrgMetamodel()
      * @generated
      */
-    EClass TRG_META_MODEL = eINSTANCE.getTrgMetaModel();
+    EClass TRG_METAMODEL = eINSTANCE.getTrgMetamodel();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -601,15 +601,15 @@ public interface TransfoDslPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TRG_META_MODEL__NAME = eINSTANCE.getTrgMetaModel_Name();
+    EAttribute TRG_METAMODEL__NAME = eINSTANCE.getTrgMetamodel_Name();
 
     /**
-     * The meta object literal for the '<em><b>Filepath</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Nsuri</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TRG_META_MODEL__FILEPATH = eINSTANCE.getTrgMetaModel_Filepath();
+    EAttribute TRG_METAMODEL__NSURI = eINSTANCE.getTrgMetamodel_Nsuri();
 
   }
 

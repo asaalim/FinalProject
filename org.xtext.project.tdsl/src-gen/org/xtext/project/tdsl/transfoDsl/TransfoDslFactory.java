@@ -59,13 +59,13 @@ public interface TransfoDslFactory extends EFactory
   Layer createLayer();
 
   /**
-   * Returns a new object of class '<em>Trg Meta Model</em>'.
+   * Returns a new object of class '<em>Trg Metamodel</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Trg Meta Model</em>'.
+   * @return a new object of class '<em>Trg Metamodel</em>'.
    * @generated
    */
-  TrgMetaModel createTrgMetaModel();
+  TrgMetamodel createTrgMetamodel();
 
   /**
    * Returns the package supported by this factory.

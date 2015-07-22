@@ -9,56 +9,78 @@ import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
+import org.xtext.project.tdsl.transfoDsl.TrgMetamodel;
 
 @SuppressWarnings("all")
 public class TransformationRunner {
+  private ResourceSet resourceSet = new ResourceSetImpl();
+  
+  private Resource packageResource;
+  
+  private EPackage metapackage;
+  
   public Object run() {
     return null;
   }
   
-  public void loadModel(final SrcMetamodel smm) {
+  public String loadModel(final SrcMetamodel smm) {
     try {
-      ResourceSet resourceSet = new ResourceSetImpl();
-      Resource.Factory.Registry _resourceFactoryRegistry = resourceSet.getResourceFactoryRegistry();
-      Map<String, Object> _extensionToFactoryMap = _resourceFactoryRegistry.getExtensionToFactoryMap();
-      XMIResourceFactoryImpl _xMIResourceFactoryImpl = new XMIResourceFactoryImpl();
-      _extensionToFactoryMap.put("ecore", _xMIResourceFactoryImpl);
-      String _importURI = smm.getImportURI();
-      String _plus = ("file://Users/adeelasaalim/Documents/FinalProject" + _importURI);
-      URI _createURI = URI.createURI(_plus);
-      Resource packageResource = resourceSet.createResource(_createURI);
-      packageResource.load(null);
-      boolean _isLoaded = packageResource.isLoaded();
-      if (_isLoaded) {
-        InputOutput.<String>println("Resource has been loaded.");
-      } else {
-        InputOutput.<String>println("Resource has been failed to load.");
+      String _xblockexpression = null;
+      {
+        Resource.Factory.Registry _resourceFactoryRegistry = this.resourceSet.getResourceFactoryRegistry();
+        Map<String, Object> _extensionToFactoryMap = _resourceFactoryRegistry.getExtensionToFactoryMap();
+        EcoreResourceFactoryImpl _ecoreResourceFactoryImpl = new EcoreResourceFactoryImpl();
+        _extensionToFactoryMap.put(".ecore", _ecoreResourceFactoryImpl);
+        Resource.Factory.Registry _resourceFactoryRegistry_1 = this.resourceSet.getResourceFactoryRegistry();
+        Map<String, Object> _extensionToFactoryMap_1 = _resourceFactoryRegistry_1.getExtensionToFactoryMap();
+        XMIResourceFactoryImpl _xMIResourceFactoryImpl = new XMIResourceFactoryImpl();
+        _extensionToFactoryMap_1.put(".xmi", _xMIResourceFactoryImpl);
+        String _importURI = smm.getImportURI();
+        String _plus = ("file://Users/adeelasaalim/Documents/FinalProject" + _importURI);
+        URI _createURI = URI.createURI(_plus);
+        Resource _createResource = this.resourceSet.createResource(_createURI);
+        this.packageResource = _createResource;
+        this.packageResource.load(null);
+        boolean _isLoaded = this.packageResource.isLoaded();
+        if (_isLoaded) {
+          InputOutput.<String>println("Resource has been loaded.");
+        } else {
+          InputOutput.<String>println("Resource has been failed to load.");
+        }
+        EList<EObject> _contents = this.packageResource.getContents();
+        EObject _get = _contents.get(0);
+        this.metapackage = ((EPackage) _get);
+        String _name = this.metapackage.getName();
+        _xblockexpression = InputOutput.<String>println(_name);
       }
-      EList<EObject> _contents = packageResource.getContents();
-      EObject _get = _contents.get(0);
-      EPackage metapackage = ((EPackage) _get);
-      EcoreUtil.Copier copier = new EcoreUtil.Copier();
-      EObject _copy = copier.copy(metapackage);
-      EPackage eCopyPackage = ((EPackage) _copy);
-      EList<EObject> _eContents = eCopyPackage.eContents();
-      boolean _isEmpty = _eContents.isEmpty();
-      if (_isEmpty) {
-        InputOutput.<String>println("Copying failed.");
-      } else {
-        InputOutput.<String>println("Copying successful.");
-      }
-      this.deriveLayer(eCopyPackage);
+      return _xblockexpression;
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
+  }
+  
+  public String saveAndCreateModel(final TrgMetamodel tmm) {
+    String _xblockexpression = null;
+    {
+      EcoreFactory theCoreFactory = EcoreFactory.eINSTANCE;
+      EPackage eCopyPackage = theCoreFactory.createEPackage();
+      String _name = tmm.getName();
+      eCopyPackage.setName(_name);
+      String _nsuri = tmm.getNsuri();
+      eCopyPackage.setNsURI(_nsuri);
+      String _nsURI = eCopyPackage.getNsURI();
+      _xblockexpression = InputOutput.<String>println(_nsURI);
+    }
+    return _xblockexpression;
   }
   
   public void deriveLayer(final EPackage ePkg) {

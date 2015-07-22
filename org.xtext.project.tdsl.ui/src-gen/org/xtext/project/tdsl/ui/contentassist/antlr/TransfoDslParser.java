@@ -42,7 +42,7 @@ public class TransfoDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSrcModelAccess().getGroup(), "rule__SrcModel__Group__0");
 					put(grammarAccess.getSrcModelAccess().getGroup_2(), "rule__SrcModel__Group_2__0");
 					put(grammarAccess.getLayerAccess().getGroup(), "rule__Layer__Group__0");
-					put(grammarAccess.getTrgMetaModelAccess().getGroup(), "rule__TrgMetaModel__Group__0");
+					put(grammarAccess.getTrgMetamodelAccess().getGroup(), "rule__TrgMetamodel__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getTransformationAccess().getNameAssignment_1(), "rule__Transformation__NameAssignment_1");
@@ -55,8 +55,8 @@ public class TransfoDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSrcModelAccess().getNameAssignment_1(), "rule__SrcModel__NameAssignment_1");
 					put(grammarAccess.getSrcModelAccess().getSourcemetamodelAssignment_2_1(), "rule__SrcModel__SourcemetamodelAssignment_2_1");
 					put(grammarAccess.getLayerAccess().getNameAssignment_1(), "rule__Layer__NameAssignment_1");
-					put(grammarAccess.getTrgMetaModelAccess().getNameAssignment_1(), "rule__TrgMetaModel__NameAssignment_1");
-					put(grammarAccess.getTrgMetaModelAccess().getFilepathAssignment_2(), "rule__TrgMetaModel__FilepathAssignment_2");
+					put(grammarAccess.getTrgMetamodelAccess().getNameAssignment_1(), "rule__TrgMetamodel__NameAssignment_1");
+					put(grammarAccess.getTrgMetamodelAccess().getNsuriAssignment_2(), "rule__TrgMetamodel__NsuriAssignment_2");
 				}
 			};
 		}

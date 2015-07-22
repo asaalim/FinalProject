@@ -9,7 +9,7 @@ Transformation:
 	(srcmetamodel=SrcMetamodel)
 	(srcmodel=SrcModel)
 	(layer+=Layer)+
-	(targetmetamodel=TrgMetaModel)
+	(targetmetamodel=TrgMetamodel)
 	
 '}'
 ;
@@ -23,8 +23,8 @@ SrcModel:
 Layer:
 	'apply' name=ID 
 ;
-TrgMetaModel:
-	'OUT' name=ID filepath=STRING
+TrgMetamodel:
+	'OUT' name=ID nsuri=STRING
 ;
 QualifiedName:
 	ID('.' ID)*

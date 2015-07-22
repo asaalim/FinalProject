@@ -131,12 +131,12 @@ public interface Transformation extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Targetmetamodel</em>' containment reference.
-   * @see #setTargetmetamodel(TrgMetaModel)
+   * @see #setTargetmetamodel(TrgMetamodel)
    * @see org.xtext.project.tdsl.transfoDsl.TransfoDslPackage#getTransformation_Targetmetamodel()
    * @model containment="true"
    * @generated
    */
-  TrgMetaModel getTargetmetamodel();
+  TrgMetamodel getTargetmetamodel();
 
   /**
    * Sets the value of the '{@link org.xtext.project.tdsl.transfoDsl.Transformation#getTargetmetamodel <em>Targetmetamodel</em>}' containment reference.
@@ -146,6 +146,6 @@ public interface Transformation extends EObject
    * @see #getTargetmetamodel()
    * @generated
    */
-  void setTargetmetamodel(TrgMetaModel value);
+  void setTargetmetamodel(TrgMetamodel value);
 
 } // Transformation

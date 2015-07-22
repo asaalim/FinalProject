@@ -10,23 +10,23 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
-import org.xtext.project.tdsl.transfoDsl.TrgMetaModel;
+import org.xtext.project.tdsl.transfoDsl.TrgMetamodel;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Trg Meta Model</b></em>'.
+ * An implementation of the model object '<em><b>Trg Metamodel</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetaModelImpl#getFilepath <em>Filepath</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetamodelImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.project.tdsl.transfoDsl.impl.TrgMetamodelImpl#getNsuri <em>Nsuri</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements TrgMetaModel
+public class TrgMetamodelImpl extends MinimalEObjectImpl.Container implements TrgMetamodel
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -49,31 +49,31 @@ public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements Tr
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getFilepath() <em>Filepath</em>}' attribute.
+   * The default value of the '{@link #getNsuri() <em>Nsuri</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFilepath()
+   * @see #getNsuri()
    * @generated
    * @ordered
    */
-  protected static final String FILEPATH_EDEFAULT = null;
+  protected static final String NSURI_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getFilepath() <em>Filepath</em>}' attribute.
+   * The cached value of the '{@link #getNsuri() <em>Nsuri</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFilepath()
+   * @see #getNsuri()
    * @generated
    * @ordered
    */
-  protected String filepath = FILEPATH_EDEFAULT;
+  protected String nsuri = NSURI_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TrgMetaModelImpl()
+  protected TrgMetamodelImpl()
   {
     super();
   }
@@ -86,7 +86,7 @@ public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements Tr
   @Override
   protected EClass eStaticClass()
   {
-    return TransfoDslPackage.Literals.TRG_META_MODEL;
+    return TransfoDslPackage.Literals.TRG_METAMODEL;
   }
 
   /**
@@ -109,7 +109,7 @@ public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements Tr
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRG_META_MODEL__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRG_METAMODEL__NAME, oldName, name));
   }
 
   /**
@@ -117,9 +117,9 @@ public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements Tr
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getFilepath()
+  public String getNsuri()
   {
-    return filepath;
+    return nsuri;
   }
 
   /**
@@ -127,12 +127,12 @@ public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements Tr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFilepath(String newFilepath)
+  public void setNsuri(String newNsuri)
   {
-    String oldFilepath = filepath;
-    filepath = newFilepath;
+    String oldNsuri = nsuri;
+    nsuri = newNsuri;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRG_META_MODEL__FILEPATH, oldFilepath, filepath));
+      eNotify(new ENotificationImpl(this, Notification.SET, TransfoDslPackage.TRG_METAMODEL__NSURI, oldNsuri, nsuri));
   }
 
   /**
@@ -145,10 +145,10 @@ public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements Tr
   {
     switch (featureID)
     {
-      case TransfoDslPackage.TRG_META_MODEL__NAME:
+      case TransfoDslPackage.TRG_METAMODEL__NAME:
         return getName();
-      case TransfoDslPackage.TRG_META_MODEL__FILEPATH:
-        return getFilepath();
+      case TransfoDslPackage.TRG_METAMODEL__NSURI:
+        return getNsuri();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -163,11 +163,11 @@ public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements Tr
   {
     switch (featureID)
     {
-      case TransfoDslPackage.TRG_META_MODEL__NAME:
+      case TransfoDslPackage.TRG_METAMODEL__NAME:
         setName((String)newValue);
         return;
-      case TransfoDslPackage.TRG_META_MODEL__FILEPATH:
-        setFilepath((String)newValue);
+      case TransfoDslPackage.TRG_METAMODEL__NSURI:
+        setNsuri((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -183,11 +183,11 @@ public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements Tr
   {
     switch (featureID)
     {
-      case TransfoDslPackage.TRG_META_MODEL__NAME:
+      case TransfoDslPackage.TRG_METAMODEL__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TransfoDslPackage.TRG_META_MODEL__FILEPATH:
-        setFilepath(FILEPATH_EDEFAULT);
+      case TransfoDslPackage.TRG_METAMODEL__NSURI:
+        setNsuri(NSURI_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -203,10 +203,10 @@ public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements Tr
   {
     switch (featureID)
     {
-      case TransfoDslPackage.TRG_META_MODEL__NAME:
+      case TransfoDslPackage.TRG_METAMODEL__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TransfoDslPackage.TRG_META_MODEL__FILEPATH:
-        return FILEPATH_EDEFAULT == null ? filepath != null : !FILEPATH_EDEFAULT.equals(filepath);
+      case TransfoDslPackage.TRG_METAMODEL__NSURI:
+        return NSURI_EDEFAULT == null ? nsuri != null : !NSURI_EDEFAULT.equals(nsuri);
     }
     return super.eIsSet(featureID);
   }
@@ -224,10 +224,10 @@ public class TrgMetaModelImpl extends MinimalEObjectImpl.Container implements Tr
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", filepath: ");
-    result.append(filepath);
+    result.append(", nsuri: ");
+    result.append(nsuri);
     result.append(')');
     return result.toString();
   }
 
-} //TrgMetaModelImpl
+} //TrgMetamodelImpl

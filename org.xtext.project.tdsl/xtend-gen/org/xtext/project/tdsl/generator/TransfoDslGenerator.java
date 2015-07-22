@@ -14,6 +14,7 @@ import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 import org.xtext.project.tdsl.generator.TransformationRunner;
 import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
+import org.xtext.project.tdsl.transfoDsl.TrgMetamodel;
 
 /**
  * Generates code from your model files on save.
@@ -31,5 +32,12 @@ public class TransfoDslGenerator implements IGenerator {
       _transformationRunner.loadModel(smm);
     };
     IteratorExtensions.<SrcMetamodel>forEach(_filter, _function);
+    TreeIterator<EObject> _allContents_1 = resource.getAllContents();
+    Iterator<TrgMetamodel> _filter_1 = Iterators.<TrgMetamodel>filter(_allContents_1, TrgMetamodel.class);
+    final Procedure1<TrgMetamodel> _function_1 = (TrgMetamodel tmm) -> {
+      TransformationRunner _transformationRunner = new TransformationRunner();
+      _transformationRunner.saveAndCreateModel(tmm);
+    };
+    IteratorExtensions.<TrgMetamodel>forEach(_filter_1, _function_1);
   }
 }

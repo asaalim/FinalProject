@@ -23,7 +23,7 @@ import org.xtext.project.tdsl.transfoDsl.SrcMetamodel;
 import org.xtext.project.tdsl.transfoDsl.SrcModel;
 import org.xtext.project.tdsl.transfoDsl.TransfoDslPackage;
 import org.xtext.project.tdsl.transfoDsl.Transformation;
-import org.xtext.project.tdsl.transfoDsl.TrgMetaModel;
+import org.xtext.project.tdsl.transfoDsl.TrgMetamodel;
 
 /**
  * <!-- begin-user-doc -->
@@ -102,7 +102,7 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected TrgMetaModel targetmetamodel;
+  protected TrgMetamodel targetmetamodel;
 
   /**
    * <!-- begin-user-doc -->
@@ -263,7 +263,7 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public TrgMetaModel getTargetmetamodel()
+  public TrgMetamodel getTargetmetamodel()
   {
     return targetmetamodel;
   }
@@ -273,9 +273,9 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTargetmetamodel(TrgMetaModel newTargetmetamodel, NotificationChain msgs)
+  public NotificationChain basicSetTargetmetamodel(TrgMetamodel newTargetmetamodel, NotificationChain msgs)
   {
-    TrgMetaModel oldTargetmetamodel = targetmetamodel;
+    TrgMetamodel oldTargetmetamodel = targetmetamodel;
     targetmetamodel = newTargetmetamodel;
     if (eNotificationRequired())
     {
@@ -290,7 +290,7 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTargetmetamodel(TrgMetaModel newTargetmetamodel)
+  public void setTargetmetamodel(TrgMetamodel newTargetmetamodel)
   {
     if (newTargetmetamodel != targetmetamodel)
     {
@@ -377,7 +377,7 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
         getLayer().addAll((Collection<? extends Layer>)newValue);
         return;
       case TransfoDslPackage.TRANSFORMATION__TARGETMETAMODEL:
-        setTargetmetamodel((TrgMetaModel)newValue);
+        setTargetmetamodel((TrgMetamodel)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -406,7 +406,7 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
         getLayer().clear();
         return;
       case TransfoDslPackage.TRANSFORMATION__TARGETMETAMODEL:
-        setTargetmetamodel((TrgMetaModel)null);
+        setTargetmetamodel((TrgMetamodel)null);
         return;
     }
     super.eUnset(featureID);

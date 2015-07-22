@@ -68,7 +68,7 @@ public class TransfoDslFactoryImpl extends EFactoryImpl implements TransfoDslFac
       case TransfoDslPackage.SRC_METAMODEL: return createSrcMetamodel();
       case TransfoDslPackage.SRC_MODEL: return createSrcModel();
       case TransfoDslPackage.LAYER: return createLayer();
-      case TransfoDslPackage.TRG_META_MODEL: return createTrgMetaModel();
+      case TransfoDslPackage.TRG_METAMODEL: return createTrgMetamodel();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -123,10 +123,10 @@ public class TransfoDslFactoryImpl extends EFactoryImpl implements TransfoDslFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public TrgMetaModel createTrgMetaModel()
+  public TrgMetamodel createTrgMetamodel()
   {
-    TrgMetaModelImpl trgMetaModel = new TrgMetaModelImpl();
-    return trgMetaModel;
+    TrgMetamodelImpl trgMetamodel = new TrgMetamodelImpl();
+    return trgMetamodel;
   }
 
   /**

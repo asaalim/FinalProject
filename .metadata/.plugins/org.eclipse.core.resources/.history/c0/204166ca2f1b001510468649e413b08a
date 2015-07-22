@@ -1,9 +1,0 @@
-grammar org.xtext.project.tdsl.TransfoDsl with org.eclipse.xtext.common.Terminals
-
-generate transfoDsl "http://www.xtext.org/project/tdsl/TransfoDsl"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';

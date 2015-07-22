@@ -10,7 +10,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="layer" upperBound="-1"
         eType="#//Layer" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="targetmetamodel" eType="#//TrgMetaModel"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetmetamodel" eType="#//TrgMetamodel"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SrcMetamodel">
@@ -24,8 +24,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Layer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TrgMetaModel">
+  <eClassifiers xsi:type="ecore:EClass" name="TrgMetamodel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filepath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nsuri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

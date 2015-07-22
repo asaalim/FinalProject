@@ -168,25 +168,25 @@ finally {
 
 
 
-// Entry rule entryRuleTrgMetaModel
-entryRuleTrgMetaModel 
+// Entry rule entryRuleTrgMetamodel
+entryRuleTrgMetamodel 
 :
-{ before(grammarAccess.getTrgMetaModelRule()); }
-	 ruleTrgMetaModel
-{ after(grammarAccess.getTrgMetaModelRule()); } 
+{ before(grammarAccess.getTrgMetamodelRule()); }
+	 ruleTrgMetamodel
+{ after(grammarAccess.getTrgMetamodelRule()); } 
 	 EOF 
 ;
 
-// Rule TrgMetaModel
-ruleTrgMetaModel
+// Rule TrgMetamodel
+ruleTrgMetamodel
     @init {
 		int stackSize = keepStackSize();
     }
 	:
 (
-{ before(grammarAccess.getTrgMetaModelAccess().getGroup()); }
-(rule__TrgMetaModel__Group__0)
-{ after(grammarAccess.getTrgMetaModelAccess().getGroup()); }
+{ before(grammarAccess.getTrgMetamodelAccess().getGroup()); }
+(rule__TrgMetamodel__Group__0)
+{ after(grammarAccess.getTrgMetamodelAccess().getGroup()); }
 )
 
 ;
@@ -775,29 +775,29 @@ finally {
 
 
 
-rule__TrgMetaModel__Group__0
+rule__TrgMetamodel__Group__0
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__TrgMetaModel__Group__0__Impl
-	rule__TrgMetaModel__Group__1
+	rule__TrgMetamodel__Group__0__Impl
+	rule__TrgMetamodel__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__TrgMetaModel__Group__0__Impl
+rule__TrgMetamodel__Group__0__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getTrgMetaModelAccess().getOUTKeyword_0()); }
+{ before(grammarAccess.getTrgMetamodelAccess().getOUTKeyword_0()); }
 
 	'OUT' 
 
-{ after(grammarAccess.getTrgMetaModelAccess().getOUTKeyword_0()); }
+{ after(grammarAccess.getTrgMetamodelAccess().getOUTKeyword_0()); }
 )
 
 ;
@@ -806,27 +806,27 @@ finally {
 }
 
 
-rule__TrgMetaModel__Group__1
+rule__TrgMetamodel__Group__1
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__TrgMetaModel__Group__1__Impl
-	rule__TrgMetaModel__Group__2
+	rule__TrgMetamodel__Group__1__Impl
+	rule__TrgMetamodel__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__TrgMetaModel__Group__1__Impl
+rule__TrgMetamodel__Group__1__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getTrgMetaModelAccess().getNameAssignment_1()); }
-(rule__TrgMetaModel__NameAssignment_1)
-{ after(grammarAccess.getTrgMetaModelAccess().getNameAssignment_1()); }
+{ before(grammarAccess.getTrgMetamodelAccess().getNameAssignment_1()); }
+(rule__TrgMetamodel__NameAssignment_1)
+{ after(grammarAccess.getTrgMetamodelAccess().getNameAssignment_1()); }
 )
 
 ;
@@ -835,26 +835,26 @@ finally {
 }
 
 
-rule__TrgMetaModel__Group__2
+rule__TrgMetamodel__Group__2
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__TrgMetaModel__Group__2__Impl
+	rule__TrgMetamodel__Group__2__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__TrgMetaModel__Group__2__Impl
+rule__TrgMetamodel__Group__2__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getTrgMetaModelAccess().getFilepathAssignment_2()); }
-(rule__TrgMetaModel__FilepathAssignment_2)
-{ after(grammarAccess.getTrgMetaModelAccess().getFilepathAssignment_2()); }
+{ before(grammarAccess.getTrgMetamodelAccess().getNsuriAssignment_2()); }
+(rule__TrgMetamodel__NsuriAssignment_2)
+{ after(grammarAccess.getTrgMetamodelAccess().getNsuriAssignment_2()); }
 )
 
 ;
@@ -938,8 +938,8 @@ rule__Transformation__TargetmetamodelAssignment_6
     }
 :
 (
-{ before(grammarAccess.getTransformationAccess().getTargetmetamodelTrgMetaModelParserRuleCall_6_0()); }
-	ruleTrgMetaModel{ after(grammarAccess.getTransformationAccess().getTargetmetamodelTrgMetaModelParserRuleCall_6_0()); }
+{ before(grammarAccess.getTransformationAccess().getTargetmetamodelTrgMetamodelParserRuleCall_6_0()); }
+	ruleTrgMetamodel{ after(grammarAccess.getTransformationAccess().getTargetmetamodelTrgMetamodelParserRuleCall_6_0()); }
 )
 
 ;
@@ -1026,14 +1026,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__TrgMetaModel__NameAssignment_1
+rule__TrgMetamodel__NameAssignment_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getTrgMetaModelAccess().getNameIDTerminalRuleCall_1_0()); }
-	RULE_ID{ after(grammarAccess.getTrgMetaModelAccess().getNameIDTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getTrgMetamodelAccess().getNameIDTerminalRuleCall_1_0()); }
+	RULE_ID{ after(grammarAccess.getTrgMetamodelAccess().getNameIDTerminalRuleCall_1_0()); }
 )
 
 ;
@@ -1041,14 +1041,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__TrgMetaModel__FilepathAssignment_2
+rule__TrgMetamodel__NsuriAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getTrgMetaModelAccess().getFilepathSTRINGTerminalRuleCall_2_0()); }
-	RULE_STRING{ after(grammarAccess.getTrgMetaModelAccess().getFilepathSTRINGTerminalRuleCall_2_0()); }
+{ before(grammarAccess.getTrgMetamodelAccess().getNsuriSTRINGTerminalRuleCall_2_0()); }
+	RULE_STRING{ after(grammarAccess.getTrgMetamodelAccess().getNsuriSTRINGTerminalRuleCall_2_0()); }
 )
 
 ;

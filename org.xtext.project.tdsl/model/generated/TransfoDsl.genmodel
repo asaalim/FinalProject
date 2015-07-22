@@ -25,9 +25,9 @@
     <genClasses ecoreClass="TransfoDsl.ecore#//Layer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//Layer/name"/>
     </genClasses>
-    <genClasses ecoreClass="TransfoDsl.ecore#//TrgMetaModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//TrgMetaModel/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//TrgMetaModel/filepath"/>
+    <genClasses ecoreClass="TransfoDsl.ecore#//TrgMetamodel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//TrgMetamodel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TransfoDsl.ecore#//TrgMetamodel/nsuri"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

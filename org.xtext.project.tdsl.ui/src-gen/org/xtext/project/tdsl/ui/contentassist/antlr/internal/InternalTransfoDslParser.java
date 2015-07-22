@@ -386,21 +386,21 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleLayer"
 
 
-    // $ANTLR start "entryRuleTrgMetaModel"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:172:1: entryRuleTrgMetaModel : ruleTrgMetaModel EOF ;
-    public final void entryRuleTrgMetaModel() throws RecognitionException {
+    // $ANTLR start "entryRuleTrgMetamodel"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:172:1: entryRuleTrgMetamodel : ruleTrgMetamodel EOF ;
+    public final void entryRuleTrgMetamodel() throws RecognitionException {
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:173:1: ( ruleTrgMetaModel EOF )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:174:1: ruleTrgMetaModel EOF
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:173:1: ( ruleTrgMetamodel EOF )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:174:1: ruleTrgMetamodel EOF
             {
-             before(grammarAccess.getTrgMetaModelRule()); 
-            pushFollow(FOLLOW_ruleTrgMetaModel_in_entryRuleTrgMetaModel301);
-            ruleTrgMetaModel();
+             before(grammarAccess.getTrgMetamodelRule()); 
+            pushFollow(FOLLOW_ruleTrgMetamodel_in_entryRuleTrgMetamodel301);
+            ruleTrgMetamodel();
 
             state._fsp--;
 
-             after(grammarAccess.getTrgMetaModelRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTrgMetaModel308); 
+             after(grammarAccess.getTrgMetamodelRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTrgMetamodel308); 
 
             }
 
@@ -413,35 +413,35 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "entryRuleTrgMetaModel"
+    // $ANTLR end "entryRuleTrgMetamodel"
 
 
-    // $ANTLR start "ruleTrgMetaModel"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:181:1: ruleTrgMetaModel : ( ( rule__TrgMetaModel__Group__0 ) ) ;
-    public final void ruleTrgMetaModel() throws RecognitionException {
+    // $ANTLR start "ruleTrgMetamodel"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:181:1: ruleTrgMetamodel : ( ( rule__TrgMetamodel__Group__0 ) ) ;
+    public final void ruleTrgMetamodel() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:185:2: ( ( ( rule__TrgMetaModel__Group__0 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:186:1: ( ( rule__TrgMetaModel__Group__0 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:185:2: ( ( ( rule__TrgMetamodel__Group__0 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:186:1: ( ( rule__TrgMetamodel__Group__0 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:186:1: ( ( rule__TrgMetaModel__Group__0 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:187:1: ( rule__TrgMetaModel__Group__0 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:186:1: ( ( rule__TrgMetamodel__Group__0 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:187:1: ( rule__TrgMetamodel__Group__0 )
             {
-             before(grammarAccess.getTrgMetaModelAccess().getGroup()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:188:1: ( rule__TrgMetaModel__Group__0 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:188:2: rule__TrgMetaModel__Group__0
+             before(grammarAccess.getTrgMetamodelAccess().getGroup()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:188:1: ( rule__TrgMetamodel__Group__0 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:188:2: rule__TrgMetamodel__Group__0
             {
-            pushFollow(FOLLOW_rule__TrgMetaModel__Group__0_in_ruleTrgMetaModel334);
-            rule__TrgMetaModel__Group__0();
+            pushFollow(FOLLOW_rule__TrgMetamodel__Group__0_in_ruleTrgMetamodel334);
+            rule__TrgMetamodel__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTrgMetaModelAccess().getGroup()); 
+             after(grammarAccess.getTrgMetamodelAccess().getGroup()); 
 
             }
 
@@ -460,7 +460,7 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "ruleTrgMetaModel"
+    // $ANTLR end "ruleTrgMetamodel"
 
 
     // $ANTLR start "rule__Transformation__Group__0"
@@ -1941,23 +1941,23 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Layer__Group__1__Impl"
 
 
-    // $ANTLR start "rule__TrgMetaModel__Group__0"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:778:1: rule__TrgMetaModel__Group__0 : rule__TrgMetaModel__Group__0__Impl rule__TrgMetaModel__Group__1 ;
-    public final void rule__TrgMetaModel__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__TrgMetamodel__Group__0"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:778:1: rule__TrgMetamodel__Group__0 : rule__TrgMetamodel__Group__0__Impl rule__TrgMetamodel__Group__1 ;
+    public final void rule__TrgMetamodel__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:782:1: ( rule__TrgMetaModel__Group__0__Impl rule__TrgMetaModel__Group__1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:783:2: rule__TrgMetaModel__Group__0__Impl rule__TrgMetaModel__Group__1
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:782:1: ( rule__TrgMetamodel__Group__0__Impl rule__TrgMetamodel__Group__1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:783:2: rule__TrgMetamodel__Group__0__Impl rule__TrgMetamodel__Group__1
             {
-            pushFollow(FOLLOW_rule__TrgMetaModel__Group__0__Impl_in_rule__TrgMetaModel__Group__01502);
-            rule__TrgMetaModel__Group__0__Impl();
+            pushFollow(FOLLOW_rule__TrgMetamodel__Group__0__Impl_in_rule__TrgMetamodel__Group__01502);
+            rule__TrgMetamodel__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TrgMetaModel__Group__1_in_rule__TrgMetaModel__Group__01505);
-            rule__TrgMetaModel__Group__1();
+            pushFollow(FOLLOW_rule__TrgMetamodel__Group__1_in_rule__TrgMetamodel__Group__01505);
+            rule__TrgMetamodel__Group__1();
 
             state._fsp--;
 
@@ -1976,12 +1976,12 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgMetaModel__Group__0"
+    // $ANTLR end "rule__TrgMetamodel__Group__0"
 
 
-    // $ANTLR start "rule__TrgMetaModel__Group__0__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:790:1: rule__TrgMetaModel__Group__0__Impl : ( 'OUT' ) ;
-    public final void rule__TrgMetaModel__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__TrgMetamodel__Group__0__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:790:1: rule__TrgMetamodel__Group__0__Impl : ( 'OUT' ) ;
+    public final void rule__TrgMetamodel__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -1992,9 +1992,9 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
             // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:795:1: ( 'OUT' )
             // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:796:1: 'OUT'
             {
-             before(grammarAccess.getTrgMetaModelAccess().getOUTKeyword_0()); 
-            match(input,18,FOLLOW_18_in_rule__TrgMetaModel__Group__0__Impl1533); 
-             after(grammarAccess.getTrgMetaModelAccess().getOUTKeyword_0()); 
+             before(grammarAccess.getTrgMetamodelAccess().getOUTKeyword_0()); 
+            match(input,18,FOLLOW_18_in_rule__TrgMetamodel__Group__0__Impl1533); 
+             after(grammarAccess.getTrgMetamodelAccess().getOUTKeyword_0()); 
 
             }
 
@@ -2013,26 +2013,26 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgMetaModel__Group__0__Impl"
+    // $ANTLR end "rule__TrgMetamodel__Group__0__Impl"
 
 
-    // $ANTLR start "rule__TrgMetaModel__Group__1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:809:1: rule__TrgMetaModel__Group__1 : rule__TrgMetaModel__Group__1__Impl rule__TrgMetaModel__Group__2 ;
-    public final void rule__TrgMetaModel__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__TrgMetamodel__Group__1"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:809:1: rule__TrgMetamodel__Group__1 : rule__TrgMetamodel__Group__1__Impl rule__TrgMetamodel__Group__2 ;
+    public final void rule__TrgMetamodel__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:813:1: ( rule__TrgMetaModel__Group__1__Impl rule__TrgMetaModel__Group__2 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:814:2: rule__TrgMetaModel__Group__1__Impl rule__TrgMetaModel__Group__2
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:813:1: ( rule__TrgMetamodel__Group__1__Impl rule__TrgMetamodel__Group__2 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:814:2: rule__TrgMetamodel__Group__1__Impl rule__TrgMetamodel__Group__2
             {
-            pushFollow(FOLLOW_rule__TrgMetaModel__Group__1__Impl_in_rule__TrgMetaModel__Group__11564);
-            rule__TrgMetaModel__Group__1__Impl();
+            pushFollow(FOLLOW_rule__TrgMetamodel__Group__1__Impl_in_rule__TrgMetamodel__Group__11564);
+            rule__TrgMetamodel__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TrgMetaModel__Group__2_in_rule__TrgMetaModel__Group__11567);
-            rule__TrgMetaModel__Group__2();
+            pushFollow(FOLLOW_rule__TrgMetamodel__Group__2_in_rule__TrgMetamodel__Group__11567);
+            rule__TrgMetamodel__Group__2();
 
             state._fsp--;
 
@@ -2051,35 +2051,35 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgMetaModel__Group__1"
+    // $ANTLR end "rule__TrgMetamodel__Group__1"
 
 
-    // $ANTLR start "rule__TrgMetaModel__Group__1__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:821:1: rule__TrgMetaModel__Group__1__Impl : ( ( rule__TrgMetaModel__NameAssignment_1 ) ) ;
-    public final void rule__TrgMetaModel__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__TrgMetamodel__Group__1__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:821:1: rule__TrgMetamodel__Group__1__Impl : ( ( rule__TrgMetamodel__NameAssignment_1 ) ) ;
+    public final void rule__TrgMetamodel__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:825:1: ( ( ( rule__TrgMetaModel__NameAssignment_1 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:826:1: ( ( rule__TrgMetaModel__NameAssignment_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:825:1: ( ( ( rule__TrgMetamodel__NameAssignment_1 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:826:1: ( ( rule__TrgMetamodel__NameAssignment_1 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:826:1: ( ( rule__TrgMetaModel__NameAssignment_1 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:827:1: ( rule__TrgMetaModel__NameAssignment_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:826:1: ( ( rule__TrgMetamodel__NameAssignment_1 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:827:1: ( rule__TrgMetamodel__NameAssignment_1 )
             {
-             before(grammarAccess.getTrgMetaModelAccess().getNameAssignment_1()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:828:1: ( rule__TrgMetaModel__NameAssignment_1 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:828:2: rule__TrgMetaModel__NameAssignment_1
+             before(grammarAccess.getTrgMetamodelAccess().getNameAssignment_1()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:828:1: ( rule__TrgMetamodel__NameAssignment_1 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:828:2: rule__TrgMetamodel__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__TrgMetaModel__NameAssignment_1_in_rule__TrgMetaModel__Group__1__Impl1594);
-            rule__TrgMetaModel__NameAssignment_1();
+            pushFollow(FOLLOW_rule__TrgMetamodel__NameAssignment_1_in_rule__TrgMetamodel__Group__1__Impl1594);
+            rule__TrgMetamodel__NameAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTrgMetaModelAccess().getNameAssignment_1()); 
+             after(grammarAccess.getTrgMetamodelAccess().getNameAssignment_1()); 
 
             }
 
@@ -2098,21 +2098,21 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgMetaModel__Group__1__Impl"
+    // $ANTLR end "rule__TrgMetamodel__Group__1__Impl"
 
 
-    // $ANTLR start "rule__TrgMetaModel__Group__2"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:838:1: rule__TrgMetaModel__Group__2 : rule__TrgMetaModel__Group__2__Impl ;
-    public final void rule__TrgMetaModel__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__TrgMetamodel__Group__2"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:838:1: rule__TrgMetamodel__Group__2 : rule__TrgMetamodel__Group__2__Impl ;
+    public final void rule__TrgMetamodel__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:842:1: ( rule__TrgMetaModel__Group__2__Impl )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:843:2: rule__TrgMetaModel__Group__2__Impl
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:842:1: ( rule__TrgMetamodel__Group__2__Impl )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:843:2: rule__TrgMetamodel__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__TrgMetaModel__Group__2__Impl_in_rule__TrgMetaModel__Group__21624);
-            rule__TrgMetaModel__Group__2__Impl();
+            pushFollow(FOLLOW_rule__TrgMetamodel__Group__2__Impl_in_rule__TrgMetamodel__Group__21624);
+            rule__TrgMetamodel__Group__2__Impl();
 
             state._fsp--;
 
@@ -2131,35 +2131,35 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgMetaModel__Group__2"
+    // $ANTLR end "rule__TrgMetamodel__Group__2"
 
 
-    // $ANTLR start "rule__TrgMetaModel__Group__2__Impl"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:849:1: rule__TrgMetaModel__Group__2__Impl : ( ( rule__TrgMetaModel__FilepathAssignment_2 ) ) ;
-    public final void rule__TrgMetaModel__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__TrgMetamodel__Group__2__Impl"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:849:1: rule__TrgMetamodel__Group__2__Impl : ( ( rule__TrgMetamodel__NsuriAssignment_2 ) ) ;
+    public final void rule__TrgMetamodel__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:853:1: ( ( ( rule__TrgMetaModel__FilepathAssignment_2 ) ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:854:1: ( ( rule__TrgMetaModel__FilepathAssignment_2 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:853:1: ( ( ( rule__TrgMetamodel__NsuriAssignment_2 ) ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:854:1: ( ( rule__TrgMetamodel__NsuriAssignment_2 ) )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:854:1: ( ( rule__TrgMetaModel__FilepathAssignment_2 ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:855:1: ( rule__TrgMetaModel__FilepathAssignment_2 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:854:1: ( ( rule__TrgMetamodel__NsuriAssignment_2 ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:855:1: ( rule__TrgMetamodel__NsuriAssignment_2 )
             {
-             before(grammarAccess.getTrgMetaModelAccess().getFilepathAssignment_2()); 
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:856:1: ( rule__TrgMetaModel__FilepathAssignment_2 )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:856:2: rule__TrgMetaModel__FilepathAssignment_2
+             before(grammarAccess.getTrgMetamodelAccess().getNsuriAssignment_2()); 
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:856:1: ( rule__TrgMetamodel__NsuriAssignment_2 )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:856:2: rule__TrgMetamodel__NsuriAssignment_2
             {
-            pushFollow(FOLLOW_rule__TrgMetaModel__FilepathAssignment_2_in_rule__TrgMetaModel__Group__2__Impl1651);
-            rule__TrgMetaModel__FilepathAssignment_2();
+            pushFollow(FOLLOW_rule__TrgMetamodel__NsuriAssignment_2_in_rule__TrgMetamodel__Group__2__Impl1651);
+            rule__TrgMetamodel__NsuriAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTrgMetaModelAccess().getFilepathAssignment_2()); 
+             after(grammarAccess.getTrgMetamodelAccess().getNsuriAssignment_2()); 
 
             }
 
@@ -2178,7 +2178,7 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgMetaModel__Group__2__Impl"
+    // $ANTLR end "rule__TrgMetamodel__Group__2__Impl"
 
 
     // $ANTLR start "rule__Transformation__NameAssignment_1"
@@ -2342,25 +2342,25 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Transformation__TargetmetamodelAssignment_6"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:935:1: rule__Transformation__TargetmetamodelAssignment_6 : ( ruleTrgMetaModel ) ;
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:935:1: rule__Transformation__TargetmetamodelAssignment_6 : ( ruleTrgMetamodel ) ;
     public final void rule__Transformation__TargetmetamodelAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:939:1: ( ( ruleTrgMetaModel ) )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:940:1: ( ruleTrgMetaModel )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:939:1: ( ( ruleTrgMetamodel ) )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:940:1: ( ruleTrgMetamodel )
             {
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:940:1: ( ruleTrgMetaModel )
-            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:941:1: ruleTrgMetaModel
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:940:1: ( ruleTrgMetamodel )
+            // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:941:1: ruleTrgMetamodel
             {
-             before(grammarAccess.getTransformationAccess().getTargetmetamodelTrgMetaModelParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleTrgMetaModel_in_rule__Transformation__TargetmetamodelAssignment_61818);
-            ruleTrgMetaModel();
+             before(grammarAccess.getTransformationAccess().getTargetmetamodelTrgMetamodelParserRuleCall_6_0()); 
+            pushFollow(FOLLOW_ruleTrgMetamodel_in_rule__Transformation__TargetmetamodelAssignment_61818);
+            ruleTrgMetamodel();
 
             state._fsp--;
 
-             after(grammarAccess.getTransformationAccess().getTargetmetamodelTrgMetaModelParserRuleCall_6_0()); 
+             after(grammarAccess.getTransformationAccess().getTargetmetamodelTrgMetamodelParserRuleCall_6_0()); 
 
             }
 
@@ -2575,9 +2575,9 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Layer__NameAssignment_1"
 
 
-    // $ANTLR start "rule__TrgMetaModel__NameAssignment_1"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1029:1: rule__TrgMetaModel__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__TrgMetaModel__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__TrgMetamodel__NameAssignment_1"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1029:1: rule__TrgMetamodel__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__TrgMetamodel__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -2588,9 +2588,9 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
             // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1034:1: ( RULE_ID )
             // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1035:1: RULE_ID
             {
-             before(grammarAccess.getTrgMetaModelAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TrgMetaModel__NameAssignment_12012); 
-             after(grammarAccess.getTrgMetaModelAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getTrgMetamodelAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TrgMetamodel__NameAssignment_12012); 
+             after(grammarAccess.getTrgMetamodelAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -2609,12 +2609,12 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgMetaModel__NameAssignment_1"
+    // $ANTLR end "rule__TrgMetamodel__NameAssignment_1"
 
 
-    // $ANTLR start "rule__TrgMetaModel__FilepathAssignment_2"
-    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1044:1: rule__TrgMetaModel__FilepathAssignment_2 : ( RULE_STRING ) ;
-    public final void rule__TrgMetaModel__FilepathAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__TrgMetamodel__NsuriAssignment_2"
+    // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1044:1: rule__TrgMetamodel__NsuriAssignment_2 : ( RULE_STRING ) ;
+    public final void rule__TrgMetamodel__NsuriAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -2625,9 +2625,9 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
             // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1049:1: ( RULE_STRING )
             // ../org.xtext.project.tdsl.ui/src-gen/org/xtext/project/tdsl/ui/contentassist/antlr/internal/InternalTransfoDsl.g:1050:1: RULE_STRING
             {
-             before(grammarAccess.getTrgMetaModelAccess().getFilepathSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TrgMetaModel__FilepathAssignment_22043); 
-             after(grammarAccess.getTrgMetaModelAccess().getFilepathSTRINGTerminalRuleCall_2_0()); 
+             before(grammarAccess.getTrgMetamodelAccess().getNsuriSTRINGTerminalRuleCall_2_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TrgMetamodel__NsuriAssignment_22043); 
+             after(grammarAccess.getTrgMetamodelAccess().getNsuriSTRINGTerminalRuleCall_2_0()); 
 
             }
 
@@ -2646,7 +2646,7 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__TrgMetaModel__FilepathAssignment_2"
+    // $ANTLR end "rule__TrgMetamodel__NsuriAssignment_2"
 
     // Delegated rules
 
@@ -2665,9 +2665,9 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_ruleLayer_in_entryRuleLayer241 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLayer248 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Layer__Group__0_in_ruleLayer274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTrgMetaModel_in_entryRuleTrgMetaModel301 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTrgMetaModel308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgMetaModel__Group__0_in_ruleTrgMetaModel334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTrgMetamodel_in_entryRuleTrgMetamodel301 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTrgMetamodel308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgMetamodel__Group__0_in_ruleTrgMetamodel334 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Transformation__Group__0__Impl_in_rule__Transformation__Group__0370 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_rule__Transformation__Group__1_in_rule__Transformation__Group__0373 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_11_in_rule__Transformation__Group__0__Impl401 = new BitSet(new long[]{0x0000000000000002L});
@@ -2718,25 +2718,25 @@ public class InternalTransfoDslParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_17_in_rule__Layer__Group__0__Impl1410 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Layer__Group__1__Impl_in_rule__Layer__Group__11441 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Layer__NameAssignment_1_in_rule__Layer__Group__1__Impl1468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgMetaModel__Group__0__Impl_in_rule__TrgMetaModel__Group__01502 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TrgMetaModel__Group__1_in_rule__TrgMetaModel__Group__01505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__TrgMetaModel__Group__0__Impl1533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgMetaModel__Group__1__Impl_in_rule__TrgMetaModel__Group__11564 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__TrgMetaModel__Group__2_in_rule__TrgMetaModel__Group__11567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgMetaModel__NameAssignment_1_in_rule__TrgMetaModel__Group__1__Impl1594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgMetaModel__Group__2__Impl_in_rule__TrgMetaModel__Group__21624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TrgMetaModel__FilepathAssignment_2_in_rule__TrgMetaModel__Group__2__Impl1651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgMetamodel__Group__0__Impl_in_rule__TrgMetamodel__Group__01502 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__TrgMetamodel__Group__1_in_rule__TrgMetamodel__Group__01505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__TrgMetamodel__Group__0__Impl1533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgMetamodel__Group__1__Impl_in_rule__TrgMetamodel__Group__11564 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__TrgMetamodel__Group__2_in_rule__TrgMetamodel__Group__11567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgMetamodel__NameAssignment_1_in_rule__TrgMetamodel__Group__1__Impl1594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgMetamodel__Group__2__Impl_in_rule__TrgMetamodel__Group__21624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TrgMetamodel__NsuriAssignment_2_in_rule__TrgMetamodel__Group__2__Impl1651 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__Transformation__NameAssignment_11694 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSrcMetamodel_in_rule__Transformation__SrcmetamodelAssignment_31725 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSrcModel_in_rule__Transformation__SrcmodelAssignment_41756 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLayer_in_rule__Transformation__LayerAssignment_51787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTrgMetaModel_in_rule__Transformation__TargetmetamodelAssignment_61818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTrgMetamodel_in_rule__Transformation__TargetmetamodelAssignment_61818 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__SrcMetamodel__NameAssignment_11849 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__SrcMetamodel__ImportURIAssignment_21880 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__SrcModel__NameAssignment_11911 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__SrcModel__SourcemetamodelAssignment_2_11946 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__Layer__NameAssignment_11981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__TrgMetaModel__NameAssignment_12012 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TrgMetaModel__FilepathAssignment_22043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__TrgMetamodel__NameAssignment_12012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TrgMetamodel__NsuriAssignment_22043 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -100,10 +100,10 @@ public class TransfoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TransfoDslPackage.TRG_META_MODEL:
+      case TransfoDslPackage.TRG_METAMODEL:
       {
-        TrgMetaModel trgMetaModel = (TrgMetaModel)theEObject;
-        T result = caseTrgMetaModel(trgMetaModel);
+        TrgMetamodel trgMetamodel = (TrgMetamodel)theEObject;
+        T result = caseTrgMetamodel(trgMetamodel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -176,17 +176,17 @@ public class TransfoDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Trg Meta Model</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Trg Metamodel</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Trg Meta Model</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Trg Metamodel</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTrgMetaModel(TrgMetaModel object)
+  public T caseTrgMetamodel(TrgMetamodel object)
   {
     return null;
   }
