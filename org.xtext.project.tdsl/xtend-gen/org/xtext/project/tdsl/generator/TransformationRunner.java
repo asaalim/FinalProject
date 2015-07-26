@@ -1,5 +1,6 @@
 package org.xtext.project.tdsl.generator;
 
+import java.io.FileOutputStream;
 import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
@@ -32,55 +33,49 @@ public class TransformationRunner {
     return null;
   }
   
-  public String loadModel(final SrcMetamodel smm) {
+  public void loadModel(final SrcMetamodel smm) {
     try {
-      String _xblockexpression = null;
-      {
-        Resource.Factory.Registry _resourceFactoryRegistry = this.resourceSet.getResourceFactoryRegistry();
-        Map<String, Object> _extensionToFactoryMap = _resourceFactoryRegistry.getExtensionToFactoryMap();
-        EcoreResourceFactoryImpl _ecoreResourceFactoryImpl = new EcoreResourceFactoryImpl();
-        _extensionToFactoryMap.put(".ecore", _ecoreResourceFactoryImpl);
-        Resource.Factory.Registry _resourceFactoryRegistry_1 = this.resourceSet.getResourceFactoryRegistry();
-        Map<String, Object> _extensionToFactoryMap_1 = _resourceFactoryRegistry_1.getExtensionToFactoryMap();
-        XMIResourceFactoryImpl _xMIResourceFactoryImpl = new XMIResourceFactoryImpl();
-        _extensionToFactoryMap_1.put(".xmi", _xMIResourceFactoryImpl);
-        String _importURI = smm.getImportURI();
-        String _plus = ("file://Users/adeelasaalim/Documents/FinalProject" + _importURI);
-        URI _createURI = URI.createURI(_plus);
-        Resource _createResource = this.resourceSet.createResource(_createURI);
-        this.packageResource = _createResource;
-        this.packageResource.load(null);
-        boolean _isLoaded = this.packageResource.isLoaded();
-        if (_isLoaded) {
-          InputOutput.<String>println("Resource has been loaded.");
-        } else {
-          InputOutput.<String>println("Resource has been failed to load.");
-        }
-        EList<EObject> _contents = this.packageResource.getContents();
-        EObject _get = _contents.get(0);
-        this.metapackage = ((EPackage) _get);
-        String _name = this.metapackage.getName();
-        _xblockexpression = InputOutput.<String>println(_name);
+      Resource.Factory.Registry _resourceFactoryRegistry = this.resourceSet.getResourceFactoryRegistry();
+      Map<String, Object> _extensionToFactoryMap = _resourceFactoryRegistry.getExtensionToFactoryMap();
+      EcoreResourceFactoryImpl _ecoreResourceFactoryImpl = new EcoreResourceFactoryImpl();
+      _extensionToFactoryMap.put(".ecore", _ecoreResourceFactoryImpl);
+      Resource.Factory.Registry _resourceFactoryRegistry_1 = this.resourceSet.getResourceFactoryRegistry();
+      Map<String, Object> _extensionToFactoryMap_1 = _resourceFactoryRegistry_1.getExtensionToFactoryMap();
+      XMIResourceFactoryImpl _xMIResourceFactoryImpl = new XMIResourceFactoryImpl();
+      _extensionToFactoryMap_1.put(".xmi", _xMIResourceFactoryImpl);
+      String _importURI = smm.getImportURI();
+      String _plus = ("file://Users/adeelasaalim/Documents/FinalProject" + _importURI);
+      URI _createURI = URI.createURI(_plus);
+      Resource _createResource = this.resourceSet.createResource(_createURI);
+      this.packageResource = _createResource;
+      this.packageResource.load(null);
+      boolean _isLoaded = this.packageResource.isLoaded();
+      if (_isLoaded) {
+        InputOutput.<String>println("Resource has been loaded.");
+      } else {
+        InputOutput.<String>println("Resource has been failed to load.");
       }
-      return _xblockexpression;
+      FileOutputStream fs = new FileOutputStream("/Users/adeelasaalim/Documents/FinalProject/org.xtext.project.tdsl/models/changedcomposed.ecore");
+      EList<EObject> _contents = this.packageResource.getContents();
+      EObject _get = _contents.get(0);
+      EPackage testPackage = ((EPackage) _get);
+      EList<EClassifier> eClass = testPackage.getEClassifiers();
+      EClassifier elem = eClass.remove(0);
+      this.packageResource.save(fs, null);
+      EList<EObject> _contents_1 = this.packageResource.getContents();
+      EObject _get_1 = _contents_1.get(0);
+      this.metapackage = ((EPackage) _get_1);
+      String _name = this.metapackage.getName();
+      InputOutput.<String>println(_name);
+      this.deriveLayer(this.metapackage);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
   }
   
-  public String saveAndCreateModel(final TrgMetamodel tmm) {
-    String _xblockexpression = null;
-    {
-      EcoreFactory theCoreFactory = EcoreFactory.eINSTANCE;
-      EPackage eCopyPackage = theCoreFactory.createEPackage();
-      String _name = tmm.getName();
-      eCopyPackage.setName(_name);
-      String _nsuri = tmm.getNsuri();
-      eCopyPackage.setNsURI(_nsuri);
-      String _nsURI = eCopyPackage.getNsURI();
-      _xblockexpression = InputOutput.<String>println(_nsURI);
-    }
-    return _xblockexpression;
+  public void saveAndCreateModel(final TrgMetamodel tmm) {
+    EcoreFactory theCoreFactory = EcoreFactory.eINSTANCE;
+    EPackage eCopyPackage = theCoreFactory.createEPackage();
   }
   
   public void deriveLayer(final EPackage ePkg) {
